@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Date</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="css/date/date.css">
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/date.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="date">
+            <input id="iDate" type="date" class="date__input" placeholder="Дата рождения">
+            <div class="date__error">Укажите дату в формате дд.мм.гггг</div>
+        </div>
+        <button id="bCheck" onclick="dtCheckFormat('#iDate')" style="margin-top: 30px;">Проверить</button>
+
+    </div>
+</body>
+</html>

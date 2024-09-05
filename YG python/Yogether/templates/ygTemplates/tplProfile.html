@@ -1,0 +1,156 @@
+<!doctype html>
+{% load static %}
+{% load chat_tag %}
+{% load likes_tag %}
+{% get_unread_messages user.id as msg_count %}
+{% get_new_likes user.id as likes_count %}
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Yogether | Йога-знакомства, общение, поиск единомышленников</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--  Seo and social  -->
+    <meta name="description" content="Сайт для знакомств и поиска единомышленников, практикующих йогу и другие учения" />
+
+    <meta property="og:title" content="Yogether | Йога-знакомства, общение, поиск единомышленников"/>
+    <meta property="og:description" content="Сайт для знакомств и поиска единомышленников, практикующих йогу и другие учения"/>
+    <meta property="og:image" content="https://yogether.ru/Yogether/static/img/index/bg-girl.jpg"/>
+    <meta property="og:url" content="https://yogether.ru/"/>
+
+    <meta itemprop="name" content="Yogether | Йога-знакомства, общение, поиск единомышленников"/>
+    <meta itemprop="description" content="Сайт для знакомств и поиска единомышленников, практикующих йогу и другие учения"/>
+    <meta itemprop="image" content="https://yogether.ru/Yogether/static/img/index/bg-girl.jpg"/>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common/fonts.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common/common.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common/header.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common/footer.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common/popups.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/content/profile.css' %}">
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+
+
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+
+    <script src="{% static 'js/popups/user-menu.js' %}"></script>
+    <script src="{% static 'js/popups/popups.js' %}"></script>
+    <script src="{% static 'js/popups/confirm.js' %}"></script>
+
+    <script src="{% static 'js/login.js' %}"></script>
+</head>
+<body>
+    <!-- Header start -->
+    <header class="header">
+        <div class="header__wrapper">
+
+            <!-- Menu block start -->
+            <div class="menu-block">
+                <figure class="menu-block__logo">
+                    <a href="/"><img class="menu-block__logo-img" src="{% static 'img/header/logo.svg' %}" width="70" alt="Yogether"></a>
+                    <figcaption class="menu-block__logo-figcaption"><a href="/" class="menu-block__link menu-block__logo-link">Yogether</a> <span class="menu-block__beta">beta</span></figcaption>
+                </figure>
+                <ul class="menu-block__menu">
+                    <li class="menu-block__item"><a href="/" class="menu-block__link">Главная</a></li>
+                    <li class="menu-block__item"><a href="{% url 'user_search' %}" class="menu-block__link">Участники</a></li>
+                    <li class="menu-block__item"><a href="/page/about" class="menu-block__link">О проекте</a></li>
+                    <li class="menu-block__item"><a href="/page/contacts" class="menu-block__link">Контакты</a></li>
+                </ul>
+                <div class="menu-block__buttons">
+                    {% if user.is_authenticated %}
+
+                    <!-- User menu block start -->
+                    <div class="menu-block__user">
+
+                        <a id="userpic" class="menu-block__userpic" href="#"><img
+                            {% if user.profile_pic %}
+                                    src="{{ user.profile_pic.url }}"
+                            {% else %}
+                                    src="{% static 'img/user-profile/no-photo.png' %}"
+                            {% endif %}
+                            alt="{{ user.first_name }} {{ user.last_name }}"></a>
+
+                        <!-- User menu popup start -->
+                        <div id="usermenu" class="menu-block__user-popup user-popup">
+
+                            <div class="user-popup__triangle"><img src="{% static 'img/popups/popup-triangle.svg' %}" width="14" height="9" alt="Элемент сайта"></div>
+
+                            <div class="user-popup__box">
+                                <div class="user-popup__hello">Привет, {{user.first_name}}!</div>
+                                {% include "../ygTemplates/headerMenu.html" %}
+                            </div>
+
+                        </div>
+                        <!-- User menu popup end -->
+
+                    </div>
+                    <!-- User menu block end -->
+                    <!--span>{{ user.username }}</span>&nbsp;
+                    <a id="aLogout" href="{% url 'account_logout' %}" class="menu-block__login menu-block__link">Выход</a-->
+
+                    {% else %}
+                    <a id="aLogin" href="{% url 'account_login' %}" class="menu-block__login menu-block__link">Вход</a>
+                    <a id="bRegister_" href="{% url 'account_signup' %}" class="menu-block__register button">Регистрация</a>
+                    {% endif %}
+                </div>
+                <div class="menu-block__mobile-buttons">
+                    {% if not user.is_authenticated %}
+                        <a id="aLoginMob" href="{% url 'account_login' %}"><img src="{% static 'img/header/login_mobile.png' %}" alt="Вход"></a>
+                    {% endif %}
+                    <a id="aMobMenu" class="menu-block__mob-bt-link" href="#"><img src="{% static 'img/header/menu_mobile.png' %}" alt="Меню" /></a>
+                </div>
+            </div>
+            <!-- Menu block end -->
+
+            <!-- Title start -->
+            <div class="header__title title">
+                <h2 class="title__h2">{% block title %}{% endblock %}</h2>
+                <div class="title__breadcrumbs">
+                    <a href="/" class="title__link">Главная</a>{% block breadcrumbs %}{% endblock %}
+                </div>
+            </div>
+            <!-- Title end -->
+
+        </div>
+    </header>
+    <!-- Header end -->
+
+    <!-- Profile start -->
+    {% block content %}
+    {% endblock %}
+    <!-- Profile end -->
+
+
+
+
+    <!-- Footer start -->
+    {% include "../ygTemplates/tplFooter.html" %}
+    <!-- Footer end -->
+
+    <!-- Popups start -->
+    <div id="darkscreen" class="darkscreen"></div>
+    <div id="popups" class="popups">
+
+        <!-- Mobile menu start -->
+        {% if user.is_authenticated %}
+            {% include "../ygTemplates/mobileMenuLogined.html" %}
+        {% else %}
+            {% include "../ygTemplates/mobileMenu.html" %}
+        {% endif %}
+        <!-- Mobile menu end -->
+
+        <!-- Login form start -->
+        {% include "../ygForms/loginForm.html" %}
+        <!-- Login form end -->
+
+        <!-- Confirm message start -->
+        {% include "../ygForms/confirmMessage.html" %}
+        <!-- Confirm message end -->
+
+    </div>
+    <!-- Popups end -->
+
+</body>
+</html>

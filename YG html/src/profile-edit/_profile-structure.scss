@@ -1,0 +1,29 @@
+.profile-structure{
+    &__wrapper{        
+        @include contentWrapper();
+        display: flex;
+        align-items: flex-start;
+        margin-top: 30px;
+    }
+    
+    &__menu{
+        margin-bottom: 60px;
+        @media (max-width: 1024px){
+            display: none;
+        }
+    }
+
+    // !!! Not checked for others but profile-edit.html
+    &__data{
+        @media (max-width: 1024px){
+            width: 100%;
+        }
+    }
+
+    &__content{
+        margin-left: 30px;
+        margin-bottom: 60px;
+    
+        @media (max-width: 480px) { margin-left: 0px; }
+    }
+}

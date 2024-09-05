@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Интеркомплект | карточка товара</title>
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="style/common.css">
+    <link rel="stylesheet" href="style/button.css"> 
+    <link rel="stylesheet" href="style/door.css"> 
+    <link rel="stylesheet" href="style/common_media.css">
+    <link rel="stylesheet" href="style/door_media.css"> 
+    <script src="js/jquery-3.5.1.min.js"></script>
+
+    <script src="js/carousel.js"></script>
+    <script src="js/door_photo.js"></script>
+    <script src="js/touch.js"></script> <!-- Должен идти после скрипта carousel.js и door_photo.js -->
+    <script src="js/button.js"></script>
+    <script src="js/menu.js"></script>
+</head>
+<body>
+
+<!-- Header start -->
+
+    <header class="container-fluid">
+        <div id="linedTop" class="lined">
+            <a href="#" class="logo"><img src="img/logo.png" width="332" alt="Интеркомплект" /></a>
+            <div class="mobile-menu"><a id="bMobile" href="#"><img src="img/mobile_menu.png" alt="Меню"></a></div>
+            <div class="menu-wrapper">
+
+                <!-- topMenu start -->
+
+                <ul id="topMenu" class="menu">                    
+
+                    <!-- li start -->
+
+                    <li><a href="#">Главная</a></li>
+
+                    <!-- li end -->
+
+                    <li><a href="#" class="active">Каталог продукции</a></li>
+                    <li><a href="#">О нас</a></li>
+                    <li><a href="#">Сертификаты</a></li>
+                    <li><a href="#">Отзывы</a></li>
+                    <li><a href="#">Контакты</a></li>
+                </ul>
+
+                <!-- topMenu end -->
+
+            </div>
+        </div>
+    </header>
+
+<!-- Header end -->
+
+    <div class="breadcrumbs">
+        <a href="#">Главная</a> / <a href="#">Каталог продукции</a> / <a href="#">Входные двери</a> / <b>Стальная дверь Barocco</b>
+    </div>
+
+    <!-- Фото и характеристики -->
+    <section class="door-info">
+        <div id="doorPhoto" class="photo" style="background-image: url('img/door/door_photo.jpg');" ontouchstart="touchStart(event,'doorPhoto');"  ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">
+            <div class="links"><a id="aPhoto1" href="img/door/door_photo.jpg" class="active"></a><a id="aPhoto2" href="img/door/door_photo2.jpg"></a><a id="aPhoto3" href="img/door/door_photo3.jpg"></a></div>
+        </div>
+        <div class="desc">
+            <h1>Стальная дверь Barocco</h1>
+            <p class="cat">Категория: Входные двери</p>
+            <!-- таблица характеристик -->
+            <div class="param">
+                <div class="row">
+                    <div class="name">Размеры</div>
+                    <div class="dots"></div>
+                    <div class="value">2050х860мм 2050х960мм</div>
+                </div>
+            </div>        
+            <div class="param">
+                <div class="row">
+                    <div class="name">Высота</div>
+                    <div class="dots"></div>
+                    <div class="value">Сварная.2-х сторонний <br>МДФ в отделке</div>
+                </div>
+            </div>        
+            <div class="param">
+                <div class="row">
+                    <div class="name">Толщина <br>наружного листа</div>
+                    <div class="dots"></div>
+                    <div class="value">	1,2 мм. 1.5 мм. 2 мм. <br>на выбор</div>
+                </div>
+            </div>        
+            <div class="param">
+                <div class="row">
+                    <div class="name">Толщина полотна</div>
+                    <div class="dots"></div>
+                    <div class="value">66мм</div>
+                </div>
+            </div>        
+            <div class="param">
+                <div class="row">
+                    <div class="name">Тип петель и <br>количество петель</div>
+                    <div class="dots"></div>
+                    <div class="value">Открытые на <br>подшипниках, 2  шт</div>
+                </div>
+            </div>        
+            <div class="param">
+                <div class="row">
+                    <div class="name">Угол открывания</div>
+                    <div class="dots"></div>
+                    <div class="value">180 градусов</div>
+                </div>
+            </div>         
+            <div class="param">
+                <div class="row">
+                    <div class="name">Теплоизоляция <br>коробки</div>
+                    <div class="dots"></div>
+                    <div class="value">Минеральная вата <br>Izovol(плотность 75)</div>
+                </div>
+            </div>         
+            <div class="param">
+                <div class="row">
+                    <div class="name">Теплоизоляция <br>полотна</div>
+                    <div class="dots"></div>
+                    <div class="value">Минеральная вата <br>Izovol(плотность 75)</div>
+                </div>
+            </div>         
+            <div class="param">
+                <div class="row">
+                    <div class="name">Тип нижнего замка</div>
+                    <div class="dots"></div>
+                    <div class="value">Замок Avers</div>
+                </div>
+            </div>         
+            <div class="param">
+                <div class="row">
+                    <div class="name">Ручка</div>
+                    <div class="dots"></div>
+                    <div class="value">Раздельная Avers</div>
+                </div>
+            </div>         
+            <div class="param">
+                <div class="row">
+                    <div class="name">Отделка внутренней <br>стороны</div>
+                    <div class="dots"></div>
+                    <div class="value"><p>Винил, МДФ 8 мм. <br>22 базовых цвета.</p><p>80 доп. цветов. <br>115 рисунков <br>фрезеровки</p></div>
+                </div>
+            </div>   
+            <div class="param">
+                <div class="row">
+                    <div class="name">Цвет полимерного <br>покрытия</div>
+                    <div class="dots"></div>
+                    <div class="value">Антик Серебро. <br>Teknos Финляндия</div>
+                </div>
+            </div>
+
+            <div class="price">от 405 BYN</div>
+
+            <div class="red-button">
+                <div class="base">Заказать дверь</div>
+                <div class="border"></div>
+                <div class="animation-right"></div>
+                <div class="animation-bottom"></div>
+            </div>
+        </div>        
+        <link rel="preload" as="image" href="img/door/door_photo2.jpg">
+        <link rel="preload" as="image" href="img/door/door_photo3.jpg">
+    </section>
+
+    <!-- Дополнительное описание -->
+    <section class="door-description">
+        <h2>Дополнительное описание</h2>
+        <div class="text">
+            <p>Данная модель двери предназначенная для установки как внутри помещений так и на улице.<br>
+            Имеет высший класс по изоляции воздушного шума (класс А).<br>
+            Высший класс по безотказности (класс А)<br>
+            Высший класс по воздухопроницаемости (класс А)<br>
+            Высший класс по сопротивлению теплопередаче (класс А)<br>
+            Коробка – сварная жесткая конструкция из профильной трубы 60х40, герметизирующей уступ;</p>
+            <p>Полотно изготовлено листовой холоднокатанной стали толщиной 1,2мм имеющий 4 ребра жесткости приваренные контактной сваркой.Полости дверного полотна и ребер жесткости заполнены минеральной ватой Izovol плотностью 75 единиц. </p>
+            <p>Полотно навешено на двух подшипниковых петлях производства Италия.</p>
+
+            В полотне установлен:
+                <ul>
+                    <li>Нижний врезной замок Avers;</li>
+                    <li>Верхний замок замок Avers R12;</li>
+                    <li>Дверная фурнитура - «Avers» хром;</li>
+                    <li>Сердцевина - «Дорма» (5-ти ключная);</li>
+                    <li>Утеплитель - «Izovol». (плотность 75 единиц).</li>
+                    <li>Внутреняя отделка панель MDF толщиной 4 мм.</li>
+                    <li>Полимерное покрытие,(Антик медь, антик бронза, черный шелк, коричневый шелк).</li>
+                </ul>
+                Вся продукция имеет сертификаты соответствия РБ. Дверь сертифицирована согласно СТБ 2433 -2015.
+            
+
+        </div>
+    </section>
+
+    <!-- Варианты цветового исполнения -->
+    <section class="color-variants">
+        <h2>Варианты цветового исполнения</h2>
+        <div class="wrapper">
+            <div class="red-label">01<span class="redline"></span>Colors</div><div class="items">
+                <div class="item" style="background-image: url('img/door/colors/color_1.jpg');">01. Практик Светлый</div>
+                <div class="item" style="background-image: url('img/door/colors/color_2.jpg');">02. Практик Темный</div>
+                <div class="item" style="background-image: url('img/door/colors/color_3.jpg');">01. Дуб Антик</div>
+                <div class="item" style="background-image: url('img/door/colors/color_4.jpg');">01. Практик Светлый</div>
+                <div class="item" style="background-image: url('img/door/colors/color_5.jpg');">02. Практик Темный</div>
+                <div class="item" style="background-image: url('img/door/colors/color_6.jpg');">01. Практик Светлый</div>
+                <div class="item" style="background-image: url('img/door/colors/color_7.jpg');">02. Практик Темный</div>
+                <div class="item" style="background-image: url('img/door/colors/color_8.jpg');">01. Практик Светлый</div>
+                <div class="item" style="background-image: url('img/door/colors/color_9.jpg');">02. Практик Темный</div>
+                <div class="item" style="background-image: url('img/door/colors/color_10.jpg');">01. Дуб Антик</div>
+                <div class="item" style="background-image: url('img/door/colors/color_11.jpg');">01. Практик Светлый</div>
+                <div class="item" style="background-image: url('img/door/colors/color_12.jpg');">02. Практик Темный</div>
+                <div class="item" style="background-image: url('img/door/colors/color_13.jpg');">01. Практик Светлый</div>
+                <div class="item" style="background-image: url('img/door/colors/color_14.jpg');">02. Практик Темный</div>
+                <div class="item" style="background-image: url('img/door/colors/color_15.jpg');">01. Практик Светлый</div>
+                <div class="item" style="background-image: url('img/door/colors/color_16.jpg');">02. Практик Темный</div>
+                <div class="item" style="background-image: url('img/door/colors/color_17.jpg');">01. Дуб Антик</div>
+                <div class="item" style="background-image: url('img/door/colors/color_18.jpg');">01. Практик Светлый</div>
+                <div class="item" style="background-image: url('img/door/colors/color_18.jpg');">02. Практик Темный</div>
+                <div class="item" style="background-image: url('img/door/colors/color_20.jpg');">01. Практик Светлый</div>
+                <div class="item" style="background-image: url('img/door/colors/color_21.jpg');">02. Практик Темный</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Рисунок МДФ панелей -->
+    <section class="door-panels">
+        <h2>Рисунок МДФ панелей</h2>
+        <div class="wrapper">
+            <div class="red-label">02<span class="redline"></span>Panels</div><div id="pnlFrame" class="frame">
+                <div id="pnlItems" class="items">
+                    <div class="item" style="background-image: url('img/door/door_panel.jpg');">H1</div>
+                    <div class="item" style="background-image: url('img/door/door_panel.jpg');">H2</div>
+                    <div class="item" style="background-image: url('img/door/door_panel.jpg');">H3</div>
+                    <div class="item" style="background-image: url('img/door/door_panel.jpg');">H4</div>
+                    <div class="item" style="background-image: url('img/door/door_panel.jpg');">H5</div>
+                    <div class="item" style="background-image: url('img/door/door_panel.jpg');">H6</div>
+                    <div class="item" style="background-image: url('img/door/door_panel.jpg');">H1</div>
+                    <div class="item" style="background-image: url('img/door/door_panel.jpg');">H2</div>
+                    <div class="item" style="background-image: url('img/door/door_panel.jpg');">H3</div>
+                    <div class="item" style="background-image: url('img/door/door_panel.jpg');">H4</div>
+                    <div class="item" style="background-image: url('img/door/door_panel.jpg');">H5</div>
+                    <div class="item" style="background-image: url('img/door/door_panel.jpg');">H6</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="slider">
+            <div id="pnlSliderBase" class="base">
+                <a id="bPnlLeft" href="#" class="arrow left"></a><a id="bPnlRight" href="#" class="arrow right"></a>
+            </div>
+            <div id="pnlSlider" class="pos"></div>
+        </div>
+        <a href="#" class="more">Смотреть больше МДФ панелей</a>
+    </section>
+
+    <!-- Популярные модели -->
+    <section id="popular" class="popular" ontouchstart="touchStart(event,'popular');"  ontouchend="touchEnd(event);" ontouchmove="touchMove(event);" ontouchcancel="touchCancel(event);">
+        <h2>Популярные модели</h2>
+        <div class="wrapper">
+            <div class="red-label">03<span class="redline"></span>Popular models</div><div id="popularFrame" class="frame">
+                <div id="popularItems" class="items">
+                    <div class="item">
+                        <div class="pic" style="background-image: url('img/door/room1.jpg');"><img src="img/door/door1.jpg" alt="Фото двери"></div>
+                        <div class="title">Стальная дверь City-03</div>
+                        <div class="price">от 250 BYN</div>
+                        <div class="red-button">
+                            <div class="base">Подробнее</div>
+                            <div class="border"></div>
+                            <div class="animation-right"></div>
+                            <div class="animation-bottom"></div>
+                        </div>
+
+                    </div>
+                    <div class="item">
+                        <div class="pic" style="background-image: url('img/door/room2.jpg');"><img src="img/door/door2.jpg" alt="Фото двери"></div>
+                        <div class="title">Стальная дверь City MDF 10mm</div>
+                        <div class="price">от 250 BYN</div>
+                        <div class="red-button">
+                            <div class="base">Подробнее</div>
+                            <div class="border"></div>
+                            <div class="animation-right"></div>
+                            <div class="animation-bottom"></div>
+                        </div>
+                        
+                    </div>
+                    <div class="item">
+                        <div class="pic" style="background-image: url('img/door/room3.jpg');"><img src="img/door/door3.jpg" alt="Фото двери"></div>
+                        <div class="title">Стальная дверь Barroco Oak</div>
+                        <div class="price">от 250 BYN</div>
+                        <div class="red-button">
+                            <div class="base">Подробнее</div>
+                            <div class="border"></div>
+                            <div class="animation-right"></div>
+                            <div class="animation-bottom"></div>
+                        </div>
+                        
+                    </div>
+                    <div class="item">
+                        <div class="pic" style="background-image: url('img/door/room4.jpg');"><img src="img/door/door4.jpg" alt="Фото двери"></div>
+                        <div class="title">Стальная дверь City-03</div>
+                        <div class="price">от 250 BYN</div>
+                        <div class="red-button">
+                            <div class="base">Подробнее</div>
+                            <div class="border"></div>
+                            <div class="animation-right"></div>
+                            <div class="animation-bottom"></div>
+                        </div>
+                        
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    
+    <footer>
+        <div class="lined">
+            <a href="#" class="logo"><img src="img/logo_light.png" width="332" alt="Интеркомплект" /></a>
+            <ul class="menu">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">Каталог продукции</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Сертификаты</a></li>
+                <li><a href="#" class="active">Отзывы</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+
+        <div class="info">
+            <div class="company">
+                ПЧУП «Интеркомплект»<br>
+                УНП 100507596
+                <div class="develop">
+                    <a href="#" class="dev-logo"><img src="img/Voloshin_112.png" alt="VOLOSHIN." class="sm"><img src="img/Voloshin_149.png" alt="VOLOSHIN." class="lg"></a>
+                    <span class="dev">Разработка и продвижение</span>
+                </div>
+            </div>
+            <div class="rekv">
+                <div class="adress">
+                    <p>Адрес:</p>
+                    <p>Республика Беларусь, 220007 <br>г. Минск, ул. Володько, 28</p>
+                </div>
+                <div class="phones">
+                    +375 (29) 645-77-05 - Елена<br>
+                    +375 (29) 619-77-05 - Татьяна<br>
+                    +375 (29) 180-77-05 - Екатерина<br>
+                    8 (017) 219-77-05, 219-77-03 - г. тел/факс
+                </div>
+                <div class="contact">
+                    Связаться с нами:
+                    <a href="mailto:info@tirisan.by" class="email">info@tirisan.by</a>
+                    <div class="social">
+                        <a href="#" class="fb"><img src="img/facebook.png" alt="Facebook"></a>
+                        <a href="#"><img src="img/vk.png" alt="Vkontakte"></a>
+                        <a href="#"><img src="img/instagram.png" alt="Instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    
+    <link rel="preload" as="image" href="img/arrow_left.png">
+    <link rel="preload" as="image" href="img/arrow_right_inactive.png">
+
+
+</body>
+</html>

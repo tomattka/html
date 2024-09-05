@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Yogether</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="css/common/fonts.css">
+
+    <!-- Style -->    
+    <link rel="stylesheet" href="css/common/common.css">	
+    <link rel="stylesheet" href="css/common/header.css">	
+    <link rel="stylesheet" href="css/common/footer.css">
+
+    <!-- Controls -->
+    <link rel="stylesheet" href="controls/css/tags/tags.css">
+    <link rel="stylesheet" href="controls/css/list/list.css">
+    <link rel="stylesheet" href="controls/css/select/select.css">
+    <link rel="stylesheet" href="controls/css/input/input.css">
+    <link rel="stylesheet" href="controls/css/hint/hint.css">
+
+    <link rel="stylesheet" href="css/content/search.css">	
+    <link rel="stylesheet" href="css/content/recommendations.css">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/search.js"></script>
+
+    <script src="controls/js/tags.js"></script>
+    <script src="controls/js/list.js"></script>
+    <script src="controls/js/select.js"></script>
+    <script src="controls/js/date.js"></script>
+    <script src="controls/js/hint.js"></script>
+</head>
+<body>
+
+    <!-- Header start -->
+    <header class="header">
+        <div class="header__wrapper">
+
+            <!-- Menu block start -->
+            <div class="menu-block">
+                <figure class="menu-block__logo">
+                    <a href="#"><img class="menu-block__logo-img" src="img/header/logo.svg" width="70" alt="Yogether"></a>
+                    <figcaption class="menu-block__logo-figcaption"><a href="#" class="menu-block__link menu-block__logo-link">Yogether</a></figcaption>
+                </figure>
+                <ul class="menu-block__menu">
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">Главная</a></li>
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">Участники</a></li>
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">О проекте</a></li>
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">Контакты</a></li>
+                </ul>
+                <div class="menu-block__buttons">
+                    <a id="aLogin" href="#" class="menu-block__login menu-block__link">Вход</a>
+                    <a href="#" id="bRegister" class="menu-block__register button">Регистрация</a>
+                </div>
+                <div class="menu-block__mobile-buttons">
+                    <a id="aLoginMob" href="#"><img src="img/header/login_mobile.png" alt="Вход"></a>
+                    <a id="aMobMenu" class="menu-block__mob-bt-link" href="#"><img src="img/header/menu_mobile.png" alt="Меню" /></a>
+                </div>
+            </div>
+            <!-- Menu block end -->
+
+            <!-- Title start -->
+            <div class="header__title title">
+                <h2 class="title__h2">Поиск единомышленников</h2>
+                <div class="title__breadcrumbs">
+                    <a href="#" class="title__link">Главная</a><span>Поиск единомышленников</span>
+                </div>
+            </div>
+            <!-- Title end -->
+
+        </div>
+    </header>
+    <!-- Header end -->
+
+    <!-- Search start -->
+    <div class="search">
+        <div class="search-input">
+            <input type="text" class="search-input__input" placeholder="например, йога">
+            <button class="search-input__params-button"><img width="24" src="img/search/search_params.svg" /></button>
+        </div>
+
+        <!-- Search params start -->
+        <div class="search__params params">
+            <div class="params__frame">
+
+                <!-- Left part of params start -->
+                <div class="params__user-data">
+
+                    <!-- Param item start (city) -->
+                    <div class="params__item">
+                        <div class="params__item-name">Город</div>
+                        <div class="params__item-value">
+                            <div class="select-list params__city">
+                                <div class="select-list__input-box">
+                                    <input type="text" class="select-list__input" autocomplete="off">
+                                    <img src="controls/img/list_clear.png" class="select-list__clear" width="12" height="12" alt="clear">
+                                </div>                            
+                            </div>
+                        </div>
+                    </div>                
+                    <!-- Param item end -->
+
+
+                    <!-- Param age start -->
+                    <div class="params__item">
+                        <div class="params__item-name">Возраст</div>
+                        <div class="params__item-value">
+                            <input type="text" class="input-simple params__age" placeholder="от"> — <input type="text" class="input-simple params__age" placeholder="до">
+                        </div>
+                    </div>
+                    <!-- Param age end -->
+
+                    <!-- Param gender start -->
+                    <div class="params__item">
+                        <div class="params__item-name">Пол</div>
+                        <div class="params__item-value">
+                            
+                            <div class="dropdown params__gender">
+                                <div class="dropdown__input-box">
+                                    <button class="dropdown__invisible"></button>
+                                    <input type="text" class="dropdown__input" value="Пол" disabled>
+                                    <img src="controls/img/list_down.png" class="dropdown__expand" width="13" alt="Expand">
+                                </div>                
+                                <div class="dropdown__hints">
+                                    <a href="#">Мужской</a>
+                                    <a href="#">Женский</a>
+                                    <a href="#">Другое</a>
+                                </div>                            
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Param gender end -->
+
+                    <!-- Param marital start -->
+                    <div class="params__item">
+                        <div class="params__item-name">Статус</div>
+                        <div class="params__item-value">
+                            
+                            <div class="dropdown params__marital">
+                                <div class="dropdown__input-box">
+                                    <button class="dropdown__invisible"></button>
+                                    <input type="text" class="dropdown__input" value="" disabled>
+                                    <img src="controls/img/list_down.png" class="dropdown__expand" width="13" alt="Expand">
+                                </div>                
+                                <div class="dropdown__hints">
+                                    <a href="#">Женат/замужем</a>
+                                    <a href="#">Свободен</a>
+                                    <a href="#">Другое</a>
+                                </div>                            
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Param marital end -->
+
+                    <!-- Param experience start -->
+                    <div class="params__item">
+                        <div class="params__item-name">Опыт практики</div>
+                        <div class="params__item-value">
+                            
+                            <div class="dropdown params__experience">
+                                <div class="dropdown__input-box">
+                                    <button class="dropdown__invisible"></button>
+                                    <input type="text" class="dropdown__input" value="" disabled>
+                                    <img src="controls/img/list_down.png" class="dropdown__expand" width="13" alt="Expand">
+                                </div>                
+                                <div class="dropdown__hints">
+                                    <a href="#">Менее 3-х мес.</a>
+                                    <a href="#">3-6 мес.</a>
+                                    <a href="#">6-12 мес.</a>
+                                </div>                            
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Param experience end -->
+
+                </div>
+                <!-- Left part of params end -->
+
+
+                <!-- Right part of params start -->
+                <div class="params__practice-block">
+
+                    <!-- Param doctrine start -->
+                    <div class="params__item">
+                        <div class="params__item-name">Направление&nbsp;<img src="controls/img/hint.png" class="hint" alt="hint">
+                            <div class="hint-box">
+                                <noindex>Направление. Это подсказка. Она нужна, чтобы было понятно. А если кому-нибудь не понятно, он может обратиться в службу поддержки.</noindex>
+                                <button class="hint-box__hidden"></button>
+                            </div>
+                        </div>
+                        <div class="params__item-value">
+                            <div id="tags1" class="tags tags-frame__tags params__doctrine">
+                                <div class="tags__item">йога<button tabindex="-1"><img src="controls/img/tag_close.png" alt="Закрыть"></button></div>
+                                <div class="tags__item">медитация<button tabindex="-1"><img src="controls/img/tag_close.png" alt="Закрыть"></button></div>
+                                <div id="input-box1" class="input-box">
+                                    <input type="text" class="input-box__hint input-autowidth" value="" size="2" maxlength="50" disabled>
+                                    <input type="text" class="input-box__input input-autowidth" value="" size="2" maxlength="50">
+                                </div>
+                            </div>
+                            <div id="tags-error1" class="tags-error tags-frame__error">Данный тег уже внесён в список!</div>
+                        </div>
+                    </div>     
+                    <!-- Param doctrine end -->
+                    
+                    <!-- Param school start -->
+                    <div class="params__item">
+                        <div class="params__item-name">Традиция&nbsp;<img src="controls/img/hint.png" class="hint" alt="hint">
+                            <div class="hint-box">
+                                <noindex>Традиция. Это подсказка. Она нужна, чтобы было понятно. А если кому-нибудь не понятно, он может обратиться в службу поддержки.</noindex>
+                                <button class="hint-box__hidden"></button>
+                            </div>
+                        </div>
+                        <div class="params__item-value">
+                            <div class="select-list params__tradition">
+                                <div class="select-list__input-box">
+                                    <input type="text" class="select-list__input" autocomplete="off">
+                                    <img src="controls/img/list_clear.png" class="select-list__clear" width="12" height="12" alt="clear">
+                                </div>                            
+                            </div>
+                        </div>
+                    </div>      
+                    <!-- Param school end -->
+
+                    <!-- Param practice start -->
+                    <div class="params__item">
+                        <div class="params__item-name">Практики&nbsp;<img src="controls/img/hint.png" class="hint" alt="hint">
+                            <div class="hint-box">
+                                <noindex>Практики. Это подсказка. Она нужна, чтобы было понятно. А если кому-нибудь не понятно, он может обратиться в службу поддержки.</noindex>
+                                <button class="hint-box__hidden"></button>
+                            </div>
+                        </div>
+                        <div class="params__item-value">
+                            <div id="tagsPractice" class="tags tags-frame__tags params__practice">
+                                <div class="tags__item">йога<button tabindex="-1"><img src="controls/img/tag_close.png" alt="Закрыть"></button></div>
+                                <div class="tags__item">медитация<button tabindex="-1"><img src="controls/img/tag_close.png" alt="Закрыть"></button></div>
+                                <div id="input-box2" class="input-box">
+                                    <input type="text" class="input-box__hint input-autowidth" value="" size="2" maxlength="50" disabled>
+                                    <input type="text" class="input-box__input input-autowidth" value="" size="2" maxlength="50">
+                                </div>
+                            </div>
+                            <div id="tags-error2" class="tags-error tags-frame__error">Данный тег уже внесён в список!</div>
+                        </div>
+                    </div>     
+                    <!-- Param practice end -->                    
+                    
+                    <!-- Param interests start -->
+                    <div class="params__item">
+                        <div class="params__item-name">Интересы</div>
+                        <div class="params__item-value">
+                            <div id="tagsInterests" class="tags tags-frame__tags params__interests">
+                                <div class="tags__item">йога<button tabindex="-1"><img src="controls/img/tag_close.png" alt="Закрыть"></button></div>
+                                <div class="tags__item">медитация<button tabindex="-1"><img src="controls/img/tag_close.png" alt="Закрыть"></button></div>
+                                <div id="input-box3" class="input-box">
+                                    <input type="text" class="input-box__hint input-autowidth" value="" size="2" maxlength="50" disabled>
+                                    <input type="text" class="input-box__input input-autowidth" value="" size="2" maxlength="50">
+                                </div>
+                            </div>
+                            <div id="tags-error3" class="tags-error tags-frame__error">Данный тег уже внесён в список!</div>
+                        </div>
+                    </div>     
+                    <!-- Param interests end -->
+
+                    <div class="params__apply">
+                        <a href="#">Сброс фильтров</a>
+                        <button class="button">Применить</button>
+                    </div>
+                </div>
+                <!-- Right part of params end -->
+
+            </div>
+        </div>        
+        <!-- Search params end -->
+
+        
+        <!-- Search results start -->
+        <div class="search__results">
+            <!-- <div class="search__not-found">Поиск по данному запросу не&nbsp;дал&nbsp;результатов.<br>
+            Вы можете посмотреть пользователей, которые зарегистрировались недавно:</div> -->
+
+            <!-- User item start -->
+            <a href="#" class="search__item item">
+                <div class="item__pic"><img src="img/search/users/user1.jpg" alt="Ирина Яковлева" /></div>
+                <div class="item__info">
+                    <div class="item__name">Ирина <br>Яковлева</div>
+                    <div class="item__desc">29 лет, <span>г. Ярославль</span></div>
+                </div>
+            </a>
+            <!-- User item end -->
+
+            <a href="#" class="search__item item">
+                <div class="item__pic"><img src="img/search/users/user2.jpg" alt="Александра Пересмешкина" /></div>
+                <div class="item__info">
+                    <div class="item__name">Александра <br>Пересмешкина</div>
+                    <div class="item__desc">35 лет, <span>г. Москва</span></div>
+                </div>
+            </a>
+
+            <a href="#" class="search__item item">
+                <div class="item__pic"><img src="img/search/users/user3.jpg" alt="Сергей Березняк" /></div>
+                <div class="item__info">
+                    <div class="item__name">Сергей <br>Березняк</div>
+                    <div class="item__desc">32 лет, <span>г. Санкт-Петербург</span></div>
+                </div>
+            </a>
+
+            <a href="#" class="search__item item">
+                <div class="item__pic"><img src="img/search/users/user4.jpg" alt="Анастасия Соколова" /></div>
+                <div class="item__info">
+                    <div class="item__name">Анастасия <br>Соколова</div>
+                    <div class="item__desc">40 лет, <span>г. Ханты-Мансийск</span></div>
+                </div>
+            </a>
+
+            <a href="#" class="search__item item">
+                <div class="item__pic"><img src="img/search/users/user5.jpg" alt="Антон Черных" /></div>
+                <div class="item__info">
+                    <div class="item__name">Антон <br>Черных</div>
+                    <div class="item__desc">33 лет, <span>г. Москва</span></div>
+                </div>
+            </a>
+
+            <a href="#" class="search__item item">
+                <div class="item__pic"><img src="img/search/users/user6.jpg" alt="Юлия Безмятежная" /></div>
+                <div class="item__info">
+                    <div class="item__name">Юлия <br>Безмятежная</div>
+                    <div class="item__desc">25 лет, <span>г. Омск</span></div>
+                </div>
+            </a>
+
+            <a href="#" class="search__item item">
+                <div class="item__pic"><img src="img/search/users/user7.jpg" alt="Людмила Сорокина" /></div>
+                <div class="item__info">
+                    <div class="item__name">Людмила <br>Сорокина</div>
+                    <div class="item__desc">29 лет, <span>г. Саратов</span></div>
+                </div>
+            </a>
+
+            <a href="#" class="search__item item">
+                <div class="item__pic"><img src="img/search/users/user8.jpg" alt="Игорь Толкунов" /></div>
+                <div class="item__info">
+                    <div class="item__name">Игорь <br>Толкунов</div>
+                    <div class="item__desc">39 лет, <span>г. Сочи</span></div>
+                </div>
+            </a>
+
+            <a href="#" class="search__item item">
+                <div class="item__pic"><img src="img/search/users/user9.jpg" alt="Семён Кочегаров" /></div>
+                <div class="item__info">
+                    <div class="item__name">Семён <br>Кочегаров</div>
+                    <div class="item__desc">26 лет, <span>г. Томск</span></div>
+                </div>
+            </a>
+
+        </div>  
+        <!-- Search results end -->
+
+        <!-- More results button start -->
+
+        <!-- <div class="search__more">
+            <img src="img/common/loading.gif" class="search__loading" alt="Загрузка">
+            <button class="search__button-more">Показать ещё</button>
+        </div> -->
+        <!-- More results button end -->
+
+        <div class="search__info">Сайт Yogether запущен недавно, и пока здесь не очень много пользователей. Мы активно продвигаем проект, и скоро участников станет больше!<br />
+            Вы можете помочь, поделившись ссылкой на сайт с друзьями или в соцсетях.</div>
+
+    </div>
+    <!-- Search end -->
+
+
+    
+    <!-- Recomendations start -->
+    <!-- <div class="recommendations">
+        <h3>Рекомендованные пользователи</h3>
+        
+        <div class="search__results recommendations__search-results"> -->
+
+            <!-- User item start -->
+            <!-- <a href="#" class="search__item item">
+                <div class="item__delete"><img src="img/popups/close.png" alt="Х"></div>
+                <div class="item__pic"><img src="img/search/users/user1.jpg" alt="Ирина Яковлева" /></div>
+                <div class="item__info">
+                    <div class="item__name">Ирина <br>Яковлева</div>
+                    <div class="item__desc">29 лет, <span>г. Ярославль</span></div>
+                </div>
+            </a> -->
+            <!-- User item end -->
+
+            <!-- <div class="search__item item">
+                <div class="item__loading"><img src="img/common/loading.gif" alt="Загрузка"></div>
+            </div>
+
+            <a href="#" class="search__item item">
+                <div class="item__pic"><img src="img/search/users/user3.jpg" alt="Сергей Березняк" /></div>
+                <div class="item__info">
+                    <div class="item__name">Сергей <br>Березняк</div>
+                    <div class="item__desc">32 лет, <span>г. Санкт-Петербург</span></div>
+                </div>
+            </a>
+        </div>
+
+    </div> -->
+    <!-- Recomendations end -->
+
+
+    <!-- Footer start -->
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <figure class="footer__logo">
+                <a href="#"><img class="footer__logo-img" src="img/footer/logo.svg" width="70" alt="Yogether"></a>
+                <figcaption class="footer__logo-figcaption"><a class="footer__link footer__logo-link" href="#">Yogether</a></figcaption>
+            </figure>
+            <div class="footer__center">
+                <ul class="footer__menu">
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Главная</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Участники</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">О проекте</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Контакты</a></li>
+                </ul>
+                <div class="footer__copyright">&copy; Yogether. Копирование материалов возможно только с разрешения владельца.</div>
+            </div>
+            <div class="footer__social">
+                <a href="#" class="footer__soc-link"><img src="img/footer/vk.png" alt="Вконтакте"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/telegram.png" alt="Телеграм"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/youtube.png" alt="Youtube"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/ok.png" alt="Одноклассники"></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer end -->
+
+</body>
+</html>

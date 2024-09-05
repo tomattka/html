@@ -1,0 +1,63 @@
+{% extends "ygTemplates/tplProfile.html" %}
+
+{% load static %}
+
+{% block title %}Сообщения{% endblock %}
+{% block breadcrumbs %}<a href="{% url 'user_profile' user_id=user.id %}" class="title__link">Профиль</a><span>Сообщения</span>
+{% endblock %}
+
+
+{% block content %}
+
+<style>
+    @import "{% static 'css/common/profile-structure.css' %}";
+    @import "{% static 'css/content/chat.css' %}";
+</style>
+
+<script src="{% static 'js/ajax/chat-ajax.js' %}"></script>
+
+<input id="my_id" type="hidden" value="{{ request.user.id }}">
+<input id="with_id" type="hidden" value="{{ chat_user.id }}">
+<audio id="player" src="{% static 'sound/message_sound.wav' %}"></audio>
+<!-- Profile structure start -->
+    <div class="profile-structure">
+        <div class="profile-structure__wrapper">
+
+            <!-- Profile menu start -->
+            {% include "../ygProfile/profile-menu.html" %}
+            <!-- Profile menu end -->
+
+            <!-- Chat page start -->
+            <div class="chat profile-structure__chat">
+                <div class="chat__top">
+                    <div class="chat__person"><a href="{{chat_user.profile_url}}"><img width="30"
+                        {% if chat_user.profile_pic %}
+                            src="{{ chat_user.profile_pic.url }}"
+                        {% else %}
+                            src="{% static 'img/user-profile/no-photo.png' %}"
+                        {% endif %}
+                       alt="{{chat_user.first_name}} {{chat_user.last_name}}">{{chat_user.first_name}} {{chat_user.last_name}}</a></div>
+                    <div class="chat__back"><a href="{% url 'chat_list' %}">Назад ></a></div>
+                </div>
+
+                <!-- Messages start -->
+                <div id="chat-messages" class="chat__messages">
+
+                    {{ messages|safe }}
+
+                </div>
+                <!-- Messages end -->
+
+                <div class="chat__bottom">
+                    <input id="iText" type="text" placeholder="Ваше сообщение" class="chat__input">
+                    <button id="bSend" class="button">Отправить</button>
+                </div>
+            </div>
+
+            <!-- Chat page end -->
+
+        </div>
+    </div>
+<!-- Profile structure end -->
+
+{% endblock %}

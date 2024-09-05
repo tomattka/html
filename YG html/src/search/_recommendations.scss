@@ -1,0 +1,23 @@
+.recommendations{
+    @include contentWrapper();
+    width: 1170px;
+    margin-bottom: 90px;
+    @media (max-width: 480px){ margin-bottom: 60px;}
+
+    &__search-results{
+        margin-top: 30px;        
+    }
+
+    h3{        
+        @media (max-width: 1190px){
+            text-align: center;
+        }
+    }
+
+    noindex{
+        @media (max-width: 679px) {
+            width: 100%;
+        }
+    }
+
+}

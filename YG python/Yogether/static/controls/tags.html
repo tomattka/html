@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Tags</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="css/tags/tags.css">
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/tags.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Structure and classes of .tags are matter for js, don't change -->
+        <div class="tags-frame">
+            <div id="tags1" class="tags tags-frame__tags">
+                <div id="input-box1" class="input-box">
+                    <input type="text" class="input-box__hint input-autowidth" value="" size="2" maxlength="50" disabled>
+                    <input type="text" class="input-box__input input-autowidth" value="" size="2" maxlength="50">
+                </div>
+            </div>
+            <div id="tags-error1" class="tags-error tags-frame__error">Данный тег уже внесён в список!</div>
+            <!--div class="tags-select">
+                <a href="#" class="tags-select__item">Москва</a>
+                <a href="#" class="tags-select__item selected">Московская область</a>
+                <a href="#" class="tags-select__item">Подмосковье</a>
+                <a href="#" class="tags-select__item">Москаленки</a>
+            </div-->
+        </div>
+
+        <div class="tags-frame" style="margin-top: 30px;">
+            <div id="tags2" class="tags tags-frame__tags">
+                <div class="tags__item">йога<button tabindex="-1"><img src="img/tag_close.png" alt="Закрыть"></button></div>
+                <div class="tags__item">медитация<button tabindex="-1"><img src="img/tag_close.png" alt="Закрыть"></button></div>
+                <div class="tags__item">осознанность<button tabindex="-1"><img src="img/tag_close.png" alt="Закрыть"></button></div>
+                <div class="tags__item">практики<button tabindex="-1"><img src="img/tag_close.png" alt="Закрыть"></button></div>
+                <div class="tags__item">тантра<button tabindex="-1"><img src="img/tag_close.png" alt="Закрыть"></button></div>
+                <div class="tags__item">мантра<button tabindex="-1"><img src="img/tag_close.png" alt="Закрыть"></button></div>
+                <div id="input-box2" class="input-box">
+                    <input type="text" class="input-box__hint input-autowidth" value="" size="2" maxlength="50" disabled>
+                    <input type="text" class="input-box__input input-autowidth" value="" size="2" maxlength="50">
+                </div>
+            </div>
+            <div id="tags-error2" class="tags-error tags-frame__error">Данный тег уже внесён в список!</div>
+        </div>        
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+{% extends "ygTemplates/tplProfile.html" %}
+
+{% load static %}
+
+{% block title %}Фотографии{% endblock %}
+{% block breadcrumbs %}<a href="{% url 'user_profile' user_id=user.id %}" class="title__link">Профиль</a><span>Фотографии</span>
+{% endblock %}
+
+
+{% block content %}
+<script src="{% static 'js/fancybox.umd.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/plugins/fancybox.css' %}" />
+
+<script src="{% static 'js/photos/photos-edit.js' %}"></script>
+<script src="{% static 'js/ajax/photos-edit-ajax.js' %}"></script>
+<style>
+    @import "{% static 'css/common/profile-structure.css' %}";
+    @import "{% static 'controls/css/input/input.css' %}";
+    @import "{% static 'css/content/photo_edit.css' %}";
+</style>
+
+    <!-- Profile edit start -->
+    <div class="profile-structure">
+        <div class="profile-structure__wrapper">
+
+            <!-- Profile menu start -->
+            {% include "../ygProfile/profile-menu.html" %}
+            <!-- Profile menu end -->
+
+            <!-- Photos start -->
+            <div class="photos profile-structure__photos">
+
+                <!-- File drop start -->
+                <div class="add-files photos__add">
+                    <div id="file-drop" class="add-files__drop file-drop">
+                        <button class="button file-drop__button">Выберите файлы</button>
+                        <div class="file-drop__comment">или перетащите файлы в это окно</div>
+                    </div>
+                    <form id="fAddPhotos" action="" method="post" enctype="multipart/form-data" class="no-display">
+                        {% csrf_token %}
+                        <input id="iFiles" name="iFiles" type="file" multiple>
+                    </form>
+                    <div class="add-files__loading"><img src="{% static 'img/common/loading.gif' %}"></div>
+                    <div class="add-files__message">Вы можете добавить суммарно до 10 фото.</div>
+                </div>
+                <!-- File drop end -->
+
+                <!-- Photo list start -->
+                <form id="fPhotos" action="savePhotos.html" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="photos__list">
+                        {{ photos|safe }}
+                    </div>
+                    <!-- Photo list end -->
+
+                </form>
+                {% if photos %}
+                <div class="photos__save-loading"><img src="{% static 'img/common/loading.gif' %}"></div>
+                <div class="photos__save-message">Изменения успешно сохранены.</div>
+                <button class="button photos__save">Сохранить</button>
+                {% endif %}
+
+            </div>
+            <!-- Photos end -->
+
+
+
+        </div>
+    </div>
+    <!-- Profile edit end -->
+{% endblock %}

@@ -1,0 +1,12 @@
+{% load static %}
+
+<form id="loginForm" name="loginForm" class="login" method="POST" action="{% url 'account_login' %}">
+  {% csrf_token %}
+  {{ form.as_p }}
+  {% if redirect_field_value %}
+  <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+  {% endif %}
+  <div id="login-progress" class="login-form__load"><img src="{% static 'img/popups/loading.gif' %}" width="40" alt="Загрузка" /></div>
+  <div id="login-error" class="login-form__error">Введено неверное сочетание логин–пароль. Проверьте данные и повторите попытку.</div>
+  <button id="login-form__login-button" class="button login-form__button" type="submit">Войти</button>
+</form>

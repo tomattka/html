@@ -1,0 +1,44 @@
+{% extends "ygTemplates/tplProfile.html" %}
+
+{% load static %}
+
+{% block title %}Сообщения{% endblock %}
+{% block breadcrumbs %}<a href="{% url 'user_profile' user_id=user.id %}" class="title__link">Профиль</a><span>Сообщения</span>
+{% endblock %}
+
+
+{% block content %}
+
+<style>
+    @import "{% static 'css/common/profile-structure.css' %}";
+    @import "{% static 'css/content/chat.css' %}";
+</style>
+
+<script src="{% static 'js/ajax/chat-ajax.js' %}"></script>
+
+<input id="my_id" type="hidden" value="{{ request.user.id }}">
+<input id="with_id" type="hidden" value="{{ chat_user.id }}">
+<audio id="player" src="{% static 'sound/message_sound.wav' %}"></audio>
+<!-- Profile structure start -->
+    <div class="profile-structure">
+        <div class="profile-structure__wrapper">
+
+            <!-- Profile menu start -->
+            {% include "../ygProfile/profile-menu.html" %}
+            <!-- Profile menu end -->
+
+            <!-- Chat list start -->
+            <div class="chat profile-structure__chat chat-list">
+                {% if message_list %}
+                {{ message_list|safe }}
+                {% else %}
+                <div class="chat-list__empty">Нет диалогов. Воспользуйтесь&nbsp;<a href="{% url 'user_search' %}">поиском</a>, чтобы&nbsp;найти собеседников.</div>
+                {% endif %}
+            </div>
+            <!-- Chat list end -->
+
+        </div>
+    </div>
+<!-- Profile structure end -->
+
+{% endblock %}

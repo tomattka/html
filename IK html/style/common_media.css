@@ -1,0 +1,213 @@
+@media only screen and (max-width: 1650px) {
+    header .menu-wrapper{
+        display: block;
+        text-align: right;
+    }
+    header ul.menu{
+        display: none;
+    }
+    header ul.menu li{
+        display: block;
+        margin: 0;        
+    }
+    header ul.menu li a{
+        display: inline-block;
+        text-align: right;
+        width: 360px;
+        box-sizing: border-box;
+        padding: 5px 0px 15px 10px;
+    }
+    header ul.menu li a.active{
+        border: none;
+    }
+    header .mobile-menu{
+        display: block;
+        text-align: right;
+    }
+    header .mobile-menu a{
+        display: inline-block;
+        margin-top: 15px;
+    }
+    header .mobile-menu img{
+        width: 42px;
+    }
+    /* footer */
+    footer ul.menu li{
+        margin-left: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 1440px) {
+    /* header */
+    header .lined{
+        margin: 35px 90px 0px 90px;
+    }
+    /* footer */
+    footer{
+        padding: 35px 90px 51px 90px;
+    }
+    footer .lined{
+        height: auto;
+        text-align: center;
+    }
+    footer a.logo, footer .company{
+        float: none;
+    }
+    footer .company{
+        display: block;
+        width: auto;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+    footer ul.menu{
+        display: block;
+        text-align: center;
+        padding: 0;
+    }
+    footer .adress{
+        width: 20vw;
+    }
+    footer .info, footer .develop{        
+        display: flex;
+        flex-direction: column;
+    }
+    footer .company{
+        order: 2;
+        margin-top: 56px;
+    }
+    footer .rekv{
+        order: 1;
+        text-align: center;
+        font-size: 17px;
+    }
+    footer .company a.dev-logo{
+        order: 2;
+        margin-top: 12px;
+    }
+    footer .company span.dev{
+        order: 1;
+        font-size: 16px;
+        margin-top: 25px;
+    }
+    footer{        
+        padding: 35px 90px 51px 90px;
+    }
+    footer .company img.sm{
+        display: none;
+    }
+    footer .company img.lg{
+        display: inline;
+    }
+
+}
+
+
+@media only screen and (max-width: 768px) {   
+    /* header */
+    header .lined{
+        margin: 30px 60px 0px 60px;
+        min-height: 60px;
+    }
+    header .logo img{
+        width: 217px;
+    }
+    header .mobile-menu a{
+        margin-top: 8px;
+    }
+    header .mobile-menu img{
+        width: 28px;
+    }
+    header ul.menu{
+        width: 100%;
+        padding-left: 0;
+        font-size: 18px;
+        line-height: normal;
+        margin-top: 20px;
+    }
+    header ul.menu li, header ul.menu li a{
+        text-align: center;
+    }
+    /* Navigation */
+    .breadcrumbs{
+        padding: 35px 15px 37px 15px;      
+    }   
+    /* Footer */
+    footer ul.menu{
+        font-size: 18px;
+    }
+    footer .adress, footer .phones, footer .contact{
+        display: block;
+        width: auto;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+    footer{        
+        padding: 35px 60px 51px 60px;
+    }
+}
+
+@media only screen and (max-width: 480px) {   
+    /* header */
+    header .lined{
+        margin: 18px 30px 0px 25px;
+        min-height: 50px;
+        padding-right: 0;
+    }    
+    header ul.menu li a{
+        padding: 7px 0px;
+        width: auto;
+    }
+    /* Navigation */
+    .breadcrumbs{
+        padding: 28px 15px 32px 15px;        
+        font-size: 14px;
+        line-height: 18px;
+    }    
+    .breadcrumbs a{
+        padding-bottom: 0;
+    }
+    /* Footer */
+    footer{
+        padding: 43px 30px 28px 24px;
+    }
+    footer a.logo img{
+        width: 238px;
+    }
+    footer .lined{
+        height: auto;
+    }
+    footer ul.menu{
+        text-align: center;
+        margin-top: 30px;
+    }
+    footer ul.menu li{
+        display: block;
+        margin-left: 0;
+        font-size: 20px;
+        line-height: 24px;
+    }
+    footer ul.menu li a{
+        padding-top: 0;
+    }    
+    footer .contact{
+        margin-top: 20px;
+    }
+    footer .contact a.email{
+        margin-top: 10px;
+    }
+    footer .contact .social a.vk{
+        margin-right: 20px;
+    }
+    footer .company{
+        font-size: 15px;
+    }
+    footer .company a.dev-logo{
+        margin-top: 5px;
+    }
+    footer .company span.dev{
+        font-size: 15px;
+    }
+}

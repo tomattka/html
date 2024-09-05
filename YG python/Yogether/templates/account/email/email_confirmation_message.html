@@ -1,0 +1,31 @@
+{% autoescape off %}
+<html lang="ru">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Yogether</title>
+</head>
+<body>
+    <table cellpadding="0" cellspacing="0" border="0" style="margin: 0; padding: 0; min-width: 320px; max-width: 700px; width: 100%;">
+        <tr>
+            <td style="background-color: #F3E3FF; padding: 10px;"><a href="http://yogether.ru" target="_blank"><img src="http://yogether.ru/img/mail/logo.png" width="180" alt="Yogether" /></a></td>
+        </tr>
+        <tr>
+            <td style="font-family: Raleway, Tahoma, Geneva, Verdana, sans-serif; height: 240px; vertical-align: top; padding: 20px 15px 45px 15px; font-size: 16px;">
+                <h1 style="color: #49497D; text-align: center; font-size: 32px;">Подтверждение аккаунта</h1>
+                <p>Вы получили это сообщение, поскольку данный e-mail был указан при регистрации аккаунта на сайте {{ current_site.name }}.</p>
+                <p>Для подтверждения вашего e-mail перейдите по ссылке:</p>
+
+                <p style="text-align: center; margin-top: 30px;"><a href=" {{ activate_url }}" style="background-color: #7551A8; padding: 10px 20px; color: white; text-decoration: none; border-radius: 8px; font-size: 16px;">Подтвердить</a></p>
+
+                <p style="margin-top: 45px; font-size: 14px; color: #454545;"><b>Обращаем Ваше внимание</b>, что на данный момент сайт находится на стадии бета-тестирования. При возникновении ошибок на сайте просьба сообщить по адресу <a href="mailto:mail@yogether.ru" style="color: #49497D;">mail@yogether.ru</a></p>
+            </td>
+        </tr>
+        <tr>
+            <td style="font-family: Raleway, Tahoma, Geneva, Verdana, sans-serif; background-color: #F3E3FF; padding: 10px; text-align: center; color: #49497D; font-size: 14px;">
+                <a href="http://yogether.ru/page/about" style="color: #49497D; margin: 0px 5px;">О проекте</a> | <a href="http://yogether.ru/search/" style="color: #49497D; margin: 0px 5px;">Участники</a> | <a href="http://yogether.ru/page/contacts" style="color: #49497D; margin: 0px 5px;">Контакты</a>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+{% endautoescape %}

@@ -1,0 +1,8 @@
+<ul class="user-popup__menu">
+    <li class="user-popup__menu-item"><a href="{% url 'user_profile' user_id=user.id %}" class="user-popup__menu-link">Моя страница</a></li>
+    <li class="user-popup__menu-item"><a href="{% url 'photos_edit' %}" class="user-popup__menu-link">Фотографии</a></li>
+    <li class="user-popup__menu-item"><a href="{% url 'chat_list' %}" class="user-popup__menu-link">Сообщения{{msg_count|safe}}</a></li>
+    <li class="user-popup__menu-item"><a href="{% url 'likes_incoming' %}" class="user-popup__menu-link">Симпатии{{likes_count|safe}}</a></li>
+    <li class="user-popup__menu-item"><a href="{% url 'user_config' %}" class="user-popup__menu-link">Настройки</a></li>
+    <li class="user-popup__menu-item"><a href="{% url 'account_logout' %}" class="user-popup__menu-link">Выход</a></li>
+</ul>

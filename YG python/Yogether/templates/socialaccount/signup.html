@@ -1,0 +1,23 @@
+{% extends "ygTemplates/tplRegistration.html" %}
+
+{% block content %}
+
+<div class="profile-form">
+
+    <h1>Регистрация</h1>
+
+    <p class="profile-form__desc">Вы собираетесь использовать свой аккаунт {{ account.get_provider.name }} для входа на сайт {{ site.name }}.<br>
+        В качестве последнего шага, пожалуйста, заполните следующую форму:</p>
+
+    <form class="signup" id="signup_form" method="post" action="{% url 'socialaccount_signup' %}">
+      {% csrf_token %}
+      {{ form.as_p }}
+      {% if redirect_field_value %}
+      <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+      {% endif %}
+      <button class="button profile-form__button" type="submit">Зарегистрироваться</button>
+    </form>
+
+</div>
+
+{% endblock %}

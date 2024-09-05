@@ -1,0 +1,41 @@
+{% extends "ygTemplates/tplRegistration.html" %}
+
+{% block title %}Вход в аккаунт{% endblock %}
+{% block breadcrumbs %}<span>Вход в аккаунт</span>
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+<div class="profile-form">
+
+  <h1>Войти</h1>
+
+  <form class="login" method="POST" action="{% url 'account_login' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% if redirect_field_value %}
+    <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+    {% endif %}
+    <button class="button profile-form__button profile-form__button-login" type="submit">Войти</button>
+  </form>
+
+  <div class="profile-form__links">
+      <a href="/accounts/password/reset/">Восстановление пароля</a>
+      <a href="/accounts/signup/">Регистрация</a>
+  </div>
+
+    {% load socialaccount %}
+    {% get_providers as socialaccount_providers %}
+    {% if socialaccount_providers %}
+    <h4>Войти с помощью соцсети</h4>
+    <div class="profile-form__socials">
+      <a href="{% provider_login_url 'vk' process='login' %}" class="profile-form__soc-button"><img src="{% static 'img/popups/vk.png' %}" alt="Вконтакте"></a>
+      <a href="{% provider_login_url 'yandex' process='login' %}" class="login-form__soc-button"><img src="{% static 'img/popups/yandex.png' %}" alt="Yandex"></a>
+    </div>
+    {% endif %}
+
+</div>
+
+{% endblock %}
+

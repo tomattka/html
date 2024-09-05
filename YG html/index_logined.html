@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Yogether</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap-4.5.2-dist/css/bootstrap.css">
+
+    
+    <!-- Fonts -->    
+    <link rel="stylesheet" href="css/common/fonts.css">    
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/common/common.css">	
+    <link rel="stylesheet" href="css/common/header.css">	
+
+    <link rel="stylesheet" href="css/content/index.css">   
+
+    <link rel="stylesheet" href="css/common/footer.css">
+    <link rel="stylesheet" href="css/common/popups.css">	
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/png">
+
+    <script src="js/jquery-3.6.0.min.js"></script> 
+    <script src="js/popups/popups.js"></script>
+    <script src="js/login.js"></script>   
+    <script src="js/popups/user-menu.js"></script>
+</head>
+<body>
+
+<!-- First Screen start -->
+<header class="first-screen">
+    <div class="first-screen__wrapper">
+
+        <!-- Menu block start -->
+        <div class="menu-block">
+            <figure class="menu-block__logo">
+                <a href="#"><img class="menu-block__logo-img" src="img/header/logo.svg" width="70" alt="Yogether"></a>
+                <figcaption class="menu-block__logo-figcaption"><a href="#" class="menu-block__link menu-block__logo-link">Yogether</a> <span class="menu-block__beta">beta</span></figcaption>
+            </figure>
+            <ul class="menu-block__menu">
+                <li class="menu-block__item"><a href="#" class="menu-block__link">Главная</a></li>
+                <li class="menu-block__item"><a href="#" class="menu-block__link">Участники</a></li>
+                <li class="menu-block__item"><a href="#" class="menu-block__link">О проекте</a></li>
+                <li class="menu-block__item"><a href="#" class="menu-block__link">Контакты</a></li>
+            </ul>
+            <!-- User menu block start -->
+            <div class="menu-block__user">
+
+                <a id="userpic" class="menu-block__userpic" href="#"><img src="img/header/userpic.jpg" alt="Фото пользователя"></a>
+
+                <!-- User menu popup start -->
+                <div id="usermenu" class="menu-block__user-popup user-popup">
+
+                    <div class="user-popup__triangle"><img src="img/popups/popup-triangle.svg" width="14" height="9" alt="Элемент сайта"></div>
+
+                    <div class="user-popup__box">
+                        <div class="user-popup__hello">Привет, Тамара!</div>
+                        <ul class="user-popup__menu">
+                            <li class="user-popup__menu-item"><a href="#" class="user-popup__menu-link">Моя страница</a></li>
+                            <li class="user-popup__menu-item"><a href="#" class="user-popup__menu-link">Сообщения <span class="amount-circle">7</span></a></li>
+                            <li class="user-popup__menu-item"><a href="#" class="user-popup__menu-link">Пункт меню</a></li>
+                            <li class="user-popup__menu-item"><a href="#" class="user-popup__menu-link">Пункт меню 2</a></li>
+                            <li class="user-popup__menu-item"><a href="#" class="user-popup__menu-link">Выход</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- User menu popup end -->
+
+            </div>
+            <!-- User menu block end -->
+
+            <div class="menu-block__mobile-buttons">
+                <a id="aLoginMob" href="#"><img src="img/header/login_mobile.png" alt="Вход"></a>
+                <a id="aMobMenu" class="menu-block__mob-bt-link" href="#"><img src="img/header/menu_mobile.png" alt="Меню" /></a>
+            </div>
+            
+        </div>
+        <!-- Menu block end -->
+
+        <div class="first-screen__tagline">
+            <h1>Место встречи единомышленников</h1>
+            <p>Сайт для поиска и общения единомышленников, <br>практикующих йогу и другие учения</p>
+        </div>
+
+        <div class="first-screen__buttons">
+            <a href="#features" class="button_empty">Подробнее</a>
+            <a href="#" class="button register">Регистрация</a>
+        </div>       
+
+    </div>
+</header>
+
+<!-- First Screen end -->
+
+
+<!-- Recently registered-->
+
+<div class="container people">
+    <div class="row">
+        <input type="text" placeholder="Введите интересующий вас запрос. Например, йога" class="search" />
+        <h2>Недавно зарегистрировались</h2>
+    </div>
+    <div class="row recent">
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex justify-content-center justify-content-md-start justify-content-lg-start justify-content-xl-start">
+            <div class="pinkbg">
+                <a href="#"><img src="img/index/people/ava1.jpg" alt="Амина Уилсон" class="avatar" /></a>
+                <p class="name"><a href="#">Амина<br>Уилсон</a></p>
+                <p class="about">25 лет, Нью Йорк</p>
+                <div class="interests"><a href="#">йога</a><a href="#">рейки</a><a href="#">биоэнергетика</a></div>
+            </div>
+        </div>        
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex justify-content-center justify-content-md-end justify-content-lg-center justify-content-xl-center">
+            <div class="pinkbg">
+                <a href="#"><img src="img/index/people/ava5.jpg" alt="Татьяна Антонова" class="avatar" /></a>
+                <p class="name"><a href="#">Татьяна<br>Антонова</a></p>
+                <p class="about">27 лет, Новосибирск</p>
+                <div class="interests"><a href="#">йога</a><a href="#">рейки</a><a href="#">биоэнергетика</a></div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex justify-content-center justify-content-md-start justify-content-lg-end justify-content-xl-end">
+            <div class="pinkbg">
+                <a href="#"><img src="img/index/people/ava8.jpg" alt="Баи Чжао" class="avatar" /></a>
+                <p class="name"><a href="#">Баи <br>Чжао</a></p>
+                <p class="about">38 лет, Шанхай</p>
+                <div class="interests"><a href="#">йога</a><a href="#">рейки</a><a href="#">биоэнергетика</a></div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 d-none d-md-flex d-lg-flex d-xl-flex justify-content-center justify-content-md-end justify-content-lg-start justify-content-xl-start">
+            <div class="pinkbg">
+                <a href="#"><img src="img/index/people/ava4.jpg" alt="Ольга Петрова" class="avatar" /></a>
+                <p class="name"><a href="#">Ольга<br>Петрова</a></p>
+                <p class="about">28 лет, Омск</p>
+                <div class="interests"><a href="#">йога</a><a href="#">рейки</a><a href="#">биоэнергетика</a></div>
+            </div>
+        </div>        
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 d-none d-lg-flex d-xl-flex justify-content-center">
+            <div class="pinkbg">
+                <a href="#"><img src="img/index/people/ava7.jpg" alt="Руслан Юсупов" class="avatar" /></a>
+                <p class="name"><a href="#">Руслан<br>Юсупов</a></p>
+                <p class="about">32 года, Пермь</p>
+                <div class="interests"><a href="#">йога</a><a href="#">рейки</a><a href="#">биоэнергетика</a></div>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 col-xl-4 d-none d-lg-flex d-xl-flex justify-content-center justify-content-lg-end justify-content-xl-end">
+            <div class="pinkbg">
+                <a href="#"><img src="img/index/people/ava3.jpg" alt="Карина Игнатова" class="avatar" /></a>
+                <p class="name"><a href="#">Карина<br>Игнатова</a></p>
+                <p class="about">23 года, Нижний Новгород</p>
+                <div class="interests"><a href="#">йога</a><a href="#">рейки</a><a href="#">биоэнергетика</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Features-->
+
+<div id="features" class="container-fluid features">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Наши преимущества</h2>
+            </div>
+        </div>
+        <div class="row items">
+            <div class="col-12 col-md-5 col-lg-4 col-xl-4">
+                <div class="item simple">
+                    <b>Простая <br />регистрация</b>
+                    <p>Есть над чем задуматься: ключевые особенности структуры проекта, которые представляют собой яркий пример.</p>
+                </div>
+                <div class="item friendly">
+                    <b>Дружелюбные <br />участники</b>
+                    <p>Значимость этих проблем очевидна и сложившаяся структура организации выявляет потребность принимаемых решений.</p>
+                </div>
+                <div class="item clever">
+                    <b>Умные <br />рекомендации</b>
+                    <p>Реплицированные с зарубежных истояников, современные исследования ограничены исключительно образом мышления!</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-lg-4 col-xl-4 d-none d-md-block d-lg-block d-xl-block">&nbsp;</div>
+            <div class="col-12 col-md-5 col-lg-4 col-xl-4">
+                <div class="item private">
+                    <b>Настройки <br />приватности</b>
+                    <p>Противоположная точка зрения подразумевает, что сторонники тоталитаризма в науке ограничены исключительно образом мышления.</p>
+                </div>
+                <div class="item good">
+                    <b>Перемены <br />к лучшему</b>
+                    <p>Для современного мира перспективное планирование прекрасно подходит для реализации приоритизации разума над эмоциями.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row register">
+            <div class="col-12">
+                <p>Регистрируйся и&nbsp;находи<br />единомышленников в&nbsp;своём городе</p>
+                <a href="#" class="button">Регистрация</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Video-->
+
+<div class="container video">
+    <div class="row">
+        <h2>О проекте</h2>
+        <div class="col-12 order-2 order-lg-1 order-xl-1">
+            <p>Для современного мира выбранный нами инновационный путь выявляет срочную потребность как самодостаточных, так и внешне зависимых концептуальных решений. Не следует, однако, забывать, что есть и новая модель развития общества.</p>
+        </div>
+        <div class="col-12 order-1 order-lg-2 order-xl-2">
+            <a href="#"><img src="img/index/player.jpg" alt="player" class="player" /></a>
+        </div>
+    </div>
+</div>
+
+<!-- Footer start -->
+
+<footer class="footer">
+    <div class="footer__wrapper">
+        <figure class="footer__logo">
+            <a href="#"><img class="footer__logo-img" src="img/footer/logo.svg" width="70" alt="Yogether"></a>
+            <figcaption class="footer__logo-figcaption"><a class="footer__link footer__logo-link" href="#">Yogether</a></figcaption>
+        </figure>
+        <div class="footer__center">
+            <ul class="footer__menu">
+                <li class="footer__menu-item"><a class="footer__link" href="#">Главная</a></li>
+                <li class="footer__menu-item"><a class="footer__link" href="#">Участники</a></li>
+                <li class="footer__menu-item"><a class="footer__link" href="#">О проекте</a></li>
+                <li class="footer__menu-item"><a class="footer__link" href="#">Контакты</a></li>
+            </ul>
+            <div class="footer__copyright">&copy; Yogether. Копирование материалов возможно только с разрешения владельца.</div>
+        </div>
+        <div class="footer__social">
+            <a href="#" class="footer__soc-link"><img src="img/footer/vk.png" alt="Вконтакте"></a>
+            <a href="#" class="footer__soc-link"><img src="img/footer/telegram.png" alt="Телеграм"></a>
+            <a href="#" class="footer__soc-link"><img src="img/footer/youtube.png" alt="Youtube"></a>
+            <a href="#" class="footer__soc-link"><img src="img/footer/ok.png" alt="Одноклассники"></a>
+        </div>
+    </div>
+</footer>
+
+<!-- Footer end -->
+
+<!-- Popups start -->
+
+<div id="darkscreen" class="darkscreen" style="display: block;"></div>
+        
+<div id="popups" class="popups" style="display: flex;">
+
+    <!-- Loggined mobile menu start -->
+    <div id="mobile-menu" class="mobile-menu" style="display: block; margin-left: -220px;">
+        <button id="mobile-menu-close" class="x-close mobile-menu__close"><img src="img/popups/close.png" alt="Закрыть"></button>
+        <div class="mobile-menu__user">
+            <img src="img/header/userpic.jpg" alt="Аватар" class="mobile-menu__user-pic">
+            <div class="mobile-menu__hello">Привет, <b>Тамара!</b></div>
+        </div>
+        
+        <ul class="mobile-menu__list mobile-menu__list-loggined">
+            <li class="mobile-menu__item"><a href="#" class="mobile-menu__link mobile-menu__link_home">Моя страница</a></li>
+            <li class="mobile-menu__item"><a href="#" class="mobile-menu__link mobile-menu__link_photos mobile-menu__link_selected">Фотографии</a></li>
+            <li class="mobile-menu__item"><a href="#" class="mobile-menu__link mobile-menu__link_messages">Сообщения</a></li>
+            <li class="mobile-menu__item"><a href="#" class="mobile-menu__link mobile-menu__link_notifications">Уведомления <span class="amount-circle">7</span></a></li>
+            <li class="mobile-menu__item"><a href="#" class="mobile-menu__link mobile-menu__link_friends">Мои друзья</a></li>
+            <li class="mobile-menu__item"><a href="#" class="mobile-menu__link mobile-menu__link_config">Настройки аккаунта</a></li>
+        </ul>
+        
+        <div class="mobile-menu__buttons mobile-menu__buttons_logined">
+            <button id="mobMenuLogin" class="button_empty mobile-menu__login">Выход</button>
+        </div>
+    </div>
+    <!-- Loggined mobile menu end -->
+
+</div>        
+
+<!-- Popups end -->
+
+</body>
+</html>

@@ -1,0 +1,371 @@
+@media only screen and (min-width: 1920px) {    
+    .mainpic{
+        height: 531px;
+        background: url('../img/page-header.jpg') no-repeat;
+        background-size: 100% auto;
+        background-position: center bottom;
+    }   
+}
+
+@media only screen and (max-width: 1650px) {
+    .mainpic{
+        background-position: left bottom;
+    }
+    /* Feedback */    
+    .content .feedback{
+        background-size: 55vw auto;
+        margin-top: -45px;
+        background-position-x: 45vw;
+    }
+    .content .feedback .items .item, .content .feedback .item .feedback-content{
+        min-height: auto;
+    }
+    .content .feedback .item .pic, .content .feedback .item .pic img{
+        width: 16vw;
+    }
+    .content .feedback .item .feedback-content{
+        width: 20vw;
+    }
+    .content .feedback .item .feedback-content .name{
+        font-size: 26px;
+        line-height: 35px;
+        white-space: nowrap;
+    }
+    .content .feedback .item .feedback-content .from{
+        font-size: 21px;
+        line-height: 27px;
+    }
+    .content .feedback .item .feedback-content .text p{
+        margin-top: 15px;
+        font-size: 16px;
+        line-height: 19px;
+    }
+
+}
+
+@media only screen and (max-width: 1440px) {
+    .mainpic{
+        height: 460px;
+    }
+    .content .feedback{
+        margin-top: -35px;
+    }
+    .content .feedback .wrapper{
+        padding: 9vw 90px 90px 90px;
+        text-align: left;
+    }
+    .content .feedback .info{
+        width: 15vw;
+    }
+    .content .feedback .items-frame{
+        width: 60vw;
+    }
+    .content .feedback .items .item{        
+        width: 27.7vw;
+        margin-right: 2vw;
+        height: auto;
+    }    
+    .content .feedback .item .pic, .content .feedback .item .pic img{
+        width: 27vw;
+    }
+    .content .feedback .item .pic{
+        margin-left: 6px;        
+        box-shadow: 0 5px 8px rgba(0,0,0,0.16);
+        margin-bottom: 25px;
+    }    
+    .content .feedback .item .feedback-content{
+        box-sizing: border-box;
+        float: none;
+        width: 100%;
+        height: auto;
+        padding-left: 5px;
+    }    
+    .content .feedback .item .feedback-content .name{
+        white-space: normal;
+    }    
+    
+    /* add feedback */    
+    .add-feedback .info, .add-feedback form.feedback-form{
+        display: block;
+        width: auto;
+    }
+    .add-feedback .info{
+        margin-bottom: 50px;
+    }
+
+}
+
+
+@media only screen and (max-width: 768px) {   
+    .mainpic{
+        height: 360px;
+    }
+    /* Page header */
+    .content{
+        margin-top: -80px;
+    }
+    .content h1{
+        width: 260px;
+        height: 36px;
+        font-size: 28px;
+        padding-top: 33px;
+    }   
+    /* Feedback */
+    .content .feedback{
+        margin-top: -25px;
+    }
+    .content .feedback .info{
+        width: 11vw;
+    }
+    .content .feedback .items-frame{
+        width: 55vw;
+    }
+    .content .feedback .items .item{        
+        width: 52vw;
+        margin-right: 0;
+    }    
+    .content .feedback .item .pic, .content .feedback .item .pic img{
+        width: 50.7vw;
+    }    
+    .content .feedback .item .feedback-content .name{
+        font-size: 23px;
+        line-height: 28px;
+    }    
+    .content .feedback .item .feedback-content .from{
+        font-size: 19px;
+        line-height: 23px;
+    }
+    .content .feedback .item .feedback-content .text p{
+        margin-top: 25px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+    /* Slider */
+    .content .feedback .slider .arrow{        
+        box-sizing: border-box;
+        width: 18px;
+        height: 20px;
+        background-size: 10px 20px;
+    }
+    .content .feedback .slider .arrow.left{
+        width: 21px;
+        border-right-width: 3px;
+    }
+    /* Add feedback form */       
+    .add-feedback .info{  
+        font-size: 18px;
+        text-align: center;
+        margin-right: 0;
+    }
+    .add-feedback form.feedback-form .buttons{
+        flex-direction: column;
+    }
+    .add-feedback form.feedback-form .buttons .send-wrapper,
+    .add-feedback form.feedback-form .buttons .attach-wrapper{
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .add-feedback form.feedback-form .buttons .send-wrapper{
+        order: 2;
+        margin-top: 40px;
+    }
+    .add-feedback form.feedback-form .buttons .attach-wrapper{
+        order: 1;
+    }    
+    .add-feedback form.feedback-form textarea.feedback{   
+        margin-bottom: 18px;
+        box-shadow: 0 5px 8px rgba(0,0,0,0.16);
+    } 
+    .message{
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 480px) {   
+    .mainpic{
+        background-image: url('../img/page-header_mobile@2x.png');
+        height: 271px;
+        background-size: 100% auto;
+    }
+    /* Page header */
+    .content{
+        margin-top: -60px;
+    }
+    .content h1{
+        width: 220px;
+        height: 32px;
+        font-size: 22px;
+        padding-top: 24px;
+    }
+    /* Feedback */    
+    .content .feedback{
+        background-size: 80vw auto;
+        margin-top: -15px;
+        background-position-x: 30vw;
+    }
+    .content .feedback .wrapper{
+        padding: 70px 30px 57px 20px;
+    }
+    .content .feedback .info{
+        width: 6vw;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .content .feedback .info .redline{
+        margin: 17px auto;
+    }
+    .content .feedback .items-frame{  
+        width: 81vw;
+        min-width: 270px;
+    }
+    .content .feedback .items .item{
+        width: 78vw;
+        min-width: 240px;
+        margin-right: 20px;
+    } 
+    .content .feedback .item .pic, .content .feedback .item .pic img{
+        width: 76vw;
+        min-width: 240px;
+    }   
+    .content .feedback .item .pic::before{
+        background-color: rgba(11, 13, 15, 0.01);  
+    }
+    .content .feedback .item .feedback-content .from{
+        margin-top: 5px;
+    }
+    /* Slider */
+    .content .feedback .slider{
+        margin-left: 24.8vw;
+        width: 67.2vw;
+        height: 35px;
+        margin-bottom: 94px;
+    }    
+    .content .feedback .slider .base{          
+        box-sizing: border-box;    
+        width: 67.2vw;
+        height: 34px;
+    }    
+    .content .feedback .slider .pos{        
+        box-sizing: border-box;
+        width: 45px; /* recalculated by script */
+        height: 35px;
+    }
+
+    /* Feedback form*/
+    .add-feedback{
+        padding: 24px 30px 105px 30px;
+    }
+    .add-feedback .frame{
+        padding: 33px 27px 45px 27px;
+    }
+    .add-feedback h2{    
+        font-size: 22px;
+        line-height: 27px;
+        margin-bottom: 30px;
+    }
+    .add-feedback .info{
+        display: block;
+        width: auto;        
+        font-size: 16px;
+        line-height: 21px;
+        margin-right: 0px;
+        padding-top: 0px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    .add-feedback form.feedback-form{
+        display: block;
+        width: auto;
+    }    
+    .add-feedback form.feedback-form input.name, .add-feedback form.feedback-form textarea.feedback{
+        font-size: 20px;
+        line-height: 27px;
+    }
+    .add-feedback .red-button{        
+        margin-bottom: 4px;
+    }
+    .add-feedback .red-button .base{    
+        font-size: 17px;
+        line-height: 44px;
+        padding: 0px 15px;
+    }
+    .add-feedback .red-button .base, .add-feedback .red-button .border{   
+        height: 44px;
+    }
+    .add-feedback form.feedback-form a.attach{        
+        margin-left: 0px;
+    }
+    .add-feedback .red-button .border{
+        border-width: 2px;
+        top: 4px;
+        left: 4px;
+    }    
+    .add-feedback .red-button .animation-right{        
+        right: -4px;
+        width: 4px;
+        /* height: 48px; */
+    }
+    .add-feedback .red-button .animation-bottom{
+        bottom: -4px;
+        height: 4px;
+    }
+    
+     /* Feedback message */
+     .message{
+        width: 310px;
+        min-height: 140px;
+        font-size: 14px;
+        line-height: 18px;
+        margin-top: 25vh;
+    }
+    .message .close{
+        text-align: right;
+        padding: 20px 18px 0px 0px;
+    }    
+    .message .close img{
+        width: 15px;
+    }
+    .message .text{
+        padding: 27px 31px 38px 32px;
+    }
+}
+
+
+@media only screen and (max-width: 375px) {
+    /* Page header */
+    .content h1{
+        width: 190px;
+    }
+    .mainpic{
+        background-size: 375px auto;
+    }
+    /* Feedback */    
+    .content .feedback{
+        margin-top: -15px;
+    }
+    .content .feedback .wrapper{
+        padding: 60px 20px 45px 20px;
+    }
+    .content .feedback .items-frame{  
+        width: 81vw;
+        min-width: 240px;
+    }
+    .content .feedback .items .item{
+        width: 76vw;
+        min-width: 210px;
+    } 
+    .content .feedback .item .pic, .content .feedback .item .pic img{
+        width: 74vw;
+        min-width: 210px;
+    }   
+    /* Slider */
+    .content .feedback .slider{
+        width: 60vw;
+        margin-left: 30vw;
+    }    
+    .content .feedback .slider .base{     
+        width: 60vw;
+    }    
+
+}

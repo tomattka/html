@@ -1,0 +1,14 @@
+{% load static %}
+<div id="mobile-menu" class="mobile-menu">
+    <button id="mobile-menu-close" class="x-close mobile-menu__close"><img src="{% static 'img/popups/close.png' %}" alt="Закрыть"></button>
+    <ul class="mobile-menu__list">
+        <li class="mobile-menu__item"><a href="/" class="mobile-menu__link">Главная</a></li>
+        <li class="mobile-menu__item"><a href="{% url 'user_search' %}" class="mobile-menu__link">Участники</a></li>
+        <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">О проекте</a></li>
+        <li class="mobile-menu__item"><a href="#" class="mobile-menu__link">Контакты</a></li>
+    </ul>
+    <div class="mobile-menu__buttons">
+        <button id="mobMenuLogin" class="button_empty mobile-menu__login">Вход</button>
+        <a href="/accounts/signup/" class="button mobile-menu__register">Регистрация</a>
+    </div>
+</div>

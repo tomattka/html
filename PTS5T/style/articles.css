@@ -1,0 +1,65 @@
+/* Категории */
+.page .cats h2{
+    margin-bottom: 30px;
+}
+.page .cats ul li{
+    list-style-type: none;
+    border-top: #aeaeae solid 1px;
+    text-transform: uppercase;
+    font-family: Roboto;
+    font-size: 16px;
+    padding: 10px 15px 10px 15px;
+}
+.page .cats ul{
+    padding-left: 0px;
+}
+.page .cats h2{
+    font-weight: normal;
+}
+.page .cats a#catroll{
+    display: none;
+    margin-left: 10px;
+    color: gray;
+}
+
+/* Cписок */
+.page ul.news{
+	display: block;
+	padding: 75px 75px 0px 75px;
+	margin: 0px;
+}
+.page ul.news li{
+	padding: 30px;
+	border-bottom: 1px solid #dadada;
+	list-style: none;
+	color: #1d1d1b;
+	font-size: 24px;
+	font-family: 'Microsoft Sans Serif';
+	min-height: 100px;
+}
+.page ul.news span{
+    display: block;
+    font-size: 18px;
+    font-family: Roboto;
+    margin: 15px 0px 15px 0px;;
+}
+.page ul.news time{
+    display: block;
+    font-size: 16px;
+    color: #454544;
+    font-family: Roboto;
+    font-style: italic;
+
+}
+
+/* Информеры */
+#informer-money table{
+	margin: auto;
+    width: 100% !important;
+}
+.informer {
+    margin-top: 30px;
+}
+    #informer-forex td, #informer-fond td, .informer-bottom td {
+        padding: 5px;
+    }

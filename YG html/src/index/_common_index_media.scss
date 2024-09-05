@@ -1,0 +1,99 @@
+/* убираю отступы у сетки бутстрапа для больших размеров */
+ @media only screen and (min-width: 1260px) {
+    header{
+        padding: inherit 0px;
+    }
+    header .row div{
+        padding: 0px;
+    }
+ }
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+    h2{
+        font-size: 36px;
+    }
+    header .mobile-buttons{
+        padding-top: 9px;
+    }    
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 767px) {
+    h2{
+        font-size: 28px;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+    h2{
+        font-size: 24px;
+    }
+    /* Первый экран */
+    header{
+        padding: 0px;
+        padding-top: 20px;
+    }
+    header figure.logo img{
+        width: 52px;
+        margin-right: 8px;
+    }
+    header figure.logo figcaption{
+        font-size: 18px;
+        line-height: 22px;
+        padding-top: 12px;
+    }
+    header .mobile-buttons{
+        padding-top: 0px;
+    }
+    
+    /* ------------- Окно регистрации 320-480 ------------- */
+    #regform{
+        width: 100%;
+        margin: 30px auto;
+        left: 0;
+        top: 0;
+    }
+    #regform .content{
+        padding: 30px 15px 60px 15px;
+    }
+    #regform h3{
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+}
+
+/* Smallest phones */
+@media only screen and (max-width: 319px) {
+    h2{
+        font-size: 18px;
+    }
+    header .mobile-buttons a.login{
+        display: none;
+    }
+    /* Форма регистрации */    
+    #regform{
+        min-width: 210px;
+    }
+    #regform .content{
+        padding: 30px 10px 30px 10px;
+    }
+    #regform h3{
+        font-size: 18px;
+        line-height: 20px;
+    }
+    #regform p.desc{
+        font-size: 14px;
+    }
+
+}
+
+/* Убираем фиксацию окна регистрации */
+@media only screen and (max-height: 660px){
+    #regform{        
+        position: absolute;
+    }
+}

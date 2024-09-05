@@ -1,0 +1,293 @@
+/* Page header */
+.mainpic{
+    height: 531px;
+    background: url('../img/page-header.jpg') no-repeat;
+    background-size: auto 100%;
+    background-position: top center;
+    text-align: center;
+}
+.content{
+    text-align: center;
+    margin-top: -120px;
+}
+.content h1{
+    display: inline-block;
+    background-color: white;
+    width: 479px;
+    height: 35px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    line-height: 1;
+    padding-top: 52px;
+    color: #292929;
+    font-weight: 500;
+}
+
+
+/* Feedback */
+.content .feedback{
+    margin-top: -35px;
+    background: url('../img/feedback_cr.png') no-repeat;
+    background-position: top right;
+}
+.content .feedback .wrapper{
+    padding: 154px 5.8vw 90px 6.8vw;
+    white-space: nowrap;
+}
+.content .feedback .info{
+    width: 3.5vw;
+    display: inline-block;
+    overflow: hidden;
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    color: #292929;
+    font-weight: 500;
+    vertical-align: top;
+}
+.content .feedback .info .redline{
+    display: inline-block;
+    width: 4px;
+    height: 78px;
+    background-color: #EF3D39;
+    margin: 22px auto;
+}
+.content .feedback .items-frame{
+    width: 82.8vw; /* item width * 2 + (1 margin) */
+    display: inline-block;
+    overflow: hidden;
+
+}
+.content .feedback .items{
+    float: left;
+    white-space: nowrap;
+}
+.content .feedback .items .item{
+    display: inline-block;
+    vertical-align: top;
+    width: 39vw;
+    min-height: 596px;
+    margin-right: 4vw;
+    padding-left: 12px;
+    padding-bottom: 7px;
+}
+.content .feedback .item .pic{
+    float: left;
+    height: auto;
+    box-shadow: 0 10px 16px rgba(0,0,0,0.16);
+    position: relative;
+}
+.content .feedback .item .pic, .content .feedback .item .pic img{
+    width: 20vw;
+}
+.content .feedback .item .pic::before { /* Image darkened */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(11, 13, 15, 0.3);  
+    z-index: 1;
+    transition: background-color 0.3s;
+}
+.content .feedback .item .pic:hover::before{ /* Darkness removement */
+    background-color: rgba(11, 13, 15, 0.01);  
+}
+.content .feedback .item .feedback-content{
+    float: left;
+    width: 16.8vw;
+    min-height: 584px;
+    white-space: normal;
+    text-align: left;
+    padding-left: 1.77vw;
+}
+.content .feedback .item .feedback-content p{
+    margin: 0;
+}
+.content .feedback .item .feedback-content .name{
+    font-size: 30px;
+    line-height: 40px;
+    white-space: nowrap;
+}
+.content .feedback .item .feedback-content .from{
+    font-size: 23px;
+    line-height: 31px;
+}
+.content .feedback .item .feedback-content .text p{
+    margin-top: 31px;
+    font-size: 18px;
+    line-height: 26px;
+}
+/* Slider */
+.content .feedback .slider{
+    margin-left: 33.6vw;
+    height: 40px;
+    margin-bottom: 81px;
+}
+.content .feedback .slider .base{
+    position: absolute;
+    height: 37px;
+    border-bottom: 2px solid #B9B9B9;
+    text-align: right;
+}
+.content .feedback .slider, .content .feedback .slider .base{
+    width: 43vw;
+}
+.content .feedback .slider .pos{
+    position: absolute;
+    width: 114px; /* recalculated by script */
+    height: 36px;
+    border-bottom: 4px solid #EF3D39;
+    /* Moving by margin-left */
+}
+.content .feedback .slider .arrow{
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+    background: no-repeat;
+}
+.content .feedback .slider .arrow.left{
+    background-image: url('../img/arrow_left_inactive.png');
+    border-right: solid 4px #EF3D39;
+}
+.content .feedback .slider .arrow.right{
+    background-image: url('../img/arrow_right.png');
+    background-position: top right;
+}
+
+/* Feedback form*/
+.add-feedback{
+    background-color: #F1F1F1;
+    padding: 52px 214px 182px 214px;
+    padding: 52px 11.1vw 182px 11.1vw;
+}
+.add-feedback .frame{
+    border: 2px solid #292929;
+    padding: 56px 85px 65px 85px;
+    padding: 56px 4.4vw 65px 4.4vw;
+}
+.add-feedback h2{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    line-height: 43px;
+    font-weight: 400;
+    margin: 0 auto 37px auto;
+}
+.add-feedback .info{
+    display: inline-block;
+    vertical-align: top;
+    width: 562px;
+    width: 29vw;
+    font-size: 22px;
+    line-height: 30px;
+    margin-right: 130px;
+    margin-right: 6.8vw;
+    padding-top: 5px;
+}
+.add-feedback form.feedback-form{
+    display: inline-block;
+    vertical-align: top;
+    width: 570px;  
+    width: 29.7vw;
+}
+
+.add-feedback form.feedback-form input.name{
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 2px solid #292929;
+    background-color: #F1F1F1;
+    font-size: 22px;
+    line-height: 30px;
+    color: #292929;
+    margin-bottom: 27px;
+}
+
+.add-feedback form.feedback-form textarea.feedback{    
+    width: 100%;
+    box-sizing: border-box;
+    height: 150px;
+    padding: 11px 17px;
+    border: none;
+    box-shadow: 0 10px 16px rgba(0,0,0,0.16);
+    margin-bottom: 28px;
+    font-size: 22px;
+    line-height: 30px;
+    color: #292929;
+}
+.add-feedback form.feedback-form .buttons{
+    display: flex;
+}
+.add-feedback form.feedback-form .buttons .send-wrapper{
+    width: 300px;
+    float: left;
+}
+.add-feedback form.feedback-form .buttons .attach-wrapper{
+    text-align: right;
+    width: 100%;
+}
+.add-feedback .red-button .base{    
+    font-size: 21px;
+    line-height: 50px;
+    padding: 0px 20px;
+}
+.add-feedback .red-button .base, .add-feedback .red-button .border{   
+    height: 50px;
+}
+.add-feedback .red-button .animation-right, .add-feedback .red-button .animation-bottom{
+    background-color: #F1F1F1;
+}
+.add-feedback form.feedback-form a.attach{
+    display: inline-block;
+    vertical-align: top;
+    width: 114px;
+    height: 28px;
+    padding-right: 36px;
+    background-image: url('../img/path.png');
+    background-repeat: no-repeat;
+    background-position: top right;
+    text-align: right;
+    font-size: 20px;
+    line-height: 20px;
+    color: #292929;
+    margin-top: 2px;
+}
+.add-feedback .file-input{
+    display: none;
+}
+
+/* Feedback message */
+.darkened{
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    top: 0;
+    left: 0;
+    text-align: center;
+    display: none;
+}
+.message{
+    display: inline-block;
+    width: 721px;
+    min-height: 184px;
+    background-color: #F1F1F1;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    line-height: 27px;
+    color: #292929;
+    margin-top: 30vh;
+}
+.message .close{
+    text-align: right;
+    padding: 23px 20px 0px 0px;
+}
+.message .text{
+    padding: 25px 52px 44px 53px;
+}

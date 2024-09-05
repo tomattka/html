@@ -1,0 +1,580 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Largest Devices, Wide Screens */
+@media only screen and (min-width : 1920px) {
+    .welcome{        
+	    background-size: 100% auto; 
+    }
+}
+/*-----------------------------------------------------------------------------------*/
+/* NAVBAR CHANGE */
+@media only screen and (min-width : 1800px) {   
+    .navbar-expand-custom {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
+    .navbar-expand-custom .navbar-nav {
+        flex-direction: row;
+    }
+    .navbar-expand-custom .navbar-nav .nav-link {
+        padding-right: .5rem;
+        padding-left: .5rem;
+    }
+    .navbar-expand-custom .navbar-collapse {
+        display: flex!important;
+    }
+    .navbar-expand-custom .navbar-toggler {
+        display: none;
+    }
+    .topmenu li.lk{
+        display: none;
+    }
+}
+@media only screen and (max-width : 1800px) {  
+    .topmenu .right-menu{
+        display: none;
+    }
+    .topmenu .navbar-brand{
+        margin-left: 0px;
+    }
+    .topmenu ul{
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+    .topmenu a.nav-link{
+        height: 60px;
+        padding: 15px 0px 0px 45px !important;
+    }
+    .topmenu a.contacts{
+        background-position-x: 3px;
+    }
+    .welcome{
+        height: 92vh;
+    }
+    .welcome #email{
+        margin-top: 60px;
+    }
+}
+/*-----------------------------------------------------------------------------------*/
+
+/* ADDITIONAL for feedback */
+@media only screen and (max-width : 1301px) { 
+    footer{
+        margin-top: 300px;
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1201px) {   
+    /* ------------------ О ПТС5Т ------------------- */
+    .about{
+        margin-bottom: 120px;
+    }
+    .about table{
+        width: 70%;
+    }
+    .about .box, .about .empty{
+        display: none;
+    }
+    /* ------------------ ПРЕИМУЩЕСТВА ------------------ */
+    .advantages a.btn{
+        position: relative;
+        margin-bottom: 90px;
+        margin-top: 60px;
+    }    
+    /* ------------------ О СИСТЕМЕ ------------------ */
+    .more-about{
+        background-image: none;
+        background-color: white;
+    }
+    .more-about .container{
+        padding-top: 120px;
+        min-width: 100%;
+    }
+    .more-about ul{
+        padding: 60px 30px 90px 30px;
+    }
+    /* ------------------ Получите ПТС5Т ------------------ */
+    #getit{
+        background-image: url('../img/bp2.jpg');
+        background-position: center bottom;
+        background-size: 120% auto;
+    }
+    #getit .col-10{
+        max-width: 600px;
+    }
+    #getit  #getform p, #getit #getform input, #getit #getform a{
+        font-size: 18px;
+        line-height: normal;
+    }
+    
+    /* ------------------ FOOTER ------------------ */
+    footer{
+        margin-top: 0px;
+        padding-top: 90px;
+        padding-bottom: 90px;
+        background-image: none;
+    }
+    footer .copyright{
+        margin-top: 60px;
+        font-size: 24px;
+        text-align: center;
+        color: #1d2027;
+    }
+    footer .copyright a{
+        color: #1d2027;
+    }
+    
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {    
+    .welcome #caption{
+        font-size: 36px;
+    }
+    .welcome img{
+        width: 270px;
+    }
+    .welcome #email a{
+        font-size: 18px;
+        padding: 7px 15px 12px 15px;
+    }    
+    /* ------------------ О ПТС5Т ------------------ */
+    .about table{
+        width: 80%;
+    }
+    .purple-line{
+        height: 10px;
+    }
+    /* ------------------ ПРЕИМУЩЕСТВА ------------------ */
+    .advantages{
+        margin: 90px auto 30px auto;
+    }
+    .advantages table{
+        display: block;
+        width: 700px;
+        position: relative;
+        left: 50%;
+        margin-left: -350px;
+        margin-bottom: 0px;
+    }
+    .advantages td.empty{
+        display: none;
+    }
+    .advantages td.advantage{
+        display: block;
+        width: 700px;
+        height: auto;
+        margin-bottom: 30px;
+        padding: 30px;
+    }
+    .advantages img{
+        float: left;
+        position: relative;
+        margin-top: -57px;
+        margin-right: 30px;
+    }
+    .advantages p{
+        text-align: left;
+        margin-bottom: 0px;
+    }
+    .advantages h2{        
+        font-size: 36px;
+    }
+    .advantages h3{
+        margin-left: 130px;
+        text-align: left;
+        font-size: 24px;
+    }
+    .advantages a.btn{
+        margin-top: 30px;
+    }   
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+    .welcome{
+        background-size: auto 150%;
+        background-position: center center;
+        min-height: 500px;
+    }
+    #desc #info{
+        font-size: 24px;
+    }
+    /* ------------------ О ПТС5Т ------------------ */
+    .about{
+        margin: 60px auto 90px auto;
+    }
+    .about table{
+        width: 90%;
+    }
+    .about .info{
+        font-size: 22px;
+        padding: 30px 30px 55px 30px;
+    }    
+    .about a.get{
+        margin-top: -25px;
+        height: 50px;
+        line-height: 50px;
+        margin-left: -130px;
+        width: 260px;
+        font-size: 24px;
+    }
+    /* ------------------ ПРЕИМУЩЕСТВА ------------------ */
+    .advantages table{
+        width: 600px;
+        margin-left: -300px;
+    }
+    .advantages td.advantage{
+        width: 600px;
+    }
+    .advantages img{
+        margin-top: -42px;
+        width: 70px;
+        padding-bottom: 40px;
+    }
+    .advantages p{
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .advantages h2{        
+        font-size: 32px;
+        margin-bottom: 60px;
+    }
+    .advantages h3{
+        margin-left: 100px;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    .advantages a.btn{
+        width: 400px;
+        margin-left: -200px;
+        letter-spacing: 1px;
+    }
+    /* ------------------ О СИСТЕМЕ ------------------ */
+    .more-about .container{
+        padding-top: 75px;
+    }
+    .more-about h2{
+        font-size: 42px;
+    }
+    .more-about ul{
+        padding: 45px 0px 75px 0px;
+    }
+    .more-about ul li{
+        padding: 20px 20px 20px 120px;
+        font-size: 20px;
+        background-size: 60px auto;
+    }    
+    /* ------------------ Получите ПТС5Т ------------------ */
+    #getit{
+        background-size: auto 140%;
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+    #getit .col-10{
+        max-width: 540px;
+    }    
+    /* ------------------ FOOTER ------------------ */
+    .social a{
+        width: 60px;
+        height: 60px;
+        background-size: 60px;
+        margin: auto 10px;
+    }
+}
+
+/* ADDITIONAL less than 620 */
+@media only screen and (max-width : 620px) {   
+    .welcome #email{
+        margin-top: 45px;
+    }
+    /* ------------------ ПРЕИМУЩЕСТВА ------------------ */
+    .advantages table{
+        width: 470px;
+        margin-left: -235px;
+    }
+    .advantages td.advantage{
+        width: 470px;
+    }    
+    /* ------------------ Получите ПТС5Т ------------------ */
+    #getit{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    #getit #getform{
+        padding: 30px 30px 60px 30px;
+    }
+    #getit #getform input, #getit #getform a{
+        width: 90%;
+        margin-left: 5%;
+    }
+    /* ------------------ FOOTER ------------------ */
+    footer{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    footer .copyright{
+        margin-top: 45px;
+        font-size: 18px;
+    }
+    .social a{
+        width: 50px;
+        height: 50px;
+        background-size: 50px;
+        margin: auto 5px;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {        
+    .welcome img{
+        width: 240px;
+    }    
+    .welcome #caption{
+        font-size: 24px;
+    }
+    .welcome #email{
+        margin-top: 30px;
+    }
+    
+    /* ------------------ О ПТС5Т ------------------ */
+    .about .info{
+        font-size: 20px;
+        padding: 30px 30px 55px 30px;
+    }    
+    .about a.get{
+        margin-top: -20px;
+        height: 40px;
+        line-height: 40px;
+        margin-left: -100px;
+        width: 200px;
+        font-size: 18px;
+    }
+    .purple-line{
+        height: 5px;
+    }
+    /* ------------------ ПРЕИМУЩЕСТВА ------------------ */
+    .advantages{
+        margin: 60px auto 30px auto;
+    }
+    .advantages table{
+        width: 380px;
+        margin-left: -190px;
+    }
+    .advantages td.advantage{
+        width: 380px;
+        padding: 20px;
+    }
+    .advantages img{
+        margin-top: -42px;
+        width: 60px;
+        padding-bottom: 40px;
+        margin-right: 20px;
+    }
+    .advantages p{
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    .advantages h2{        
+        font-size: 26px;
+        margin-bottom: 50px;
+    }
+    .advantages h3{
+        margin-left: 80px;
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    .advantages a.btn{
+        width: 300px;
+        margin-left: -150px;
+        letter-spacing: normal;
+        font-size: 18px;
+        padding-top: 6px;
+        height: 40px;
+    }
+    
+    /* ------------------ О СИСТЕМЕ ------------------ */
+    .more-about .container{
+        padding-top: 60px;
+    }
+    .more-about h2{
+        font-size: 36px;
+    }    
+    .more-about ul{
+        padding-bottom: 30px;
+    }
+    .more-about ul li{
+        padding: 10px 10px 10px 90px;
+        font-size: 16px;
+        background-size: 50px auto;
+        background-position-x: 10px;
+    }
+
+    /* ------------------ Получите ПТС5Т ------------------ */
+    #getit #getform{
+        padding: 30px 30px 60px 30px;
+    }
+    #getit #getform input, #getit #getform a{
+        width: 100%;
+        margin-left: 0px;
+    }
+    #getit #getform p.longdesc{
+        font-size: 16px;
+    }
+    /* ------------------ FOOTER ------------------ */    
+    footer .copyright{
+        font-size: 16px;
+    }
+    .social a{
+        width: 40px;
+        height: 40px;
+        background-size: 40px;
+        margin: auto 5px;
+    }
+
+}
+
+/* ADDITIONAL super-small (less than 400 */
+@media only screen and (max-width : 400px) {   
+    /* ------------------ О ПТС5Т ------------------ */
+    .about .info{
+        font-size: 18px;
+    }
+    /* ------------------ ПРЕИМУЩЕСТВА ------------------ */
+    .advantages table{
+        width: 310px;
+        margin-left: -155px;
+    }
+    .advantages td.advantage{
+        width: 310px;
+        margin-bottom: 15px;
+    }
+    .advantages h2{        
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .advantages h3{
+        margin-left: 80px;
+        font-size: 20px;
+        margin-bottom: 15px;
+    }    
+    .advantages p{
+        font-size: 16px;
+        margin-top: 15px;
+    }
+    .advantages img{
+        margin-top: -32px;
+        padding-bottom: 50px;
+    }
+
+    /* ------------------ О СИСТЕМЕ ------------------ */
+    .more-about h2{
+        font-size: 30px;
+    }    
+    /* ------------------ Получите ПТС5Т ------------------ */
+    #getit .col{
+        max-width: 0px;
+    }
+    #getit #getform p.longdesc{
+        font-size: 14px;
+    }
+    /* ------------------ FOOTER ------------------ */
+    .social a{
+        width: 35px;
+        height: 35px;
+        background-size: 35px;
+        margin: auto 2px;
+    } 
+
+}
+/* ADDITIONAL (less than 370) */
+@media only screen and (max-width : 370px) {  
+    .about .info{
+        font-size: 16px;
+    }   
+}
+/* ADDITIONAL SMALLEST (less than 319) */
+@media only screen and (max-width : 319px) {  
+    /* ------------------ Меню и главный экран ------------------ */
+    .topmenu a.nav-link{
+        font-size: 18px;
+    }
+    .welcome img{
+        width: 220px;
+    }    
+    .welcome #caption{
+        font-size: 18px;
+    }    
+    /* ------------------ О ПТС5Т ------------------ */
+    .about{
+        margin: 30px auto 60px auto;;
+    } 
+    .about a.get{
+        margin-left: -70px;
+        width: 140px;
+    }
+    /* ------------------ ПРЕИМУЩЕСТВА ------------------ */
+    .advantages{
+        margin: 60px auto 0px auto;
+    }
+    .advantages table{
+        width: 230px;
+        margin-left: -115px;
+    }
+    .advantages td.advantage{
+        width: 230px;
+        margin-bottom: 15px;
+    }
+    .advantages h3{
+        font-size: 18px;
+        margin-left: 0px;
+    }
+    .advantages img{
+        display: none;
+    }    
+    .advantages a.btn{
+        width: 230px;
+        margin-left: -115px;
+        font-size: 16px;
+        padding-top: 6px;
+        height: 40px;
+        margin-top: 20px;
+    }
+    .video{
+        margin-top: 0px;
+    }
+    /* ------------------ О СИСТЕМЕ ------------------ */
+    .more-about h2{
+        font-size: 24px;
+    }
+    .more-about ul li{
+        padding: 10px;
+        background-image: none !important;
+    }
+    /* ------------------ ПОЛУЧИТЬ ------------------ */
+    #getit #getform{
+        padding: 30px 15px 30px 15px;
+    }
+    #getit .col{
+        display: none;
+    }
+    #getit .col-xs-12{
+        min-width: 100% !important;
+    }
+    #getit #getform p.longdesc{
+        display: none;
+    }
+    /* ------------------ FOOTER ------------------ */    
+    footer .copyright{
+        font-size: 16px;
+    }
+    .social a{
+        width: 24px;
+        height: 24px;
+        background-size: 24px;
+        margin: auto 1px;
+    }
+
+}

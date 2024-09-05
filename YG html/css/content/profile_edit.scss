@@ -1,0 +1,13 @@
+// Common files
+@import "../../src/common/variables";
+@import "../../src/common/mixins";
+
+// User info
+@import "../../src/user-profile/includes";
+@import "../../src/user-profile/user-info";
+
+// Profile structure
+@import "../../src/profile-edit/profile-edit-pen";
+@import "../../src/profile-edit/profile-edit_user-data";
+@import "../../src/profile-edit/profile-edit_user-info";
+@import "../../src/profile-edit/profile-edit_save-all";

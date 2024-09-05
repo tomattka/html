@@ -1,0 +1,28 @@
+{% load static %}
+<div id="mobile-menu" class="mobile-menu">
+    <button id="mobile-menu-close" class="x-close mobile-menu__close"><img src="{% static 'img/popups/close.png' %}" alt="Закрыть"></button>
+    <div class="mobile-menu__user">
+        <img
+                {% if user.profile_pic %}
+                        src="{{ user.profile_pic.url }}"
+                {% else %}
+                        src="{% static 'img/user-profile/no-photo.png' %}"
+                {% endif %}
+                alt="{{ user.first_name }} {{ user.last_name }}" class="mobile-menu__user-pic">
+        <div class="mobile-menu__hello">Привет, <b>{{ user.first_name }}!</b></div>
+    </div>
+
+    <ul class="mobile-menu__list mobile-menu__list-loggined">
+        <li class="mobile-menu__item"><a href="{% url 'user_profile' user_id=user.id %}" class="mobile-menu__link mobile-menu__link_home">Моя страница</a></li>
+        <li class="mobile-menu__item"><a href="{% url 'chat_list' %}" class="mobile-menu__link mobile-menu__link_messages">Сообщения{{msg_count|safe}}</a></li>
+        <li class="mobile-menu__item"><a href="{% url 'likes_incoming' %}" class="mobile-menu__link mobile-menu__link_friends">Симпатии{{likes_count|safe}}</a></li>
+        <li class="mobile-menu__item"><a href="{% url 'photos_edit' %}" class="mobile-menu__link mobile-menu__link_photos">Фотографии</a></li>
+        <li class="mobile-menu__item"><a href="{% url 'user_config' %}" class="mobile-menu__link mobile-menu__link_config">Настройки</a></li>
+        <li class="mobile-menu__item"><a href="{% url 'user_search' %}" class="mobile-menu__link mobile-menu__link_friends">Участники</a></li>
+    </ul>
+
+    <div class="mobile-menu__buttons mobile-menu__buttons_logined">
+        <a href="{% url 'account_logout' %}" class="button_empty mobile-menu__login">Выход</a>
+    </div>
+
+</div>

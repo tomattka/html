@@ -1,0 +1,176 @@
+$borderColor: rgba(42, 16, 78, 0.2);
+
+.profile-structure__chat{
+    margin-left: 30px;
+    margin-bottom: 60px;
+
+    @media (max-width: 480px) { margin-left: 0px; }
+}
+
+.chat{
+    border: 1px solid $borderColor;
+    border-radius: $cornerRadius;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+
+    @media (max-width: 480px) {
+        height: 480px;
+    }
+
+    &__top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 25px 10px 30px;
+        border-bottom: 1px solid $borderColor;
+    }
+
+    &__person{
+        img {
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            margin-right: 10px;
+        }
+
+        a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+
+            &:hover{text-decoration: underline;}
+        }
+    }
+
+    &__messages{        
+        overflow: auto;
+        overflow-x: hidden;
+        height: 100%;
+        vertical-align: bottom;
+        padding-bottom: 10px;
+
+        &::-webkit-scrollbar {
+            width: 8px;
+
+            @media (max-width: 480px){
+                width: 6px;
+            }
+        }
+        
+        &::-webkit-scrollbar-track {
+            background: none;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background: $linksColor; 
+            border-radius: 10px;
+        }
+          
+    }
+
+    &__message{        
+        margin: 15px;
+        
+        @media (max-width: 480px){
+            margin: 10px 5px;
+        }
+    }
+
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid $borderColor;
+        padding: 7px 10px 8px 15px;
+    }
+
+    &__input{
+        width: 100%;
+        border: none;
+        font-family: 'Raleway', sans-serif;
+        font-size: 16px;
+
+        &::placeholder{
+            color: $placeHolderColor;
+        }
+    }
+}
+
+.message{    
+    max-width: 600px;
+    float: right;
+    font-size: 14px;
+    display: flex;
+    align-items: flex-end;
+    
+
+    @media (max-width: 480px){
+        max-width: 87%;
+    }
+
+    &__body{
+        min-width: 270px;
+        border: 1px solid $borderColor;
+        border-radius: 8px 8px 0px 8px;
+        padding: 10px 10px 15px 15px;
+        
+        @media (max-width: 480px){
+            min-width: 0px;
+            padding: 8px 8px 10px 10px;
+        }
+    }
+
+    &__corner img{
+        position: relative;
+        vertical-align: bottom;
+        left: -1px;
+    }
+
+    &__header{        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__name{
+        font-weight: 600;
+        font-size: 16px;
+        margin-right: 15px;
+
+        @media (max-width: 480px){ font-size: 14px; }
+    }
+
+    &__time{
+        color: $paramTextColor;
+
+        @media (max-width: 480px){ font-size: 12px; }
+    }
+
+    &__text{
+        width: 100%;
+        flex-basis: 100%;
+        padding-right: 5px;
+        margin-top: 15px;
+        
+        @media (max-width: 480px){ margin-top: 10px; }
+    }
+
+    /* pink message */
+
+    &_from{
+        float: left;    
+    }
+
+    &_from &__body{
+        border: none;
+        border-radius: 8px 8px 8px 0px;
+        background-color: $activeMenuColor;
+    }
+
+    &_from &__corner img{
+        left: 0px;
+    }
+}

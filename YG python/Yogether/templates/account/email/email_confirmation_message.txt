@@ -1,0 +1,7 @@
+{% extends "account/email/base_message.txt" %}
+{% load account %}
+
+{% block content %}{% autoescape off %}
+Вы получили это сообщение, поскольку данный e-mail был указан при регистрации аккаунта на сайте {{ current_site.name }}.
+
+Для подтверждения вашего e-mail перейдите по ссылке:  {{ activate_url }}{% endautoescape %}{% endblock %}

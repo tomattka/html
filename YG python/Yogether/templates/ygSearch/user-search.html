@@ -1,0 +1,244 @@
+{% extends "ygTemplates/tplProfile.html" %}
+
+{% load static %}
+
+{% block title %}Поиск{% endblock %}
+{% block breadcrumbs %}<span>Поиск пользователей</span>
+{% endblock %}
+
+
+{% block content %}
+
+<style>
+    @import "{% static 'controls/css/tags/tags.css' %}";
+    @import "{% static 'controls/css/list/list.css' %}";
+    @import "{% static 'controls/css/select/select.css' %}?v=1.1";
+    @import "{% static 'controls/css/date/date.css' %}";
+    @import "{% static 'controls/css/input/input.css' %}";
+    @import "{% static 'controls/css/hint/hint.css' %}";
+
+    @import "{% static 'css/content/search.css' %}";
+</style>
+
+<script src="{% static 'controls/js/tags.js' %}"></script>
+<script src="{% static 'controls/js/list.js' %}"></script>
+<script src="{% static 'controls/js/select.js' %}"></script>
+<script src="{% static 'controls/js/date.js' %}"></script>
+<script src="{% static 'controls/js/hint.js' %}"></script>
+
+<script src="{% static 'js/ajax/ajax-hints.js' %}"></script>
+
+<script src="{% static 'js/search.js' %}"></script>
+<script src="{% static 'js/ajax/search-ajax.js' %}"></script>
+
+<!-- Search start -->
+<input id="hUserId" type="hidden" value="{{user.id}}">
+
+<div class="search">
+    <div class="search-input">
+        <input id="iSearch" type="text" class="search-input__input" placeholder="например, йога">
+        <button class="search-input__params-button"><img width="24" src="{% static 'img/search/search_params.svg' %}" /></button>
+    </div>
+
+    <!-- Search params start -->
+    <div class="search__params params">
+        <div class="params__frame">
+
+            <!-- Left part of params start -->
+            <div class="params__user-data">
+
+                <!-- Param item start -->
+                <div class="params__item">
+                    <div class="params__item-name">Город</div>
+                    <div class="params__item-value">
+                        <div class="select-list params__city">
+                            <div class="select-list__input-box">
+                                <input id="iLocation" type="text" class="select-list__input" autocomplete="off">
+                                <img src="{% static 'controls/img/list_clear.png' %}" class="select-list__clear" width="12" height="12" alt="clear">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Param item end -->
+                <div class="params__item">
+                    <div class="params__item-name">Возраст</div>
+                    <div class="params__item-value">
+                        <input id="iAgeFrom" type="text" class="input-simple params__age" placeholder="от"> — <input id="iAgeTill" type="text" class="input-simple params__age" placeholder="до">
+                    </div>
+                </div>
+
+                <div class="params__item">
+                    <div class="params__item-name">Пол</div>
+                    <div class="params__item-value">
+
+                        <div class="dropdown params__gender">
+                            <div class="dropdown__input-box">
+                                <button class="dropdown__invisible"></button>
+                                <input id="iGender" type="text" class="dropdown__input" value="любой" disabled>
+                                <img src="{% static 'controls/img/list_down.png' %}" class="dropdown__expand" width="13" alt="Expand">
+                            </div>
+                            <div class="dropdown__hints">
+                                <a href="#">любой</a>
+                                {{ vocabularies.genders|safe}}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Param marital start -->
+                    <div class="params__item">
+                        <div class="params__item-name">Статус</div>
+                        <div class="params__item-value">
+
+                            <div class="dropdown params__marital">
+                                <div class="dropdown__input-box">
+                                    <button class="dropdown__invisible"></button>
+                                    <input id="iMarital" type="text" class="dropdown__input" value="любой" disabled>
+                                    <img src="{% static 'controls/img/list_down.png' %}" class="dropdown__expand" width="13" alt="Expand">
+                                </div>
+                                <div class="dropdown__hints">
+                                    <a href="#">любой</a>
+                                    {{ vocabularies.statusList|safe}}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                <!-- Param marital end -->
+
+                <!-- Param experience start -->
+                    <div class="params__item">
+                        <div class="params__item-name">Опыт практики</div>
+                        <div class="params__item-value">
+
+                            <div class="dropdown params__experience">
+                                <div class="dropdown__input-box">
+                                    <button class="dropdown__invisible"></button>
+                                    <input id="iExperience" type="text" class="dropdown__input" value="любой" disabled>
+                                    <img src="{% static 'controls/img/list_down.png' %}" class="dropdown__expand" width="13" alt="Expand">
+                                </div>
+                                <div class="dropdown__hints">
+                                    <a href="#">любой</a>
+                                    {{ vocabularies.experience|safe}}
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                <!-- Param experience end -->
+            </div>
+            <!-- Left part of params end -->
+
+            <!-- Right part of params start -->
+            <div class="params__practice-block">
+
+                <!-- Param doctrine start -->
+                <div class="params__item">
+                    <div class="params__item-name">Учение&nbsp;<img src="{% static 'controls/img/hint.png' %}" class="hint" alt="hint">
+                            <div class="hint-box">
+                                <noindex>Название учения/верования. Например: йога, каббала, пастафарианство</noindex>
+                                <button class="hint-box__hidden"></button>
+                            </div>
+                    </div>
+                    <div class="params__item-value">
+
+                        <div id="tagsDoctrine" class="tags tags-frame__tags params__doctrine">
+                            <div class="input-box">
+                                <input type="text" class="input-box__hint input-autowidth" value="" size="2" maxlength="50" disabled>
+                                <input id="iDoctrine" type="text" class="input-box__input input-autowidth" value="" size="2" maxlength="50">
+                            </div>
+                        </div>
+                        <div class="tags-error tags-frame__error">Данный тег уже внесён в список!</div>
+
+                    </div>
+                </div>
+                <!-- Param doctrine end -->
+
+                <!-- Param school start -->
+                <div class="params__item">
+                    <div class="params__item-name">Традиция&nbsp;<img src="{% static 'controls/img/hint.png' %}" class="hint" alt="hint">
+                            <div class="hint-box">
+                                <noindex>Традиция — отдельная ветвь учения. Может носить имя гуру/учителя, конкретной школы/организации и т.п.</noindex>
+                                <button class="hint-box__hidden"></button>
+                            </div>
+                    </div>
+                    <div class="params__item-value">
+
+                        <div id="tagsTradition" class="tags tags-frame__tags params__doctrine">
+                            <div class="input-box">
+                                <input type="text" class="input-box__hint input-autowidth" value="" size="2" maxlength="50" disabled>
+                                <input id="iTradition" type="text" class="input-box__input input-autowidth" value="" size="2" maxlength="50">
+                            </div>
+                        </div>
+                        <div class="tags-error tags-frame__error">Данный тег уже внесён в список!</div>
+
+                    </div>
+                </div>
+                <!-- Param school end -->
+
+                <!-- Param practice start -->
+                <div class="params__item">
+                    <div class="params__item-name">Практики&nbsp;<img src="{% static 'controls/img/hint.png' %}" class="hint" alt="hint">
+                            <div class="hint-box">
+                                <noindex>Практики — конкретные упражнения/техники.<br>Например: хатха-йога, медитация, прокрастинация.</noindex>
+                                <button class="hint-box__hidden"></button>
+                            </div></div>
+                    <div class="params__item-value">
+
+                        <div id="tagsPractice" class="tags tags-frame__tags params__practice">
+                            <div class="input-box">
+                                <input type="text" class="input-box__hint input-autowidth" value="" size="2" maxlength="50" disabled>
+                                <input id="iPractice" type="text" class="input-box__input input-autowidth" value="" size="2" maxlength="50">
+                            </div>
+                        </div>
+                        <div class="tags-error tags-frame__error">Данный тег уже внесён в список!</div>
+
+                    </div>
+                </div>
+                <!-- Param practice end -->
+
+                <!-- Param interests start -->
+                <div class="params__item">
+                    <div class="params__item-name">Интересы</div>
+                    <div class="params__item-value">
+
+                        <div id="tagsInterests" class="tags tags-frame__tags params__interests">
+                            <div class="input-box">
+                                <input type="text" class="input-box__hint input-autowidth" value="" size="2" maxlength="50" disabled>
+                                <input id="iInterests" type="text" class="input-box__input input-autowidth" value="" size="2" maxlength="50">
+                            </div>
+                        </div>
+                        <div class="tags-error tags-frame__error">Данный тег уже внесён в список!</div>
+
+                    </div>
+                </div>
+                <!-- Param interests end -->
+
+                    <div class="params__apply">
+                        <a id="aClearFilters" href="#">Сброс фильтров</a>
+                        <button id="bApplyParams" class="button">Применить</button>
+                    </div>
+            </div>
+            <!-- Right part of params end -->
+        </div>
+    </div>
+    <!-- Search params end -->
+
+    <div class="search__more"><img id="imgLoading" src="{% static 'img/common/loading.gif' %}" class="search__loading" alt="Загрузка"></div>
+
+
+    <!-- Search results start -->
+    <div id="search-results" class="search__results">
+        {{ result|safe }}
+    </div>
+    <!-- Search results end -->
+
+    <div class="search__info">Сайт Yogether запущен недавно, и пока здесь не очень много пользователей. Мы активно продвигаем проект, и скоро участников станет больше!<br />
+            Вы можете помочь, поделившись ссылкой на сайт с друзьями или в соцсетях.</div>
+</div>
+<!-- Search end -->
+
+<!-- Recommendations  include "../ygProfile/recommendations.html" -->
+
+{% endblock %}

@@ -1,0 +1,23 @@
+.pen{
+    border: none;
+    background: none;
+    margin-left: 16px;
+    cursor: pointer;
+    display: flex;
+    visibility: hidden;
+    align-items: center;
+
+    @media (max-width: 1024px){
+        display: none;
+    }
+}
+
+.user-info__item:hover .pen,
+.user-data__name:hover .pen
+{
+    visibility: visible;
+
+    @media (max-width: 1024px){
+        visibility: hidden;
+    }
+}

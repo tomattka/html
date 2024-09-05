@@ -1,0 +1,18 @@
+{% load static %}
+
+{% if recommend %}
+<style>
+    @import "{% static 'css/content/recommendations.css' %}";
+</style>
+
+<script src="{% static 'js/ajax/recommend-ajax.js' %}"></script>
+
+<div class="recommendations">
+    <h3>Рекомендованные пользователи:</h3>
+
+    <div class="search__results recommendations__search-results">
+        {{ recommend|safe }}
+    </div>
+
+</div>
+{% endif %}

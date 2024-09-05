@@ -1,0 +1,37 @@
+{% extends "ygTemplates/tplRegistration.html" %}
+
+{% block title %}Подтвердить email{% endblock %}
+{% block breadcrumbs %}<span>Подтвердить email</span>
+{% endblock %}
+
+{% load account %}
+
+
+{% block content %}
+<div class="profile-form">
+
+<h1>Подтвердите e-mail адрес</h1>
+
+{% if confirmation %}
+
+{% user_display confirmation.email_address.user as user_display %}
+
+<p class="profile-form__desc">Пожалуйста, подтвердите, что хотите использовать адрес <a href="mailto:{{ confirmation.email_address.email }}">{{ confirmation.email_address.email }}</a>
+    для входа на сайт {{ site.name }}<p>
+
+<form method="post" action="{% url 'account_confirm_email' confirmation.key %}">
+{% csrf_token %}
+    <button class="button profile-form__button" type="submit">Подтвердить</button>
+</form>
+
+{% else %}
+
+{% url 'account_email' as email_url %}
+
+<p>Ссылка для подтверждения данного e-mail истекла или не верна. Пожалуйста, <a href="{{ email_url }}">осуществите повторный запрос на подтверждение</a>.<p>
+
+{% endif %}
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+.save-all{
+    text-align: center;
+    padding-top: 5px;
+    @media (min-width: 1025px){ display: none; }
+
+    &__message, &__loading{
+        margin-bottom: 16px;
+        display: none;
+    }
+    &__message_err{ color: $errorMsgColor; }
+
+    &__button{
+        width: 200px;
+        font-size: 14px;
+    }
+
+}

@@ -1,0 +1,9 @@
+<!-- Profile menu start -->
+<div class="profile-menu profile-structure__menu">
+    <a href="{% url 'user_profile' user_id=user.id %}" class="profile-menu__item profile-menu__item_home {{ menu_links.my_page }}">Моя страница</a>
+    <a href="{% url 'photos_edit' %}" class="profile-menu__item profile-menu__item_photos {{ menu_links.photos }}">Фотографии</a>
+    <a href="{% url 'chat_list' %}" class="profile-menu__item profile-menu__item_messages {{ menu_links.messages }}">Сообщения{{msg_count|safe}}</a> <!-- msg_count is a template tag -->
+    <a href="{% url 'likes_incoming' %}" class="profile-menu__item profile-menu__item_friends {{ menu_links.likes }}">Симпатии{{likes_count|safe}}</a>
+    <a href="{% url 'user_config' %}" class="profile-menu__item profile-menu__item_config {{ menu_links.config }}">Настройки</a>
+</div>
+<!-- Profile menu end -->

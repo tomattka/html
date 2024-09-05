@@ -1,0 +1,48 @@
+.user-info{
+    &__item{
+        @media (max-width: 680px){
+            display: block;
+            margin-bottom: 10px;
+        }
+    }
+
+    &__editable{
+        //display: flex;
+        display: none;
+        align-items: center;        
+        
+        @media (max-width: 1024px){
+            display: flex;
+            width: 100%;
+        }
+    }
+
+    &__save{
+        margin-left: 9px;
+        max-height: 46px;
+        
+        @media (max-width: 1024px){
+            display: none;
+        }
+    }
+
+    &__param{
+        display: flex;
+        align-items: center;
+    }
+
+    &__value{        
+        @media (max-width: 1024px){ display: none; }
+        span{ color: #B7B7D3; }
+    }
+
+    // elements
+    &__tags, &__select-list, &__dropdown, &__date{
+        width: 100%;
+    }
+    &__tags, &__input-simple{
+        min-width: 500px;
+        @media(max-width: 1200px){ min-width: 300px; }
+        @media(max-width: 480px){ min-width: none; }
+    }
+}

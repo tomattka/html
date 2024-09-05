@@ -1,0 +1,684 @@
+@charset "UTF-8";
+/* Variables */
+/* Configuration */
+h2 {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+  font-size: 44px;
+  letter-spacing: 0.01em;
+  color: #49497D;
+}
+
+@media (max-width: 992px) {
+  h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 320px) {
+  h2 {
+    font-size: 18px;
+  }
+}
+
+.first-screen {
+  height: 940px;
+  background: url("../../img/index/bg1-w-scroll.jpg") no-repeat;
+  background-position: top center;
+  min-width: 240px;
+}
+
+.first-screen a:hover {
+  color: #49497D;
+}
+
+.first-screen a.button:hover {
+  color: #FDFBFD !important;
+}
+
+@media (max-width: 992px) {
+  .first-screen {
+    background-size: auto 100%;
+    background-position: center bottom;
+    min-height: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 992px) and (min-width: 846px) and (max-height: 355px) {
+  .first-screen {
+    min-height: 500px;
+  }
+}
+
+.first-screen__wrapper {
+  width: 1170px;
+  margin: auto;
+  padding-top: 20px;
+}
+
+@media (max-width: 1200px) {
+  .first-screen__wrapper {
+    width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .first-screen__wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.first-screen__tagline {
+  padding-top: 250px;
+}
+
+@media (max-width: 992px) {
+  .first-screen__tagline {
+    padding-top: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .first-screen__tagline {
+    padding-top: 100px;
+  }
+}
+
+.first-screen__tagline h1, .first-screen__tagline p {
+  font-style: normal;
+  font-weight: 800;
+  font-size: 46px;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+  color: #49497D;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .first-screen__tagline h1, .first-screen__tagline p {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 480px) {
+  .first-screen__tagline h1, .first-screen__tagline p {
+    font-size: 28px;
+  }
+}
+
+.first-screen__tagline p {
+  margin-top: 7px;
+  font-size: 32px;
+}
+
+@media (max-width: 900px) {
+  .first-screen__tagline p {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .first-screen__tagline p {
+    font-size: 18px;
+  }
+}
+
+.first-screen__buttons {
+  margin-top: 50px;
+  margin-left: auto;
+  min-height: 160px;
+  padding-bottom: 160px;
+}
+
+.first-screen__buttons div {
+  padding: 0px;
+}
+
+.first-screen__buttons a {
+  padding: 14px 32px;
+  border: 2px solid #49497D;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #49497D;
+  margin-right: 24px;
+}
+
+@media (max-width: 480px) {
+  .first-screen__buttons a {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .first-screen__buttons a {
+    margin-right: 5px;
+  }
+}
+
+.first-screen__buttons a:hover {
+  text-decoration: none;
+  background-color: #49497D;
+  border-color: #49497D;
+  color: white;
+}
+
+.first-screen__buttons a.register {
+  background-color: #7551A8;
+  border-color: #7551A8;
+  color: white;
+  margin-right: 0px;
+}
+
+.first-screen__buttons a.register:hover {
+  text-decoration: none;
+  background-color: #AB89DB;
+  border-color: #AB89DB;
+}
+
+.first-screen ul {
+  margin: 0;
+}
+
+/* ------------------------------  Недавно зарегистрировались ------------------------------ */
+.people {
+  margin: 19px auto 120px auto;
+}
+
+.people input.search {
+  border: 1px solid rgba(42, 16, 78, 0.2);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 3px 12px -2px rgba(42, 16, 78, 0.15);
+          box-shadow: 0px 3px 12px -2px rgba(42, 16, 78, 0.15);
+  border-radius: 8px;
+  outline: none;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  width: 100%;
+  padding: 22.5px 22.5px 22.5px 67px;
+  background: url("../../img/index/search.png") no-repeat;
+  background-position: 22px 20px;
+  color: #49497D;
+}
+
+.people input.search::-webkit-input-placeholder {
+  color: #B7B7D3;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.people input.search:-ms-input-placeholder {
+  color: #B7B7D3;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.people input.search::-ms-input-placeholder {
+  color: #B7B7D3;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.people input.search::placeholder {
+  color: #B7B7D3;
+  font-weight: 500;
+  opacity: 1;
+}
+
+.people h2 {
+  margin: 60px auto;
+}
+
+.people div {
+  padding: 0px;
+}
+
+.people .pinkbg {
+  width: 370px;
+  height: 214px;
+  border-radius: 12px;
+  background: url("../../img/index/pattern.png") no-repeat;
+  background-position: right;
+  background-color: #FDFBFD;
+  padding: 30px;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+.people .avatar {
+  border-radius: 80px;
+  float: left;
+  margin-right: 24px;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 5px;
+}
+
+.people .name {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  color: #49497D;
+}
+
+.people .name a {
+  color: #49497D;
+}
+
+.people .name a:hover {
+  text-decoration: none;
+  color: #AB89DB;
+}
+
+.people .about {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+          font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #49497D;
+  margin-bottom: 5px;
+}
+
+.people .interests {
+  clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 89px;
+  max-height: 89px;
+  overflow: hidden;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: 14px;
+  -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+          font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #49497D;
+}
+
+@media (max-width: 480px) {
+  .people .interests {
+    height: 60px;
+    max-height: 60px;
+    margin-top: -5px;
+  }
+}
+
+.people .interests a {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #7551A8;
+  padding: 6px 12px;
+  background: #E6D6FD;
+  border-radius: 4px;
+  margin-right: 8px;
+  margin-bottom: 5px;
+  display: inline-block;
+  white-space: nowrap;
+  max-width: 450px;
+  overflow: hidden;
+}
+
+.people .interests a:hover {
+  text-decoration: none;
+  color: white;
+  background-color: #7551A8;
+}
+
+/* ------------------------------  Преимущества ------------------------------ */
+.features {
+  height: 1192px;
+  background: url("../../img/index/bg-girl.jpg") no-repeat;
+  background-position: top center;
+}
+
+.features h2 {
+  margin: 105px auto 119px auto;
+}
+
+.features .items {
+  height: 583px;
+}
+
+.features .item {
+  background-repeat: no-repeat;
+  padding-left: 72px;
+  min-height: 147px;
+  margin-bottom: 32px;
+}
+
+.features .item b {
+  display: block;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: #49497D;
+  margin-bottom: 16px;
+}
+
+.features .item p {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: #07071F;
+  width: 237px;
+}
+
+.features .item.simple {
+  background-image: url("../../img/index/simple.png");
+}
+
+.features .item.friendly {
+  background-image: url("../../img/index/friendly.png");
+}
+
+.features .item.clever {
+  background-image: url("../../img/index/clever.png");
+}
+
+.features .item.private {
+  background-image: url("../../img/index/private.png");
+}
+
+.features .item.good {
+  background-image: url("../../img/index/good.png");
+}
+
+.features .register {
+  margin-top: 46px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 120%;
+  letter-spacing: 0.01em;
+  color: #49497D;
+}
+
+.features .register p {
+  margin-bottom: 40px;
+}
+
+.features .register a.button {
+  margin-top: 40px;
+  padding: 14px 32px;
+  background: #7551A8;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+}
+
+.features .register a.button:hover {
+  text-decoration: none;
+  background-color: #AB89DB;
+}
+
+/* ------------------------------  Видео ------------------------------ */
+.video {
+  text-align: center;
+  margin: 90px auto 120px auto;
+  max-width: 970px;
+}
+
+.video h2 {
+  margin-bottom: 60px;
+}
+
+.video p {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0.01em;
+  color: #07071F;
+  margin-bottom: 40px;
+}
+
+.video .player {
+  max-width: 970px;
+  width: 100%;
+}
+
+/* ------------------------------  Медиа (все блоки кроме первого и футера) ------------------------------ */
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px) {
+  /* ------------- Недавно зарегистрировались 993-1200 ------------- */
+  .people .pinkbg {
+    width: 310px;
+  }
+  /* Видео */
+  .video {
+    margin: 90px auto 150px auto;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  /*  Недавно зарегистрировались  */
+  .people .pinkbg {
+    width: 350px;
+  }
+  /* ------------- Видео 481-767 ------------- */
+  .video {
+    margin: 80px auto 90px auto;
+  }
+  .video h2 {
+    margin-bottom: 30px;
+  }
+  .video .player {
+    margin-bottom: 45px;
+  }
+  .video p {
+    margin-bottom: 0px;
+  }
+  /* ------------- Преимущества 769-992 ------------- */
+  .features {
+    height: auto;
+    background: url("../../img/index/bg-girl_light.jpg") no-repeat;
+    background-position: center bottom;
+    background-color: #f9f9f9;
+    padding-bottom: 120px;
+    overflow: hidden;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 767px) {
+  /* Недавно зарегистрировались */
+  .people {
+    margin-bottom: 80px;
+  }
+  .people input.search {
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+  .people .pinkbg {
+    width: 400px;
+  }
+  /* ------------- Преимущества 481-767 ------------- */
+  .features {
+    padding-bottom: 95px;
+    overflow: auto;
+  }
+  .features h2 {
+    margin: 90px auto 60px auto;
+  }
+  .features .item {
+    width: 400px;
+    margin: auto;
+    margin-bottom: 32px;
+    min-height: auto;
+  }
+  .features .item p {
+    width: auto;
+  }
+  .features .item br {
+    display: none;
+  }
+  .features .register {
+    margin-top: 60px;
+    font-size: 22px;
+  }
+  /* Видео */
+  .video p {
+    font-size: 16px;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  /* ------------- Недавно зарегистрировались 320-480 ------------- */
+  .people {
+    margin-bottom: 35px;
+  }
+  .people input.search {
+    width: 100%;
+    margin: auto 15px;
+    padding: 14px 16px 16px 46px;
+    background-position: 14px 14px;
+    background-size: 20px;
+  }
+  .people h2 {
+    margin: 40px auto;
+    width: 100%;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  .people .pinkbg {
+    width: 100%;
+    /* min-width: 288px; ? */
+    max-width: 370px;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: 90%;
+    height: 178px;
+    margin-bottom: 20px;
+    padding: 20px;
+    padding-right: 5px;
+  }
+  .people .name {
+    margin-bottom: 12px;
+  }
+  .people .about {
+    height: 32px;
+    line-height: 18px;
+  }
+  /* ------------- Преимущества 320-480 ------------- */
+  .features {
+    padding-bottom: 78px;
+  }
+  .features h2 {
+    margin: 40px auto;
+  }
+  .features .items {
+    height: auto;
+  }
+  .features .items .col-12 {
+    padding: 0px;
+  }
+  .features .item {
+    width: auto;
+    padding-left: 60px;
+    background-size: 40px;
+  }
+  .features .item b {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+  .features .register {
+    font-size: 20px;
+    margin-top: 28px;
+    /* +32px from item */
+  }
+  .features .register p {
+    margin-bottom: 32px;
+  }
+  .features .register a.button {
+    padding: 13px 24px;
+  }
+  /* Видео */
+  .video {
+    margin: 70px auto 80px auto;
+  }
+  .video h2 {
+    margin-bottom: 20px;
+  }
+  .video .player {
+    margin-bottom: 40px;
+  }
+  .video p {
+    font-size: 14px;
+    line-height: 160%;
+  }
+}
+
+/* Smallest phones */
+@media only screen and (max-width: 319px) {
+  /* Недавно зарегистрировались <319 */
+  .people {
+    min-width: 240px;
+  }
+  .people input.search {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .people .pinkbg {
+    padding: 15px;
+    height: auto;
+  }
+  .people .avatar {
+    width: 60px;
+    height: 60px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+  }
+  .people .name {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .people .interests a {
+    white-space: nowrap;
+  }
+  /* Преимущества <319 */
+  .features .item {
+    padding-left: 44px;
+    background-size: 30px;
+  }
+  .features .item b {
+    font-size: 14px;
+  }
+  .features .item p {
+    font-size: 12px;
+  }
+  .features .register {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+}
+/*# sourceMappingURL=index.css.map */

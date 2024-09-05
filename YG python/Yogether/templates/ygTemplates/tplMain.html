@@ -1,0 +1,239 @@
+<!doctype html>
+{% load static %}
+{% load chat_tag %}
+{% load likes_tag %}
+{% get_unread_messages user.id as msg_count %}
+{% get_new_likes user.id as likes_count %}
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>Yogether | Йога-знакомства, общение, поиск единомышленников</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!--  Seo and social  -->
+    <meta name="description" content="Сайт для знакомств и поиска единомышленников, практикующих йогу и другие учения" />
+
+    <meta property="og:title" content="Yogether | Йога-знакомства, общение, поиск единомышленников"/>
+    <meta property="og:description" content="Сайт для знакомств и поиска единомышленников, практикующих йогу и другие учения"/>
+    <meta property="og:image" content="https://yogether.ru/Yogether/static/img/index/bg-girl.jpg"/>
+    <meta property="og:url" content="https://yogether.ru/"/>
+
+    <meta itemprop="name" content="Yogether | Йога-знакомства, общение, поиск единомышленников"/>
+    <meta itemprop="description" content="Сайт для знакомств и поиска единомышленников, практикующих йогу и другие учения"/>
+    <meta itemprop="image" content="https://yogether.ru/Yogether/static/img/index/bg-girl.jpg"/>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{% static 'bootstrap-4.5.2-dist/css/bootstrap.css' %}">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="{% static 'css/common/fonts.css' %}">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="{% static 'css/common/common.css' %}">
+    <link rel="stylesheet" href="{% static 'css/common/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/content/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/common/footer.css' %}">
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/common/popups.css' %}">
+
+    <!-- Icons -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/png">
+
+    <!--  Scripts  -->
+    <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+
+    <script src="{% static 'js/popups/user-menu.js' %}"></script>
+    <script src="{% static 'js/popups/popups.js' %}"></script>
+    <script src="{% static 'js/login.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</head>
+<body>
+
+<!-- First Screen start -->
+<header class="first-screen">
+    <div class="first-screen__wrapper">
+
+        <!-- Menu block start -->
+        <div class="menu-block">
+            <figure class="menu-block__logo">
+                <a href="/"><img class="menu-block__logo-img" src="{% static 'img/header/logo.svg' %}" width="70" alt="Yogether"></a>
+                <figcaption class="menu-block__logo-figcaption"><a href="/" class="menu-block__link menu-block__logo-link">Yogether</a> <span class="menu-block__beta">beta</span></figcaption>
+            </figure>
+            <ul class="menu-block__menu">
+                <li class="menu-block__item"><a href="/" class="menu-block__link">Главная</a></li>
+                <li class="menu-block__item"><a href="{% url 'user_search' %}" class="menu-block__link">Участники</a></li>
+                <li class="menu-block__item"><a href="/page/about" class="menu-block__link">О проекте</a></li>
+                <li class="menu-block__item"><a href="/page/contacts" class="menu-block__link">Контакты</a></li>
+            </ul>
+
+            <div class="menu-block__buttons">
+                {% if user.is_authenticated %}
+
+                <!-- User menu block start -->
+                <div class="menu-block__user">
+
+                    <a id="userpic" class="menu-block__userpic" href="#"><img
+                        {% if user.profile_pic %}
+                                src="{{ user.profile_pic.url }}"
+                        {% else %}
+                                src="{% static 'img/user-profile/no-photo.png' %}"
+                        {% endif %}
+                        alt="{{ user.first_name }} {{ user.last_name }}"></a>
+
+                    <!-- User menu popup start -->
+                    <div id="usermenu" class="menu-block__user-popup user-popup">
+
+                        <div class="user-popup__triangle"><img src="{% static 'img/popups/popup-triangle.svg' %}" width="14" height="9" alt="Элемент сайта"></div>
+
+                        <div class="user-popup__box">
+                            <div class="user-popup__hello">Привет, {{user.first_name}}!</div>
+                            {% include "../ygTemplates/headerMenu.html" %}
+                        </div>
+
+                    </div>
+                    <!-- User menu popup end -->
+
+                </div>
+                <!-- User menu block end -->
+
+                {% else %}
+                <a id="aLogin" href="{% url 'account_login' %}" class="menu-block__login menu-block__link">Вход</a>
+                <a id="bRegister_" href="{% url 'account_signup' %}" class="menu-block__register button">Регистрация</a>
+                {% endif %}
+            </div>
+
+            <div class="menu-block__mobile-buttons">
+                {% if not user.is_authenticated %}
+                <a id="aLoginMob" href="{% url 'account_login' %}"><img src="{% static 'img/header/login_mobile.png' %}" alt="Вход"></a>
+                {% endif %}
+                <a id="aMobMenu" class="menu-block__mob-bt-link" href="#"><img src="{% static 'img/header/menu_mobile.png' %}" alt="Меню" /></a>
+            </div>
+
+        </div>
+        <!-- Menu block end -->
+
+        <div class="first-screen__tagline">
+            <h1>Место встречи единомышленников</h1>
+            <p>Сайт для поиска и общения единомышленников, <br>практикующих йогу и другие учения</p>
+        </div>
+
+        <div class="first-screen__buttons">
+            <a id="aMore" href="#features" class="button_empty">Подробнее</a>
+            <a href="/accounts/signup/" class="button register">Регистрация</a>
+        </div>
+
+    </div>
+</header>
+
+<!-- First Screen end -->
+
+<!-- Recently registered-->
+
+<div class="container people">
+    <div class="row">
+        <input type="text" placeholder="Введите интересующий вас запрос. Например, йога" class="search" />
+        <h2>Недавно зарегистрировались</h2>
+    </div>
+    <noindex>
+    <div class="row recent">
+        {{ recent_users|safe }}
+    </div>
+    </noindex>
+</div>
+
+<!-- Features-->
+
+<div id="features" class="container-fluid features">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2>Наши преимущества</h2>
+            </div>
+        </div>
+        <div class="row items">
+            <div class="col-12 col-md-5 col-lg-4 col-xl-4">
+                <div class="item simple">
+                    <b>Простая <br />регистрация</b>
+                    <p>Зарегистрируйтесь по e-mail или используйте аккаунт социальной сети</p>
+                </div>
+                <div class="item friendly">
+                    <b>Дружелюбные <br />участники</b>
+                    <p>Обнаружив людей со схожими интересами на этом сайте вы можете быть уверены, что они открыты к знакомству и общению</p>
+                </div>
+                <div class="item clever">
+                    <b>Умные <br />рекомендации</b>
+                    <p>Заполните свой профиль и получите рекомендации наиболее единомыслящих с вами единомышленников :)</p>
+                </div>
+            </div>
+            <div class="col-md-2 col-lg-4 col-xl-4 d-none d-md-block d-lg-block d-xl-block">&nbsp;</div>
+            <div class="col-12 col-md-5 col-lg-4 col-xl-4">
+                <div class="item private">
+                    <b>Настройки <br />приватности</b>
+                    <p>При желании вы можете скрыть свой профиль от поисковых систем и из поиска на сайте</p>
+                </div>
+                <div class="item good">
+                    <b>Перемены <br />к лучшему</b>
+                    <p>Новые люди — новая энергия в вашей жизни. Вместе мы сильнее!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row register">
+            <div class="col-12">
+                <p>Зарегистрируйтесь и&nbsp;найдите<br />единомышленников по своим интересам</p>
+                <a href="/accounts/signup/" class="button">Регистрация</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Video-->
+
+<div class="container video">
+    <div class="row">
+        <h2>О проекте</h2>
+        <div class="col-12 order-2 order-lg-1 order-xl-1">
+            <div style="max-width: 850px; margin: auto; text-align: left;">
+                <p>Наличие единомышленников — важная составляющая духовной практики и жизни в целом. Не всегда бывает легко найти близких по духу людей.</p>
+                <p>Проект Yogether призван помочь с этой задачей! На сайте организован удобный поиск по различным параметрам, таким как учение, традиция и пр.</p>
+                <p>Достаточно зарегистрироваться и заполнить небольшую анкету, и Вы появитесь в рекомендациях у людей со схожими интересами, а также получите персональные рекомендации.</p>
+                <p>На сайте функционирует система симпатий — Вы можете легко выразить свой интерес другим пользователям, а также увидеть взаимные симпатии в личном кабинете.</p>
+                <p>Желаем приятного общения!</p>
+            </div>
+        </div>
+<!--        <div class="col-12 order-1 order-lg-2 order-xl-2">-->
+<!--            <a href="#"><img src="{% static 'img/index/player.jpg' %}" alt="player" class="player" /></a>-->
+<!--        </div>-->
+    </div>
+</div>
+
+<!-- Footer start -->
+{% include "../ygTemplates/tplFooter.html" %}
+<!-- Footer end -->
+
+<!-- Popups start -->
+<div id="darkscreen" class="darkscreen"></div>
+<div id="popups" class="popups">
+
+    <!-- Mobile menu start -->
+    {% if user.is_authenticated %}
+        {% include "../ygTemplates/mobileMenuLogined.html" %}
+    {% else %}
+        {% include "../ygTemplates/mobileMenu.html" %}
+    {% endif %}
+    <!-- Mobile menu end -->
+
+    <!-- Login form start -->
+    {% include "../ygForms/loginForm.html" %}
+    <!-- Login form end -->
+
+    <!-- Confirm message start -->
+    {% include "../ygForms/confirmMessage.html" %}
+    <!-- Confirm message end -->
+
+</div>
+<!-- Popups end -->
+
+</body>
+</html>

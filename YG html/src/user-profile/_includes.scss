@@ -1,0 +1,26 @@
+$mainPhotoWidth : 270px;
+$mainPhotoLaptop: 120px;
+$mainPhotoLaptopS: 90px;
+$mainPhotoMobile: 60px;
+
+@mixin headersAdjust{
+    @media (max-width: 768px) { font-size: 24px; }
+    @media (max-width: 480px) { font-size: 16px; }
+}
+
+@mixin likeButton{
+    text-align: left;
+    height: 30px;
+    border: none;
+    background: url('../../img/common/like.svg') no-repeat;
+    background-size: auto 28px;
+    background-position: left center;
+    padding-left: 50px;
+    font-size: 16px;
+    color: $linksColor;
+    cursor: pointer;
+
+    &_active{
+        background-image: url('../../img/common/like_active.svg');
+    }
+}

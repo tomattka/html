@@ -1,0 +1,114 @@
+/*==========  Desktop First Method  ==========*/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1201px) {
+    .page img{
+        max-width: 100%;
+        height: auto !important;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) {   
+    .page{
+        margin: 90px auto;
+    }    
+    .page article h1{
+        margin-bottom: 60px;
+    }
+    .contactpage{
+        margin-bottom: 150px;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+    .page{
+        min-height: 300px;
+    }
+    .contactpage{
+        width: 400px;
+        margin-left: -200px;
+    }
+    /* login form*/
+    .loginform{
+        width: 400px;
+        margin-left: -200px;
+        padding: 60px 30px;
+    }
+    /* subs */
+    .subs, .user{
+        margin: 90px 30px 120px 30px;
+    }
+    a.lk-button.save{
+        width: 360px;
+        margin-left: -180px;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {        
+    .page{
+        margin: 60px auto;
+    }    
+    .page article h1{
+        margin-bottom: 45px;
+        font-size: 24px;
+    }
+    .page article p{
+        font-size: 16px;
+    }
+    .contactpage {
+        width: 100%;
+        margin-left: 0px;
+        left: 0px;
+    }
+    .contactpage a.sendbtn {
+        width: 300px;
+        margin-left: -150px;
+    }
+    /* login form*/
+    .loginform{
+        width: 100%;
+        left: 0;
+        margin: 0;
+    }
+    .loginform p.err, .loginform a.recover{
+        font-size: 14px;
+    }
+    .loginform h1{
+        font-size: 24px;
+    }
+    /* subs */
+    a.lk-button.save{
+        width: 90%;
+        margin-left: 5%;
+        left: 0;
+    }
+    .subs, .user{
+        margin: 30px 15px 120px 15px;
+    }
+}
+
+/* ADDITIONAL less than 300 */
+@media only screen and (max-width : 300px) {
+    .contactpage a.sendbtn {
+        width: 200px;
+        margin-left: -100px;
+        font-size: 14px;
+        height: 40px;
+        padding: 0;
+        line-height: 40px;
+    }
+    .loginform h1{
+        font-size: 20px;
+    }
+    /* subs */
+    .subs, .user{
+        margin: 30px 10px 120px 10px;
+    }
+    a.lk-button.save{
+        width: 100%;
+    }
+}

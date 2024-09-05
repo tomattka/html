@@ -1,0 +1,331 @@
+/* Основные */
+h2{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    line-height: 43px;
+    margin: 0px 0px 100px 68px;
+    font-weight: normal;
+}
+section{
+    overflow: hidden;
+}
+.wrapper{
+    white-space: nowrap;
+}
+.frame, .items{
+    width: 83.333vw;
+}
+.frame{
+    display: inline-block;
+    overflow: hidden;
+}
+.items{
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.frame .items{
+    width: auto;
+}
+/* Отступы шапки и футера */
+header .lined{    
+    margin: 35px 6.875vw 0px 6.875vw;
+}
+footer{
+    padding: 35px 6.875vw 51px 6.875vw;
+}
+/* Фото и характеристики товара */
+.door-info{
+    height: 795px;
+    background-color: #F1F1F1;
+    box-sizing: border-box;
+    margin-left: 6.875vw;
+    white-space: nowrap;
+}
+.door-info .photo{
+    display: inline-block;
+    vertical-align: top;
+    background: no-repeat left center;
+    background-size: 43.385vw 41.406vw;
+    width: 43.385vw;
+    height: 795px;    
+    transition: linear background 0.4s;
+    cursor: pointer;
+}
+.door-info .photo .links{
+    text-align: center;
+    margin-top: 738px;
+}
+.door-info .photo .links a{
+    display: inline-block;
+    vertical-align: middle;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    margin: 0px 6.5px;
+}
+.door-info .photo .links a.active{
+    background-color: #F33632;
+    border: 2px solid #F33632;
+}
+.door-info .desc{
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: top;
+    padding: 37px 6.667vw 33px 2.604vw;
+    width: 48.52vw;
+
+}
+.door-info h1{    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    line-height: 47px;
+    font-weight: bold;
+    margin: 0px 0px 7px 0px;
+
+}
+.door-info .cat{    
+    margin: 0px 0px 40px 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
+    line-height: 28px;
+    font-weight: 400;
+}
+.door-info .param{
+    display: table;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 8px;
+}
+.door-info .row{
+    display: table-row;
+}
+.door-info .name, .door-info .dots, .door-info .value{
+    display: table-cell;
+    white-space: nowrap;
+}
+.door-info br{
+    display: none;
+}
+.door-info p{
+    margin: 0;
+}
+.door-info .name{
+    width: 10px;
+    font-weight: 500;
+}
+.door-info .dots{
+    width: auto;
+    border-bottom: solid 1px #D2D2D2;
+}
+.door-info .value{
+    width: 10px;
+    text-align: right;
+}
+.door-info .price{
+    margin: 35px 0px 40px 0px;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    font-size: 33px;
+    line-height: 44px;
+}
+.door-info .red-button .animation-right, .door-info .red-button .animation-bottom{
+    background-color: #F1F1F1;
+}
+/* дополнительное описание */
+.door-description{
+    margin: 54px 6.875vw 143px 6.875vw;
+    background-color: #F1F1F1;
+    box-shadow: 0 20px 26px rgba(0,0,0,0.16);
+    padding: 46px 3.854vw 60px 3.854vw;
+    font-family: 'Montserrat', sans-serif;
+}
+.door-description h2{
+    margin: 0px 0px 46px 0px;
+    font-size: 30px;
+    line-height: 37px;
+    color: #F33632;
+    font-weight: 500;
+}
+.door-description .text{
+    font-size: 22px;
+    line-height: 32px;
+    column-count: 2;
+    column-gap: 6.354vw;
+}
+.door-description .text p{
+    margin: 0px 0px 35px 0px;
+}
+.door-description ul{
+    margin: 0;
+    list-style: url('../img/door/ul-dot.png');
+    padding-left: 15px;
+}
+.door-description ul li{
+    padding-left: 3px;
+}
+
+/* Варианты цветового исполнения*/
+.color-variants{
+    padding: 64px 6.615vw 68px 6.875vw;
+    background-color: #F1F1F1;
+    background-image: url('../img/door/colors.png');
+    background-repeat: no-repeat;
+    background-size: 31.458vw 12.708vw;
+    background-position: 60.156vw 0px;
+}
+.color-variants .items{
+    white-space: normal;
+}
+.color-variants .item{
+    display: inline-block;
+    vertical-align: top;
+    width: 10.313vw;
+    background: no-repeat top center;
+    background-size: 10.313vw 8.594vw;
+    padding-top: 9.271vw;
+    margin: 0px 1.406vw 30px 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+}
+/* Рисунок МДФ панелей */
+.door-panels{
+    padding: 114px 6.875vw 116px 6.875vw;
+    background: url('../img/door/panels.png') no-repeat;
+    background-position: 56.771vw 47px;
+    background-size: 34.948vw 12.708vw;
+    overflow: hidden;
+}
+.door-panels .items{
+    margin-bottom: 50px;
+}
+.door-panels .item{
+    display: inline-block;
+    width: 8.542vw;
+    padding-top: 22.396vw;
+    background: no-repeat top center;
+    background-size: 8.542vw 21.250vw;
+    margin-right: 5.885vw;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 35px;
+    line-height: 43px;
+    font-weight: 500;
+    text-align: center;
+}
+
+/* Slider */
+.door-panels .slider{
+    margin-left: 33.6vw;
+    height: 40px;
+    margin-bottom: 81px;
+}
+.door-panels .slider .base{
+    position: absolute;
+    height: 37px;
+    border-bottom: 2px solid #B9B9B9;
+    text-align: right;
+}
+.door-panels .slider, .door-panels .slider .base{
+    width: 43vw;
+}
+.door-panels .slider .pos{
+    position: absolute;
+    width: 114px; /* recalculated by script */
+    height: 36px;
+    border-bottom: 4px solid #EF3D39;
+    /* Moving by margin-left */
+}
+.door-panels .slider .arrow{
+    display: inline-block;
+    width: 24px;
+    height: 28px;
+    background: no-repeat;
+}
+.door-panels .slider .arrow.left{
+    background-image: url('../img/arrow_left_inactive.png');
+    border-right: solid 4px #EF3D39;
+}
+.door-panels .slider .arrow.right{
+    background-image: url('../img/arrow_right.png');
+    background-position: top right;
+}
+.door-panels a.more{
+    display: inline-block;
+    height: 52px;
+    background: url('../img/door/doc.png') no-repeat;
+    padding-left: 60px;
+    font-size: 22px;
+    line-height: 52px;
+    color: #292929;
+    text-decoration: underline;
+    margin-left: 3.542vw;
+}
+/* Популярные модели */
+.popular{
+    padding: 114px 6.875vw 76px 6.875vw;
+    background: url('../img/door/popular.png') no-repeat;
+    background-position: 34.375vw 0px;
+    background-size: 83.385vw 12.708vw;
+    background-color: #F1F1F1;
+}
+.popular .items{
+    /* shadow cut fix */
+    padding-left: 20px;
+    margin-left: -20px;
+    padding-bottom: 40px;
+}
+.popular .frame{
+    width: 84.5vw;
+}
+.popular .item{
+    display: inline-block;
+    width: 18.385vw;
+    margin-right: 2.604vw;
+    text-align: center;
+    background-color: white;
+    padding-bottom: 30px;
+    box-shadow: 0 20px 26px rgba(0,0,0,0.16);
+    overflow: hidden;
+}
+.popular .item .pic{
+    background: no-repeat center top;
+    background-size: 18.385vw 18.542vw;
+    text-align: center;
+    padding-top: 49px;
+    position: relative;
+}
+.popular .item .pic img{
+    width: 11.406vw;
+    height: 22.188vw;
+}
+.popular .item .red-button .base{    
+    font-size: 21px;
+    line-height: 50px;
+    padding: 0px 20px;
+}
+.popular .item .red-button .base, .popular .item .red-button .border{   
+    height: 50px;
+}
+.popular .red-button .animation-right{
+    height: 57px;
+}
+.popular .item .title{
+    margin: 20px 34px 15px 34px;
+    border-bottom: 3px solid #EF3D39;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
+    line-height: 28px;
+    height: 59px;
+    white-space: normal;
+}
+.popular .item .price{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 23px;
+    line-height: 28px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}

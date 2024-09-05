@@ -1,0 +1,87 @@
+.user-view{
+    min-width: $mainPhotoWidth;   
+    flex-basis: $mainPhotoWidth;
+    @media (max-width: 768px) {
+        width: 100%;
+        flex-basis: auto;
+    }
+    
+    &__h2{ 
+        display: none;
+        margin-top: 30px;
+        margin-bottom: 16px;
+        @media (max-width: 768px) { display: block; }        
+        @include headersAdjust();
+    }
+
+    &__avatar{
+        width: $mainPhotoWidth;
+        margin-bottom: 8px;
+        @media (max-width: 768px) { display: none; }
+    }
+
+    &__avatar-img { 
+        border-radius: $mainPhotoWidth / 2;
+        width: $mainPhotoWidth;
+        height: auto;
+    }
+
+    &__prevs{
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+        margin-bottom: 24px;
+
+        
+        @media (max-width: 768px) {
+            justify-content: flex-start;
+        }
+    }
+    &__prevs-link { 
+        display: block; 
+        margin: 3px;
+        @media (max-width: 768px) { margin: 5px;}
+    }
+    
+    &__prevs-img { border-radius: 8px; }
+
+    &__buttons{
+        display: flex;
+        justify-content: space-between;
+        @media (max-width: 768px) { display: none; }
+    }
+
+    &__add{
+        width: 210px;
+        font-weight: 600;
+    }
+
+    &__like{
+        @include likeButton();
+
+        &:hover{
+            background-image: url('../../img/common/like_active.svg');
+        }
+    }
+
+    // &__message{ // old profile version
+    //     border: 2px solid #B7B7D3;
+    //     border-radius: 8px;
+    //     background-color: white;
+    //     padding: 10px;
+    //     cursor: pointer;
+    // }
+
+    &__message-full{
+        border: none;
+        background: none;
+        cursor: pointer;
+        line-height: 30px;
+
+        img{
+            height: 26px;
+            vertical-align: middle;
+        }
+    }
+
+}

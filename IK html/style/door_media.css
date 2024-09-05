@@ -1,0 +1,564 @@
+@media only screen and (max-width: 1919px) {    
+    /* карточка товара */
+    .door-info .photo{
+        background-size: auto 100%;
+        background-position: center center;
+    }
+    .door-info .param{
+        font-size: 17px;
+        line-height: 21px;
+    }
+    /* Варианты цветового исполнения*/
+    .color-variants .items{
+        width: auto;
+    }
+    .color-variants .item{
+        width: 198px;
+        background-size: 198px 165px;
+        padding-top: 178px;
+        margin: 0px 27px 30px 0px;
+    }    
+    .popular .frame{
+        width: 86vw;
+    }
+    
+}
+@media only screen and (max-width: 1650px) {  
+    .door-info{
+        margin-left: 0;
+    }    
+    .door-info .desc{
+        width: 56.3vw;
+    }
+}
+@media only screen and (max-width: 1440px) {   
+    /* карточка товара */
+    .door-info{
+        height: 600px;
+    }
+    .door-info .param{
+        font-size: 15px;
+        line-height: 17px;
+    }   
+    .door-info .photo{
+        width: 40vw;
+        height: 600px;
+    }
+    .door-info .photo .links{
+        margin-top: 550px;
+    }
+    .door-info .desc{
+        padding: 20px 2vw 30px 2.604vw;
+    }
+    .door-info .desc h1{
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .door-info .cat{    
+        margin-bottom: 30px;
+        font-size: 18px;
+        line-height: 23px;
+    }
+    .door-info .price{
+        margin: 20px 0px 25px 0px;
+        font-size: 28px;
+        line-height: 33px;
+    }
+    
+    .red-button .base{    
+        font-size: 20px;
+        line-height: 55px;
+        padding: 0px 20px;
+    }
+    .red-button .base, .red-button .border{   
+        height: 55px;
+    }
+    /* дополнительное описание */
+    .door-description .text{
+        font-size: 20px;
+        line-height: 28px;
+    }
+    /* популярные модели */
+    .popular .item .title{
+        font-size: 17px;
+    }
+}
+
+@media only screen and (max-width: 1150px) { 
+    .door-info{
+        height: auto;
+    }
+    .door-info br{
+        display: initial;
+    }
+    /* дополнительное описание */
+    .door-description .text{
+        font-size: 18px;
+        line-height: 24px;
+    }    
+    /* Варианты цветового исполнения*/
+    .color-variants{
+        background-position-y: 2.609vw;
+    }
+    .color-variants .item{
+        width: 99px;
+        background-size: 99px 82.5px;
+        padding-top: 95px;
+        margin: 0px 20px 25px 0px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .color-variants h2{
+        margin-bottom: 55px;
+        margin-left: 5.9vw;
+    }
+    .red-label{
+        width: 6vw;
+    }
+    /* популярные модели */
+    h2{
+        margin-bottom: 60px;
+    }
+    .popular{
+        padding: 45px 6.615vw 50px 6.875vw;
+        background-position-y: 30px;
+    }
+    .popular .item{
+        width: 300px;
+        margin-right: 35px;
+        padding-bottom: 20px;
+    }
+    .popular .item .pic{
+        background-size: 300px 304px;
+        padding-top: 27px;
+    }
+    .popular .item .pic img{
+        width: 175px;
+        height: auto;
+    }
+
+}
+@media only screen and (max-width: 768px) { 
+    .frame{
+        width: 82vw;
+    }
+    /* карточка товара */
+    .door-info{
+        text-align: center;
+        white-space: normal;
+    }    
+    .door-info .photo{
+        background-size: 100vw auto;
+        width: 100vw;
+        height: 81.867vw;
+        background-position: left top;
+    }
+    .door-info .photo .links{
+        margin-top: 73.333vw;
+    }
+    .door-info .photo .links a{
+        width: 10px;
+        height: 10px;
+        margin: 0px 3px;
+    }
+    .door-info .desc{     
+        display: block;   
+        padding: 28px 30px 30px 25px;
+        width: auto;
+    }
+    .door-info h1{
+        font-size: 22px;
+        line-height: 27px;
+    }
+    .door-info .cat{    
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .door-info .param{
+        font-size: 13.5px;
+        line-height: 16px;
+        margin-top: 15px;
+    }
+    .door-info h1, .door-info .cat, .door-info .param{
+        text-align: left;
+    }
+    .door-info br{
+        display: initial;
+    }
+    .door-info .price{
+        font-size: 22px;
+        line-height: 27px;
+    }
+    /* кнопка */    
+    .red-button{
+        margin-bottom: 4px;
+    }
+    .red-button .base, .red-button .border{   
+        height: 41px;
+    }    
+    .red-button .base{
+        font-size: 17px;
+        line-height: 41px;
+        padding: 0px 17px;
+    }
+    .red-button .border{
+        border-width: 2px;
+        top: 4px;
+        left: 4px;
+    }    
+    .red-button .animation-right{        
+        right: -4px;
+        width: 4px;
+    }
+    .red-button .animation-bottom{
+        bottom: -4px;
+        height: 4px;
+    }    
+    /* дополнительное описание */
+    .door-description{
+        padding-top: 30px;
+        margin-bottom: 90px;
+    }
+    .door-description h2{
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 30px;
+    }
+    .door-description .text{
+        column-count: 1;
+    }
+    /* Варианты цветового исполнения*/
+    .color-variants{
+        background-position-y: 30px;
+        background-size: 35vw auto;
+    }
+    .color-variants, .door-panels, .popular{
+        padding: 45px 9vw 45px 9vw;
+    }
+    h2{
+        margin-bottom: 35px;
+        margin-left: 8.9vw;
+        font-size: 28px;
+    }
+    .red-label{
+        width: 9vw;
+    }
+    /* Панели МДФ */
+    .door-panels .item{
+        width: 120px;
+        background-size: 120px 295px;
+        padding-top: 315px;
+        margin-right: 60px;
+        font-size: 24px;
+        line-height: 29px;
+    }    
+    .door-panels a.more{
+        font-size: 20px;
+    }
+
+}
+@media only screen and (max-width: 480px) { 
+    /* Варианты цветового исполнения*/
+    .color-variants{
+        padding: 23px 30px 30px 25px;
+        background-size: 44.267vw 17.867vw;
+        background-position: 47.733vw 17.600vw;
+    }
+    .color-variants .item{
+        width: 23.467vw;
+        background-size: 23.467vw 19.467vw;
+        padding-top: 20.800vw;
+        margin: 0 1.867vw 4vw 0;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .red-label{
+        width: 8.533vw;
+        font-size: 14px;
+        line-height: 18px;
+    }
+    .red-label .redline{
+        margin: 17px auto;
+        height: 45px;
+    }
+    /* Slider */
+    .door-panels .slider{
+        margin-left: 17.333vw;
+        width: 67.200vw;
+        height: 35px;
+        margin-bottom: 55px;
+    }    
+    .door-panels .slider .base{          
+        box-sizing: border-box;    
+        width: 67.200vw;
+        height: 34px;
+    }    
+    .door-panels .slider .pos{        
+        box-sizing: border-box;
+        width: 45px; /* recalculated by script */
+        height: 35px;
+    }
+    .door-panels .slider .arrow{        
+        box-sizing: border-box;
+        width: 18px;
+        height: 20px;
+        background-size: 10px 20px;
+    }
+    .door-panels .slider .arrow.left{
+        width: 21px;
+        border-right-width: 3px;
+    }
+    .door-panels a.more{
+        background-size: 32px 40px;
+        padding-left: 49px;
+        font-size: 15px;
+        height: 40px;
+        line-height: 40px;
+    }    
+    /* Популярные модели */
+    .popular{
+        padding: 41px 0px 60px 25px;
+        overflow: hidden;
+        background-size: 117.333vw 17.867vw;
+        background-position: 28.800vw 16.533vw;
+    }    
+    .popular .frame{
+        width: 85.8vw;
+    }
+    .popular .items{
+        margin-left: -24px;
+    }
+    .popular .item{
+        width: 53.600vw;
+        margin-right: 9.333vw;
+        padding-bottom: 20px;
+    }
+    .popular .item .pic{
+        background-size: 53.600vw 54.133vw;
+        padding-top: 27px;
+    }
+    .popular .item .pic img{
+        width: 33.333vw;
+        height: 64.533vw;
+    }
+    .popular .item .title{
+        margin: 12px 20px 12px 20px;
+        font-size: 15px;
+        line-height: 19px;
+        height: 45px;
+    }
+    .popular .item .price{
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 17px;
+    }
+    /* кнопка */
+    .popular .item .red-button{
+        margin-bottom: 3px;
+    }
+    .popular .item .red-button .base{    
+        font-size: 14px;
+        line-height: 28px;
+        padding: 0px 6px;
+    }
+    .popular .item .red-button .base, .popular .item .red-button .border{   
+        height: 28px;
+    }    
+    .popular .item .red-button .border{
+        border-width: 2px;
+        top: 3px;
+        left: 3px;
+    }    
+    .popular .item .red-button .animation-right{        
+        right: -3px;
+        width: 3px;
+    }
+    .popular .item .red-button .animation-bottom{
+        bottom: -3px;
+        height: 3px;
+    }
+
+}
+
+@media only screen and (max-width: 375px) {
+    h2{
+        font-size: 25px;
+        line-height: 30px;
+        margin: 0px 0px 50px 30px;
+    }
+    .frame, .items{
+        width: 300px;
+    }
+    .frame .items{
+        width: auto;
+    }
+
+    .breadcrumbs{
+        line-height: 21px;
+        font-size: 13px;
+        padding: 28px 23px 32px 23px;
+    }    
+    /* карточка товара */
+    .door-info{
+        height: auto;
+        margin-left: 0;
+        text-align: center;
+    }    
+    .door-info .photo{
+        background-size: 100vw 81.867vw;
+        width: 100vw;
+        height: 81.867vw;
+        background-position: left top;
+    }
+    .door-info .photo .links{
+        margin-top: 73.333vw;
+    }
+    .door-info .photo .links a{
+        width: 10px;
+        height: 10px;
+        margin: 0px 3px;
+    }
+    .door-info .desc{        
+        padding: 28px 30px 30px 25px;
+        width: auto;
+    }
+    .door-info h1{
+        font-size: 22px;
+        line-height: 27px;
+    }
+    .door-info .cat{    
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .door-info .param{
+        font-size: 13.5px;
+        line-height: 16px;
+        margin-top: 15px;
+    }
+    .door-info h1, .door-info .cat, .door-info .param{
+        text-align: left;
+    }
+    .door-info br{
+        display: initial;
+    }
+    .door-info .price{
+        font-size: 22px;
+        line-height: 27px;
+    }
+    /* кнопка */    
+    .red-button{
+        margin-bottom: 4px;
+    }
+    .red-button .base, .red-button .border{   
+        height: 41px;
+    }    
+    .red-button .base{
+        font-size: 17px;
+        line-height: 41px;
+        padding: 0px 17px;
+    }
+    .red-button .border{
+        border-width: 2px;
+        top: 4px;
+        left: 4px;
+    }    
+    .red-button .animation-right{        
+        right: -4px;
+        width: 4px;
+        height: 45px;
+    }
+    .red-button .animation-bottom{
+        bottom: -4px;
+        height: 4px;
+    }
+    
+    /* дополнительное описание */
+    .door-description{
+        margin-top: 34px;
+        padding: 20px 19px 110px 19px;
+        margin-bottom: 96px;
+    }
+    .door-description h2{
+        font-size: 20px;
+        line-height: 22px;
+        margin-bottom: 30px;
+    }
+    .door-description .text{
+        column-count: 1;
+        font-size: 16px;
+        line-height: 19px;
+    }
+    .door-description .text p{
+        margin-bottom: 20px;
+    }
+    /* Рисунок МДФ панелей */
+    .door-panels{
+        padding: 56px 30px 71px 25px;
+        background-size: auto 67px;
+        background-position: 165px 98px;
+    }
+    .door-panels .frame{
+        width: 318px;
+    }
+    .door-panels .item{
+        width: 85px;
+        background-size: 85px 209px;
+        padding-top: 221px;
+        margin-right: 51px;
+        font-size: 22px;
+        line-height: 27px;
+    }
+    .door-panels a.more{
+        font-size: 15px;
+        height: 40px;
+        line-height: normal;
+    }
+    
+}
+
+@media only screen and (max-width: 320px) {    
+    .door-info .photo{
+        width: 320px;
+        height: 305px;
+        background-size: 320px 305px;
+    }    
+    .door-info .photo .links{
+        margin-top: 275px;
+    }
+    .red-label{
+        width: 23px;
+    }
+    /* Slider */
+    .door-panels .slider{
+        width: 200px;
+        margin-left: 40px;
+    }    
+    .door-panels .slider .base{ 
+        width: 200px;
+    }
+    /* Popular models */
+    .popular .frame{
+        width: 318px;
+    }
+    .popular .items{
+        margin-left: -24px;
+    }
+    .popular .item{
+        width: 171px;
+        margin-right: 25px;
+        padding-bottom: 20px;
+    }
+    .popular .item .pic{
+        background-size: 171px 173px;
+        padding-top: 27px;
+    }
+    .popular .item .pic img{
+        width: 106px;
+        height: 206px;
+    }
+    .popular .item .price{
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 17px;
+    }
+}

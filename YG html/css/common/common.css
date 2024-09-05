@@ -1,0 +1,170 @@
+/* Variables */
+/* Configuration */
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  min-width: 320px;
+  font-weight: 500;
+  color: #07071F;
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+a {
+  color: #7551A8;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  vertical-align: top;
+}
+
+button {
+  outline: none;
+  border: none;
+  font-family: 'Raleway', sans-serif;
+}
+
+input {
+  outline: none;
+}
+
+h1, h2 {
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 1024px) {
+  h1, h2 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 767px) {
+  h1, h2 {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2 {
+    font-size: 24px;
+  }
+}
+
+h3 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+@media (max-width: 1024px) {
+  h3 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 767px) {
+  h3 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  h3 {
+    font-size: 20px;
+  }
+}
+
+.no-display {
+  display: none;
+}
+
+.clear {
+  clear: both;
+}
+
+/* main button */
+.button, .button_empty {
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 32px;
+  background: #7551A8;
+  color: white;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.button:hover, .button_empty:hover {
+  background-color: #AB89DB;
+  text-decoration: none;
+}
+
+@media (max-width: 480px) {
+  .button, .button_empty {
+    padding: 12px 7px;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 500;
+  }
+}
+
+.button_empty {
+  background: none;
+  border: 2px solid #49497D;
+  padding: 12px 32px;
+  color: #49497D;
+  font-weight: 600;
+}
+
+@media (max-width: 480px) {
+  .button_empty {
+    border-width: 1px;
+    padding: 11px 7px;
+  }
+}
+
+.button_empty:hover {
+  background-color: #49497D;
+  color: white;
+}
+
+.amount-circle {
+  display: inline-block;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  background-color: #7551A8;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  font-size: 12px;
+  margin-top: 3px;
+}
+/*# sourceMappingURL=common.css.map */

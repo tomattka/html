@@ -1,0 +1,45 @@
+/* Красная кнопка */
+.red-button{
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 7px;
+}
+.red-button .base{
+    height: 64px;
+    background-color: #EF3D39;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    line-height: 64px;
+    color: white;
+    text-align: center;
+    padding: 0px 30px;
+    white-space: nowrap;
+}
+.red-button .border{
+    position: absolute;
+    box-sizing: border-box;
+    width: 100%;
+    height: 64px;
+    border: 3px solid #EF3D39;
+    top: 7px;
+    left: 7px;
+}
+.red-button .animation-right{
+    position: absolute;
+    top: 0;
+    right: -7px;
+    background-color: white;
+    width: 7px;
+    height: 71px;
+    visibility: hidden;
+}
+.red-button .animation-bottom{
+    position: absolute;
+    bottom: -7px;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    height: 7px;
+    visibility: hidden;
+}

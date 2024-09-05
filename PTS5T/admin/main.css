@@ -1,0 +1,327 @@
+/* CSS Document */
+/* Common */
+body{
+	margin: 0px;
+	padding: 0px;
+	background-color: #c0c0c0;
+	font-family: Tahoma, Arial;
+    font-size: 14px;
+}
+#main{
+	background-color: #f3f4f3;
+	margin: 30px auto 100px auto;
+	width: 1400px;
+}
+a{
+	text-decoration: none;
+    color: #232323;
+}
+a:hover{
+	text-decoration: underline;
+}
+/* Header */
+header{
+	background-color: #000000;
+	color: #f3f4f3;
+	height: 150px;
+}
+figure.logo{
+	margin: 40px 35px 0px 50px;
+	display: block;
+	position: absolute;
+}
+figure.logo figcaption{
+	float: left;
+}
+figure.logo img{
+	float: left;
+	margin-right: 35px;
+	border: none;
+}
+figure.logo a{
+	color: #f1ead5;
+	text-decoration: none;
+	font-size: 20px;
+}
+nav.topmenu{
+	display: block;
+	position: absolute;
+	margin: 65px auto auto 470px;
+	font-size: 16px;
+	width: 740px;
+}
+nav.topmenu a{
+	color: #f1ead5;
+}
+div.user{
+	display: block;
+	position: absolute;
+	margin: 52px auto auto 1200px;
+	font-size: 16px;
+	text-align: right;
+	width: 140px;
+	
+}
+.user a{
+	color: #10dfb6;
+	line-height: 26px;
+	
+}
+/* content */
+.content td.left{
+	padding: 60px 20px 100px 60px;
+	vertical-align: top;
+}
+.content h1{
+	margin: 0px;
+	padding: 0px;
+	font-weight: normal;
+	font-size: 30px;
+	color: #a76c37;
+}
+.content h1 a{
+	font-size: 14px;
+	color: #666666;
+	margin-left: 50px;
+	text-decoration: underline;
+}
+.content h1 a:hover{
+	color: #000000;
+}
+.newsItem{
+	margin-top: 20px;
+}
+.newsItem h2{
+	margin: 0px 15px 0px 0px;
+	padding: 0px;
+	font-weight: normal;
+	font-size: 18px;
+	color: #333333;
+	float: left;
+	display: block;	
+}
+.newsItem h2 a{
+	color: #333333;
+}
+.newsItem p{
+	font-size: 14px;
+	margin: 5px 0px 0px 0px;
+	padding: 0px;
+	color: #666666;
+	clear: both;
+}
+.newsItem time{
+	color:#a76c37;
+}
+.newsItem span{
+	display: block;
+	float: left;
+	margin: 3px 0px 0px 0px;
+	vertical-align: middle;
+}
+.newsItem p a{
+	color: #666666;
+}
+.newsItem span input, .newsItem span img{
+        margin: 0px 10px 0px 0px;
+}
+nav.pages{
+	margin: 40px 0px 20px 0px;
+	font-size: 18px;
+}
+nav.pages a{
+	color: #666666;
+	margin-right: 10px;
+}
+nav.pages a.active{
+	font-weight: bold;
+	color: #454545;
+}
+nav.pages a.active:hover{
+	text-decoration: none;
+}
+/* Events */
+.content td.right{
+	vertical-align: top;
+	padding: 50px 40px 100px 0px;
+}
+div.events{
+	padding: 25px 30px 30px 30px;
+	border: 1px solid #b1b1b1;
+}
+.events h2{
+	margin: 0px 0px 20px 0px;
+	padding: 0px;
+	font-weight: normal;
+	font-size: 24px;
+	color: #a76c37;
+}
+.events h2 a{
+	font-size: 12px;
+	color: #666666;
+	margin-left: 30px;
+	text-decoration: underline;
+}
+.events h2 a:hover{
+	color: #000000;
+}
+.eventItem{
+	margin: 15px 0px 0px 10px;
+	padding: 0px;
+	color: #666666;
+	font-size: 12px;
+}
+.eventItem h3{
+	margin: 0px;
+	padding: 0px;
+	font-weight: normal;
+	font-size: 16px;
+	color: #333333;
+}
+.eventItem time{
+	color: #999999;
+	line-height: 16px;
+}
+.eventItem a{
+	color: #666666;
+}
+.eventItem a:hover{
+	color: #333333;
+}
+.eventItem h3 a{
+	color: #333333;
+}
+/* Footer */
+footer{
+	background-color: #333333;
+	padding: 50px 30px 50px 60px;
+	color: #dadada;
+	font-size: 14px;
+}
+footer span{
+	display: block;
+}
+footer a{
+	color: #dadada;
+}
+/* Forms */
+div.editForm{
+	margin-top: 30px;
+}
+.editForm .wideStroke, .editForm .wideBlock{
+	display: block;
+	margin: 3px 0px 12px 0px;
+	width: 750px;
+    font-size: 14px;
+}
+.editForm select.wideStroke {
+    width: 755px;
+}
+.editForm .wideBlock{
+	height: 80px;
+}
+.wide .editForm .wideStroke, .wide .editForm .wideBlock, .wide select.wideStroke{
+    width: 1110px;
+}
+.editForm .buttons {
+    margin: 0px 70px 0px 0px;
+    text-align: center;
+}
+.editForm .buttons input{
+	width: 120px;
+	font-size: 16px;
+	margin: 0px 10px 0px 10px;
+}
+.editForm #additional{
+	padding-bottom: 20px;
+}
+.editForm a#show{
+	color: #01A383;
+	width: 200px;
+	display: block;
+	margin-top: 20px;
+}
+/* CKEditor*/
+.ck.ck-editor {
+    margin-top: 3px !important;
+}
+
+.ck.ck-toolbar {
+    max-width: 757px !important;
+}
+
+.ck-editor__editable {
+    min-height: 200px;
+    width: 739px;
+    margin-bottom: 12px;
+    font-family: Tahoma, Arial;
+    font-size: 14px;
+}
+div.cke {
+    margin: 3px 0px 12px 0px;
+}
+/* login form*/
+.loginform{
+	width: 30%;
+	margin-left: 35%;
+}
+.loginform h1{
+	text-align: center;
+}
+.loginform .square{
+	border: solid 1px #acacac;
+	margin: 30px 0px 180px 0px;
+	padding: 15px 30px 40px 30px;
+}
+.loginform label{
+	display: block;
+	margin-top: 15px;
+}
+.loginform label input{
+	display: block;
+	width: 330px;
+	margin-top: 5px;
+}
+.loginform p{
+	font-size: 12px;
+	text-align: right;
+	display: block;
+	margin:  3px 0px 15px 0px;
+}
+.loginform a{
+	color: #888888;
+}
+.loginform a:hover{
+	color: #a76c37;
+}
+.loginform .login-buttons{
+	text-align: center;
+}
+.loginform .login-buttons input{
+	font-size: 14px;	
+	margin-top: 15px;
+	width: 160px;
+}
+/* search */
+.search{
+	margin: 30px 0px 10px 0px;
+	width: 700px;
+}
+.search input{
+	font-size: 14px;
+	color: #232323;
+	width: 300px;
+	margin-right: 5px;
+}
+.search input.btn{
+	width: 100px;
+}
+/* money */
+.allmoney{
+	border: 1px solid #dadada;
+	margin: 30px 0px 30px 0px;
+	padding: 15px;
+	width: 300px;
+	text-align: center;
+	font-size: 24px;
+}

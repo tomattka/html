@@ -1,0 +1,58 @@
+.config{
+    padding: 30px 30px 60px 30px;
+    @media (max-width: 620px) { padding: 0px 0px 30px 0px; }
+
+    &__item{
+        margin-bottom: 30px;
+        line-height: 130%;
+    }
+
+    &__title{margin-bottom: 5px;}
+
+    &__input{
+        width: 300px;
+        margin-right: 5px;
+        @media (max-width: 620px) { width: 100%; }
+    }
+
+    &__email &__input{
+        @media (max-width: 620px) {margin-bottom: 7px; }
+    }
+
+    input[type=checkbox]{margin-right: 10px;}
+
+    &__password{margin-bottom: 60px;}
+
+    &__password &__input{margin-bottom: 15px;}
+
+    &__message{
+        margin-bottom: 15px;
+        &_red{ color: $errorMsgColor; }
+        &_green{ color: green;}
+    }
+
+    &__time{ margin-top: 45px; }
+
+    &__dropdown{ 
+        width: 500px; 
+        @media (max-width: 620px) {width: 100%;}
+    }
+
+    &__news{ margin-top: 45px; }
+
+    &__recommend { margin-top: 45px; }
+
+    &__info{
+        color: $paramTextColor;
+        font-size: 14px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    &__button{
+        @media (max-width: 480px) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}

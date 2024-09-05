@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Yogether</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="css/common/fonts.css">
+
+    <!-- Style -->    
+    <link rel="stylesheet" href="css/common/common.css">	
+    <link rel="stylesheet" href="css/common/header.css">	
+    <link rel="stylesheet" href="css/common/footer.css">	
+    <link rel="stylesheet" href="css/common/popups.css">    
+    
+    <link rel="stylesheet" href="css/common/profile-structure.css">	
+    
+    <!-- Controls -->
+    <link rel="stylesheet" href="controls/css/input/input.css">
+
+    <!-- Page styles after controls -->
+    <link rel="stylesheet" href="css/content/photo_edit.css">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    
+    <script src="js/popups/popups.js"></script>
+    <script src="js/popups/confirm.js"></script>
+    <script src="js/photos/photos-edit.js"></script>
+
+    <script src="controls/js/tags.js"></script>
+    <script src="controls/js/list.js"></script>
+    <script src="controls/js/select.js"></script>
+    <script src="controls/js/date.js"></script>
+</head>
+<body>
+
+    <!-- Header start -->
+    <header class="header">
+        <div class="header__wrapper">
+
+            <!-- Menu block start -->
+            <div class="menu-block">
+                <figure class="menu-block__logo">
+                    <a href="#"><img class="menu-block__logo-img" src="img/header/logo.svg" width="70" alt="Yogether"></a>
+                    <figcaption class="menu-block__logo-figcaption"><a href="#" class="menu-block__link menu-block__logo-link">Yogether</a></figcaption>
+                </figure>
+                <ul class="menu-block__menu">
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">Главная</a></li>
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">Участники</a></li>
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">О проекте</a></li>
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">Контакты</a></li>
+                </ul>
+
+                <!-- User menu block start -->
+                <div class="menu-block__user">
+
+                    <a id="userpic" class="menu-block__userpic" href="#"><img src="img/header/userpic.jpg" alt="Фото пользователя"></a>
+
+                    <!-- User menu popup start -->
+                    <div id="usermenu" class="menu-block__user-popup user-popup">
+
+                        <div class="user-popup__triangle"><img src="img/popups/popup-triangle.svg" width="14" height="9" alt="Элемент сайта"></div>
+
+                        <div class="user-popup__box">
+                            <div class="user-popup__hello">Привет, Тамара!</div>
+                            <ul class="user-popup__menu">
+                                <li class="user-popup__menu-item"><a href="#" class="user-popup__menu-link">Моя страница</a></li>
+                                <li class="user-popup__menu-item"><a href="#" class="user-popup__menu-link">Пункт меню</a></li>
+                                <li class="user-popup__menu-item"><a href="#" class="user-popup__menu-link">Пункт меню 2</a></li>
+                                <li class="user-popup__menu-item"><a href="#" class="user-popup__menu-link">Выход</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <!-- User menu popup end -->
+
+                </div>
+                <!-- User menu block end -->
+
+                <div class="menu-block__mobile-buttons">
+                    <a id="aMobMenu" class="menu-block__mob-bt-link" href="#"><img src="img/header/menu_mobile.png" alt="Меню" /></a>
+                </div>
+            </div>
+            <!-- Menu block end -->
+
+            <!-- Title start -->
+            <div class="header__title title">
+                <h2 class="title__h2">Мои фотографии</h2>
+                <div class="title__breadcrumbs">
+                    <a href="#" class="title__link">Главная</a><span>Управление фотографиями</span>
+                </div>
+            </div>
+            <!-- Title end -->
+
+        </div>
+    </header>
+    <!-- Header end -->
+
+    <!-- Profile structure start -->
+    <div class="profile-structure">
+        <div class="profile-structure__wrapper">
+
+            <!-- Profile menu start -->
+            <div class="profile-menu profile-structure__menu">
+                <a href="profile_edit.html" class="profile-menu__item profile-menu__item_home">Моя страница</a>
+                <a href="photos-edit.html" class="profile-menu__item profile-menu__item_photos profile-menu__item_selected">Фотографии</a>
+                <a href="#" class="profile-menu__item profile-menu__item_messages">Сообщения</a>
+                <a href="#" class="profile-menu__item profile-menu__item_notifications">Уведомления</a>
+                <a href="#" class="profile-menu__item profile-menu__item_friends">Мои друзья</a>
+                <a href="#" class="profile-menu__item profile-menu__item_config">Настройки аккаунта</a>
+            </div>
+            <!-- Profile menu end -->
+
+            <!-- Photos start -->
+            <div class="photos profile-structure__photos">
+
+                <!-- File drop start -->
+                <div class="add-files photos__add">
+                    <div id="file-drop" class="add-files__drop file-drop">
+                        <button class="button file-drop__button">Выберите файлы</button>
+                        <div class="file-drop__comment">или перетащите файлы в это окно</div>
+                    </div>   
+                    <form id="fAddPhotos" action="" method="post" class="no-display">
+                        <input id="iFiles" name="iFiles" enctype="multipart/form-data" type="file" multiple>
+                    </form>
+                    <div class="add-files__loading"><img src="img/common/loading.gif"></div>
+                    <div class="add-files__message">Вы можете добавить суммарно до 10 фото.</div>
+                </div>    
+                <!-- File drop end --> 
+
+                <!-- Photo list start -->
+                <div class="photos__list">
+                    
+                    <!-- Photo item start -->
+                    <div id="item1" class="photos__item">
+                        <div class="photos__photo"><a href="#"><img src="img/photos-edit/1.jpg" height="200" /></a></div>
+                        <div class="photos__description">
+                            <textarea class="input-simple" placeholder="Описание"></textarea>
+                        </div>
+                        <div class="photos__arrows">
+                            <img src="img/photos-edit/arrow_up.svg" width="30" alt="Вверх">
+                            <img src="img/photos-edit/arrow_down.svg" width="30" alt="Вниз">
+                        </div>
+                        <div class="photos__delete">
+                            <img src="img/photos-edit/delete.svg" width="30" alt="Удалить">
+                        </div>
+                    </div>
+                    <!-- Photo item end -->
+
+                    <div id="item2" class="photos__item">
+                        <div class="photos__photo"><a href="#"><img src="img/photos-edit/2.jpg" height="200" /></a></div>
+                        <div class="photos__description">
+                            <textarea class="input-simple" placeholder="Описание"></textarea>
+                        </div>
+                        <!-- <div class="photos__arrows">
+                            <img src="img/photos-edit/arrow_up.svg" width="30" alt="Вверх">
+                            <img src="img/photos-edit/arrow_down.svg" width="30" alt="Вниз">
+                        </div>
+                        <div class="photos__delete">
+                            <img src="img/photos-edit/delete.svg" width="30" alt="Удалить">
+                        </div> -->
+                        <div class="photos__loading" style="display: block;">
+                            <img src="img/common/loading.gif">
+                        </div>
+                    </div>
+
+                    <div id="item3" class="photos__item">
+                        <div class="photos__photo"><a href="#"><img src="img/photos-edit/3.jpg" height="200" /></a></div>
+                        <div class="photos__description">
+                            <textarea class="input-simple" placeholder="Описание"></textarea>
+                        </div>
+                        <div class="photos__arrows">
+                            <img src="img/photos-edit/arrow_up.svg" width="30" alt="Вверх">
+                            <img src="img/photos-edit/arrow_down.svg" width="30" alt="Вниз">
+                        </div>
+                        <div class="photos__delete">
+                            <img src="img/photos-edit/delete.svg" width="30" alt="Удалить">
+                        </div>
+                    </div>
+
+                    <div id="item4" class="photos__item">
+                        <div class="photos__photo"><a href="#"><img src="img/photos-edit/4.jpg" height="200" /></a></div>
+                        <div class="photos__description">
+                            <textarea class="input-simple" placeholder="Описание"></textarea>
+                        </div>
+                        <div class="photos__arrows">
+                            <img src="img/photos-edit/arrow_up.svg" width="30" alt="Вверх">
+                            <img src="img/photos-edit/arrow_down.svg" width="30" alt="Вниз">
+                        </div>
+                        <div class="photos__delete">
+                            <img src="img/photos-edit/delete.svg" width="30" alt="Удалить">
+                        </div>
+                    </div>
+
+                    <div id="item5" class="photos__item">
+                        <div class="photos__photo"><a href="#"><img src="img/photos-edit/5.jpg" height="200" /></a></div>
+                        <div class="photos__description">
+                            <textarea class="input-simple" placeholder="Описание"></textarea>
+                        </div>
+                        <div class="photos__arrows">
+                            <img src="img/photos-edit/arrow_up.svg" width="30" alt="Вверх">
+                            <img src="img/photos-edit/arrow_down.svg" width="30" alt="Вниз">
+                        </div>
+                        <div class="photos__delete">
+                            <img src="img/photos-edit/delete.svg" width="30" alt="Удалить">
+                        </div>
+                    </div>
+
+                </div>
+                <!-- Photo list end -->
+
+                <div class="photos__save-loading"><img src="img/common/loading.gif"></div>
+                <div class="photos__save-message">Изменения успешно сохранены.</div>
+                <button class="button photos__save">Сохранить</button>
+
+            </div>
+            <!-- Photos end -->
+
+            
+
+        </div>
+    </div>
+    <!-- Profile structure end -->
+
+
+    <!-- Footer start -->
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <figure class="footer__logo">
+                <a href="#"><img class="footer__logo-img" src="img/footer/logo.svg" width="70" alt="Yogether"></a>
+                <figcaption class="footer__logo-figcaption"><a class="footer__link footer__logo-link" href="#">Yogether</a></figcaption>
+            </figure>
+            <div class="footer__menus">
+                <ul class="footer__menu footer__menu_first">
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Главная</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Участники</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">О проекте</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Встречи</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Контакты</a></li>
+                </ul>
+                <ul class="footer__menu">
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Расписание</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Города и страны</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Встречи YG</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Карта сайта</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Наша команда</a></li>
+                </ul>
+            </div>
+            <div class="footer__social">
+                <a href="#" class="footer__soc-link"><img src="img/footer/vk.png" alt="Вконтакте"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/instagram.png" alt="Инстаграм"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/facebook.png" alt="Facebook"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/youtube.png" alt="Youtube"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/twitter.png" alt="Twitter"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/ok.png" alt="Одноклассники"></a>
+            </div>
+            <div class="footer__desc">Поиск единомышленников для общения и совместных практик для йогов и эзотериков</div>
+            <div class="footer__copyright">&copy; Yogether. Копирование материалов возможно только с разрешения владельца.</div>
+            <div class="footer__policy">
+                <a href="#" class="footer__link footer__policy-link">Политика конфиденциальности</a>
+                <a href="#" class="footer__link footer__policy-link">Политика обработки персональных данных</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer end -->
+
+<!-- Popups start -->
+
+<div id="darkscreen" class="darkscreen"></div>
+    
+<div id="popups" class="popups">
+
+    <!-- confirm box start -->
+    <div id="confirm" class="confirm">
+        <button id="confirm-close" class="x-close confirm__close"><img src="img/popups/close.png" alt="Закрыть"></button>
+        <h3 class="confirm__title">Подтверждение</h3>
+        <p class="confirm__text">Подтвердите своё действие. Данное действие нельзя будет отменить!</p>
+        <div class="confirm__buttons">
+            <button id="bOk" class="button confirm__ok">Подтверждаю</button>
+            <button id="bCancel" class="button_empty confirm__cancel">Отмена</button>
+        </div>
+    </div>
+
+</div>
+<!-- Popups end -->
+
+</body>
+</html>

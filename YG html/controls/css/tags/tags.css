@@ -1,0 +1,140 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  -webkit-font-feature-settings: 'pnum' on, 'lnum' on;
+          font-feature-settings: 'pnum' on, 'lnum' on;
+  color: #07071F;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 60px;
+}
+
+.tags-frame {
+  width: 470px;
+}
+
+.tags-frame__error {
+  margin-top: 2px;
+  margin-left: 16px;
+  position: absolute;
+}
+
+.tags {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid rgba(42, 16, 78, 0.2);
+  border-radius: 8px;
+  padding: 10px 16px 5px 16px;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.tags__item {
+  display: inline-block;
+  padding: 5px 9px 5px 12px;
+  min-height: 26px;
+  background: #E6D6FD;
+  border-radius: 4px;
+  color: #7551A8;
+  margin-right: 7px;
+  margin-bottom: 5px;
+}
+
+.tags__item button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin-left: 10px;
+  outline: none;
+}
+
+.tags__item button img {
+  vertical-align: unset;
+}
+
+.input-box {
+  display: inline-block;
+  position: relative;
+  min-height: 26px;
+  padding: 5px 0px;
+}
+
+.input-box__hint, .input-box__input {
+  font-size: 14px;
+  line-height: 16px;
+  border: none;
+  outline: none;
+  font-family: 'Raleway', sans-serif;
+}
+
+.input-box__hint {
+  position: absolute;
+  z-index: 1;
+  color: #999;
+  background-color: #fff;
+}
+
+.input-box__input {
+  position: relative;
+  z-index: 2;
+  color: #000;
+  background: none;
+}
+
+.tags-error {
+  color: #E62E6B;
+  font-size: 12px;
+  display: none;
+}
+
+.tags-select {
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid rgba(42, 16, 78, 0.2);
+  border-radius: 8px;
+  padding: 8px 0px;
+  top: 110px;
+  left: 690px;
+  z-index: 3;
+}
+
+.tags-select__item {
+  display: block;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #49497D;
+  text-decoration: none;
+}
+
+.tags-select__item:hover {
+  text-decoration: none;
+}
+
+.tags-select__item:hover, .tags-select__item.selected {
+  background-color: #F3E3FF;
+}
+/*# sourceMappingURL=tags.css.map */

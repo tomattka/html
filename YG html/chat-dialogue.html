@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Yogether</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="css/common/fonts.css">
+
+    <!-- Style -->    
+    <link rel="stylesheet" href="css/common/common.css">	
+    <link rel="stylesheet" href="css/common/header.css">	
+    <link rel="stylesheet" href="css/common/footer.css">
+
+    <link rel="stylesheet" href="css/common/profile-structure.css">	
+
+    <link rel="stylesheet" href="css/content/chat.css">	
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">  
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- <script src="js/chat.js"></script>  (SEE chat-ajax.js) -->
+</head>
+<body>
+    <!-- Header start -->
+    <header class="header">
+        <div class="header__wrapper">
+
+            <!-- Menu block start -->
+            <div class="menu-block">
+                <figure class="menu-block__logo">
+                    <a href="#"><img class="menu-block__logo-img" src="img/header/logo.svg" width="70" alt="Yogether"></a>
+                    <figcaption class="menu-block__logo-figcaption"><a href="#" class="menu-block__link menu-block__logo-link">Yogether</a></figcaption>
+                </figure>
+                <ul class="menu-block__menu">
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">Главная</a></li>
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">Участники</a></li>
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">О проекте</a></li>
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">Контакты</a></li>
+                </ul>
+                <div class="menu-block__buttons">
+                    <a id="aLogin" href="#" class="menu-block__login menu-block__link">Вход</a>
+                    <a href="#" id="bRegister" class="menu-block__register button">Регистрация</a>
+                </div>
+                <div class="menu-block__mobile-buttons">
+                    <a id="aLoginMob" href="#"><img src="img/header/login_mobile.png" alt="Вход"></a>
+                    <a id="aMobMenu" class="menu-block__mob-bt-link" href="#"><img src="img/header/menu_mobile.png" alt="Меню" /></a>
+                </div>
+            </div>
+            <!-- Menu block end -->
+
+            <!-- Title start -->
+            <div class="header__title title">
+                <h2 class="title__h2">Сообщения</h2>
+                <div class="title__breadcrumbs">
+                    <a href="#" class="title__link">Главная</a><span>Сообщения</span>
+                </div>
+            </div>
+            <!-- Title end -->
+
+        </div>
+    </header>
+    <!-- Header end -->
+
+    <!-- Profile structure start -->
+    <div class="profile-structure">
+        <div class="profile-structure__wrapper">
+            <!-- Profile menu start -->
+            <div class="profile-menu profile-structure__menu">
+                <a href="#" class="profile-menu__item profile-menu__item_home">Моя страница</a>
+                <a href="#" class="profile-menu__item profile-menu__item_photos">Фотографии</a>
+                <a href="#" class="profile-menu__item profile-menu__item_messages profile-menu__item_selected">Сообщения</a>
+                <a href="#" class="profile-menu__item profile-menu__item_notifications">Уведомления</a>
+                <a href="#" class="profile-menu__item profile-menu__item_friends">Мои друзья</a>
+                <a href="#" class="profile-menu__item profile-menu__item_config">Настройки аккаунта</a>
+            </div>
+            <!-- Profile menu end -->
+
+            <!-- Chat page start -->
+            <div class="chat profile-structure__chat">
+                <div class="chat__top">
+                    <div class="chat__person"><a href="#"><img width="30" src="img/chat/userpic.jpg" alt="Ирина Яковлева">Ирина Яковлева</a></div>
+                    <div class="chat__back"><a href="#">Назад ></a></div>
+                </div>
+
+                <!-- Messages start -->
+                <div id="chat-messages" class="chat__messages">
+
+                    <div class="chat__message message message_from">
+                        <div class="message__corner"><img src="img/chat/corner_left.gif"></div>
+                        <div class="message__body">
+                            <div class="message__header">
+                                <div class="message__name">Ирина</div>
+                                <div class="message__time">сегодня в 22:15</div>
+                            </div>
+                            <div class="message__text">Вам отправлен запрос на добавление в друзья</div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="chat__message message message_to">
+                        <div class="message__body">
+                            <div class="message__header">
+                                <div class="message__name">Алёна</div>
+                                <div class="message__time">сегодня в 22:15</div>
+                            </div>
+                            <div class="message__text">Привет, как дела?<br>Была бы рада познакомиться))</div>
+                        </div>
+                        <div class="message__corner"><img src="img/chat/corner_right.gif"></div>
+                    </div>
+                    <div class="clear"></div>
+                    
+                    <div class="chat__message message message_from">
+                        <div class="message__corner"><img src="img/chat/corner_left.gif"></div>
+                        <div class="message__body">
+                            <div class="message__header">
+                                <div class="message__name">Ирина</div>
+                                <div class="message__time">сегодня в 22:15</div>
+                            </div>
+                            <div class="message__text">Привет, всё хорошо. Я Ира, люблю заниматься йогой.<br>Расскажи о себе</div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="chat__message message message_to">
+                        <div class="message__body">
+                            <div class="message__header">
+                                <div class="message__name">Алёна</div>
+                                <div class="message__time">сегодня в 22:15</div>
+                            </div>
+                            <div class="message__text">Я Алёна, тоже люблю йогу. Ещё мне нравятся всякие одухотворяющие практики.</div>
+                        </div>
+                        <div class="message__corner"><img src="img/chat/corner_right.gif"></div>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="chat__message message message_from">
+                        <div class="message__corner"><img src="img/chat/corner_left.gif"></div>
+                        <div class="message__body">
+                            <div class="message__header">
+                                <div class="message__name">Ирина</div>
+                                <div class="message__time">сегодня в 22:15</div>
+                            </div>
+                            <div class="message__text">Давно практикуешь?</div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    
+                    <div class="chat__message message message_to">
+                        <div class="message__body">
+                            <div class="message__header">
+                                <div class="message__name">Алёна</div>
+                                <div class="message__time">сегодня в 22:15</div>
+                            </div>
+                            <div class="message__text">Примерно три года, а ты?</div>
+                        </div>
+                        <div class="message__corner"><img src="img/chat/corner_right.gif"></div>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="chat__message message message_from">
+                        <div class="message__corner"><img src="img/chat/corner_left.gif"></div>
+                        <div class="message__body">
+                            <div class="message__header">
+                                <div class="message__name">Ирина</div>
+                                <div class="message__time">сегодня в 22:15</div>
+                            </div>
+                            <div class="message__text">Вам отправлен запрос на добавление в друзья</div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="chat__message message message_to">
+                        <div class="message__body">
+                            <div class="message__header">
+                                <div class="message__name">Алёна</div>
+                                <div class="message__time">сегодня в 22:15</div>
+                            </div>
+                            <div class="message__text">Привет, как дела?<br>Была бы рада познакомиться))</div>
+                        </div>
+                        <div class="message__corner"><img src="img/chat/corner_right.gif"></div>
+                    </div>
+                    <div class="clear"></div>
+                    
+                    <div class="chat__message message message_from">
+                        <div class="message__corner"><img src="img/chat/corner_left.gif"></div>
+                        <div class="message__body">
+                            <div class="message__header">
+                                <div class="message__name">Ирина</div>
+                                <div class="message__time">сегодня в 22:15</div>
+                            </div>
+                            <div class="message__text">Привет, всё хорошо. Я Ира, люблю заниматься йогой.<br>Расскажи о себе</div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="chat__message message message_to">
+                        <div class="message__body">
+                            <div class="message__header">
+                                <div class="message__name">Алёна</div>
+                                <div class="message__time">сегодня в 22:15</div>
+                            </div>
+                            <div class="message__text">Я Алёна, тоже люблю йогу. Ещё мне нравятся всякие одухотворяющие практики.</div>
+                        </div>
+                        <div class="message__corner"><img src="img/chat/corner_right.gif"></div>
+                    </div>
+                    <div class="clear"></div>
+
+                    <div class="chat__message message message_from">
+                        <div class="message__corner"><img src="img/chat/corner_left.gif"></div>
+                        <div class="message__body">
+                            <div class="message__header">
+                                <div class="message__name">Ирина</div>
+                                <div class="message__time">сегодня в 22:15</div>
+                            </div>
+                            <div class="message__text">Давно практикуешь?</div>
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                    
+                    <div class="chat__message message message_to">
+                        <div class="message__body">
+                            <div class="message__header">
+                                <div class="message__name">Алёна</div>
+                                <div class="message__time">сегодня в 22:15</div>
+                            </div>
+                            <div class="message__text">Примерно три года, а ты?</div>
+                        </div>
+                        <div class="message__corner"><img src="img/chat/corner_right.gif"></div>
+                    </div>
+                    <div class="clear"></div>
+
+                </div>
+                <!-- Messages end -->
+
+                <div class="chat__bottom">
+                    <input type="text" placeholder="Ваше сообщение" class="chat__input">
+                    <button class="button">Отправить</button>
+                </div>
+            </div>
+
+            <!-- Chat page end -->
+        </div>
+    </div>
+    <!-- Profile structure end -->
+
+    <!-- Footer start -->
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <figure class="footer__logo">
+                <a href="#"><img class="footer__logo-img" src="img/footer/logo.svg" width="70" alt="Yogether"></a>
+                <figcaption class="footer__logo-figcaption"><a class="footer__link footer__logo-link" href="#">Yogether</a></figcaption>
+            </figure>
+            <div class="footer__menus">
+                <ul class="footer__menu footer__menu_first">
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Главная</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Участники</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">О проекте</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Встречи</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Контакты</a></li>
+                </ul>
+                <ul class="footer__menu">
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Расписание</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Города и страны</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Встречи YG</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Карта сайта</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Наша команда</a></li>
+                </ul>
+            </div>
+            <div class="footer__social">
+                <a href="#" class="footer__soc-link"><img src="img/footer/vk.png" alt="Вконтакте"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/instagram.png" alt="Инстаграм"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/facebook.png" alt="Facebook"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/youtube.png" alt="Youtube"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/twitter.png" alt="Twitter"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/ok.png" alt="Одноклассники"></a>
+            </div>
+            <div class="footer__desc">Поиск единомышленников для общения и совместных практик для йогов и эзотериков</div>
+            <div class="footer__copyright">&copy; Yogether. Копирование материалов возможно только с разрешения владельца.</div>
+            <div class="footer__policy">
+                <a href="#" class="footer__link footer__policy-link">Политика конфиденциальности</a>
+                <a href="#" class="footer__link footer__policy-link">Политика обработки персональных данных</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer end -->
+
+</body>
+</html>

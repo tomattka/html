@@ -1,0 +1,156 @@
+{% extends "ygTemplates/tplProfile.html" %}
+
+{% load static %}
+
+{% block title %}Моя страница{% endblock %}
+{% block breadcrumbs %}<a href="{% url 'user_profile' user_id=user.id %}" class="title__link">Профиль</a><span>Моя страница</span>
+{% endblock %}
+
+
+{% block content %}
+<script src="{% static 'js/fancybox.umd.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/plugins/fancybox.css' %}" />
+
+{% if user.is_authenticated %}
+<input id="hUserId" type="hidden" value="{{user.id}}">
+
+    <!-- Profile start -->
+
+    <div class="user-profile">
+        <div class="user-profile__wrapper">
+            <div class="user-view user-profile__view">
+                <div class="user-view__avatar">
+
+                    {% if user.profile_pic %}
+                    <a href="{{ user.profile_pic_full.url }}" data-fancybox="gallery">
+                    <img class="user-view__avatar-img" src="{{ user.profile_pic.url }}"
+                         alt="{{ user.first_name }} {{ user.last_name }}" />
+                    </a>
+                    {% else %}
+                    <img class="user-view__avatar-img" src="{% static 'img/user-profile/no-photo.png' %}"
+                         alt="{{ user.first_name }} {{ user.last_name }}" />
+                    {% endif %}
+
+                </div>
+
+                {% if user_photos %}
+                <h2 class="user-view__h2">Фотографии пользователя</h2>
+                <div class="user-view__prevs">
+                    {{ user_photos|safe }}
+                </div>
+                {% endif %}
+
+            </div>
+            <div class="user-info user-profile__info">
+                <div class="user-info__name">
+                    <img class="user-info__photo"
+                    {% if user.profile_pic %}
+                        src="{{ user.profile_pic.url }}"
+                    {% else %}
+                        src="{% static 'img/user-profile/no-photo.png' %}"
+                    {% endif %}
+                    alt="{{ user.first_name }} {{ user.last_name }}">
+                    <h1 class="user-info__h1">{{ user.first_name }} {{ user.last_name }}</h1>
+                </div>
+
+                <!-- User params start -->
+
+                    {% if user_info.location %}
+                    <div class="user-info__item">
+                        <div class="user-info__param">Место жительства:</div>
+                        <div class="user-info__value">{{ user_info.location }}</div>
+                    </div>
+                    {% endif %}
+
+                    {% if user_info.birth_date %}
+                    <div class="user-info__item">
+                        <div class="user-info__param">Возраст:</div>
+                        <div class="user-info__value">{{ user_info.getAge }}</div>
+                    </div>
+                    {% endif %}
+
+                    {% if user_info.marital_status %}
+                    <div class="user-info__item">
+                        <div class="user-info__param">Семейное положение:</div>
+                        <div class="user-info__value">{{ user_info.str_mar_status }}</div>
+                    </div>
+                    {% endif %}
+
+                    {% if user_info.doctrine_list %}
+                    <div class="user-info__item">
+                        <div class="user-info__param">Учение:</div>
+                        <div class="user-info__value">{{ user_info.doctrine_list|safe }}</div>
+                    </div>
+                    {% endif %}
+
+                    {% if user_info.tradition_list %}
+                    <div class="user-info__item">
+                        <div class="user-info__param">Традиция:</div>
+                        <div class="user-info__value">{{ user_info.tradition_list|safe }}</div>
+                    </div>
+                    {% endif %}
+
+                    {% if user_info.practice_list %}
+                    <div class="user-info__item">
+                        <div class="user-info__param">Практики:</div>
+                        <div class="user-info__value">{{ user_info.practice_list|safe }}</div>
+                    </div>
+                    {% endif %}
+
+                    {% if user_info.experience %}
+                    <div class="user-info__item">
+                        <div class="user-info__param">Опыт практики:</div>
+                        <div class="user-info__value">{{ user_info.experience }}</div>
+                    </div>
+                    {% endif %}
+
+                    {% if user_info.interest_list %}
+                    <div class="user-info__item">
+                        <div class="user-info__param">Интересы:</div>
+                        <div class="user-info__value">{{ user_info.interest_list|safe }}</div>
+                    </div>
+                    {% endif %}
+
+                    {% if user_info.request %}
+                    <div class="user-info__item">
+                        <div class="user-info__param">Ищу:</div>
+                        <div class="user-info__value">{{ user_info.request }}</div>
+                    </div>
+                    {% endif %}
+
+                    {% if user_info.about %}
+                    <div class="user-info__item">
+                        <div class="user-info__param">Обо мне:</div>
+                        <div class="user-info__value">{{ user_info.about }}</div>
+                    </div>
+                    {% endif %}
+
+                    {% if not user_info.enough_info %}
+                    <div class="user-info__item user-info__urge">
+                        Укажите больше данных о себе, это поможет единомышленникам найти Вас.
+                    </div>
+                    <div class="user-info__item">
+                        <a href="/profile/edit.html">Редактировать профиль</a>
+                    </div>
+                    {% else %}
+                    <div class="user-info__item" style="padding-top: 20px;">
+                        <a href="/profile/edit.html">Перейти в режим редактирования</a>
+                    </div>
+                    {% endif %}
+                <!-- User params end -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile end -->
+
+<!-- Recommendations start -->
+{% include "../ygProfile/recommendations.html" %}
+<!-- Recommendations end -->
+
+{% else %}
+<p class="no-data">Нет данных</p>
+{% endif %}
+
+{% endblock %}

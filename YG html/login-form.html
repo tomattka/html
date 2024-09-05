@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Yogether</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="css/common/fonts.css">
+
+    <!-- Style -->    
+    <link rel="stylesheet" href="css/common/common.css">	
+    <link rel="stylesheet" href="css/common/header.css">	
+    <link rel="stylesheet" href="css/common/footer.css">	
+    
+    <link rel="stylesheet" href="css/content/forms.css">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Header start -->
+    <header class="header">
+        <div class="header__wrapper">
+
+            <!-- Menu block start -->
+            <div class="menu-block">
+                <figure class="menu-block__logo">
+                    <a href="#"><img class="menu-block__logo-img" src="img/header/logo.svg" width="70" alt="Yogether"></a>
+                    <figcaption class="menu-block__logo-figcaption"><a href="#" class="menu-block__link menu-block__logo-link">Yogether</a></figcaption>
+                </figure>
+                <ul class="menu-block__menu">
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">Главная</a></li>
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">Участники</a></li>
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">О проекте</a></li>
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">Контакты</a></li>
+                </ul>
+                <div class="menu-block__buttons">
+                    <a id="aLogin" href="#" class="menu-block__login menu-block__link">Вход</a>
+                    <a href="#" id="bRegister" class="menu-block__register button">Регистрация</a>
+                </div>
+                <div class="menu-block__mobile-buttons">
+                    <a id="aLoginMob" href="#"><img src="img/header/login_mobile.png" alt="Вход"></a>
+                    <a id="aMobMenu" class="menu-block__mob-bt-link" href="#"><img src="img/header/menu_mobile.png" alt="Меню" /></a>
+                </div>
+            </div>
+            <!-- Menu block end -->
+
+            <!-- Title start -->
+            <div class="header__title title">
+                <h2 class="title__h2">Вход</h2>
+                <div class="title__breadcrumbs">
+                    <a href="#" class="title__link">Главная</a><span>Вход</span>
+                </div>
+            </div>
+            <!-- Title end -->
+
+        </div>
+    </header>
+    <!-- Header end -->
+
+    
+    <!-- Register form start -->
+
+    <div class="profile-form">      
+        
+        <h1>Войти</h1>
+        
+        <form id="loginForm" name="loginForm" class="login" method="POST" action="/accounts/login/">
+            <input type="hidden" name="csrfmiddlewaretoken" value="t1NnPtmEu2WoeSzFub050EoMvebbK8s9LG75XbKGm4tclPQ7vJZo6XFvdFVhejMn">
+            <p><label for="id_login">Войти:</label> <input type="text" name="login" placeholder="Логин" autocomplete="email" class="login-form__input login-form__input_login" required id="id_login"></p>
+            <p><label for="id_password">Пароль:</label> <input type="password" name="password" placeholder="Пароль" autocomplete="current-password" class="login-form__input login-form__input_password" required id="id_password"></p>
+            <p><label for="id_remember">Запомнить меня:</label> <input type="checkbox" name="remember" checked="true" style="display: none;" id="id_remember"></p>
+            <button class="button profile-form__button profile-form__button-login" type="submit">Войти</button>
+        </form>
+        
+        <div class="profile-form__links">
+            <a href="/accounts/password/reset/">Восстановление пароля</a>
+            <a href="/accounts/signup/">Регистрация</a>
+        </div>    
+        
+        <h4>Войти с помощью соцсети</h4>
+        <div class="profile-form__socials">
+            <a href="/accounts/vk/login/?process=login" class="profile-form__soc-button"><img src="img/popups/vk.png" alt="Вконтакте"></a>
+            <button class="profile-form__soc-button"><img src="img/popups/ok.png" alt="Одноклассники"></button>
+            <button class="profile-form__soc-button"><img src="img/popups/facebook.png" alt="Facebook"></button>
+            <button class="profile-form__soc-button"><img src="img/popups/google2.png" alt="Google +"></button>
+        </div>
+        
+    </div>
+
+    <!-- Register form end -->
+
+
+    <!-- Footer start -->
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <figure class="footer__logo">
+                <a href="#"><img class="footer__logo-img" src="img/footer/logo.svg" width="70" alt="Yogether"></a>
+                <figcaption class="footer__logo-figcaption"><a class="footer__link footer__logo-link" href="#">Yogether</a></figcaption>
+            </figure>
+            <div class="footer__menus">
+                <ul class="footer__menu footer__menu_first">
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Главная</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Участники</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">О проекте</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Встречи</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Контакты</a></li>
+                </ul>
+                <ul class="footer__menu">
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Расписание</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Города и страны</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Встречи YG</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Карта сайта</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Наша команда</a></li>
+                </ul>
+            </div>
+            <div class="footer__social">
+                <a href="#" class="footer__soc-link"><img src="img/footer/vk.png" alt="Вконтакте"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/instagram.png" alt="Инстаграм"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/facebook.png" alt="Facebook"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/youtube.png" alt="Youtube"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/twitter.png" alt="Twitter"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/ok.png" alt="Одноклассники"></a>
+            </div>
+            <div class="footer__desc">Поиск единомышленников для общения и совместных практик для йогов и эзотериков</div>
+            <div class="footer__copyright">&copy; Yogether. Копирование материалов возможно только с разрешения владельца.</div>
+            <div class="footer__policy">
+                <a href="#" class="footer__link footer__policy-link">Политика конфиденциальности</a>
+                <a href="#" class="footer__link footer__policy-link">Политика обработки персональных данных</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer end -->
+
+</body>
+</html>

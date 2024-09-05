@@ -1,0 +1,111 @@
+.params{
+    // display: block;
+    display: none;
+    border: 1px solid rgba(42, 16, 78, 0.2);
+    border-radius: 8px;
+    box-shadow: 0px 3px 12px -2px rgba(42, 16, 78, 0.15);
+    padding: 32px;
+
+    @media (max-width: 1200px){
+        box-shadow: none;
+    }
+    @media (max-width: 480px){
+        padding: 32px 16px 8px 16px;
+    }
+
+    &__frame{ // needed to avoid problems with script and adoptations
+        display: flex;
+        @media (max-width: 1200px){
+            display: block;
+        }
+    }
+
+    // params columns
+    &__user-data{
+        width: 335px;
+        overflow: hidden;
+        margin-right: 45px;
+
+        @media (max-width: 1200px){
+            width: 100%;
+        }
+
+        .params__item-name{
+            width: 110px;
+            @media (max-width: 1200px){ width: 100%;}
+        }    
+    }
+
+    &__practice-block{
+        padding-left: 45px;
+        border-left: 1px solid rgba(42, 16, 78, 0.08);
+        
+        @media (max-width: 1200px){
+            width: 100%;
+            border: none;
+            padding: 0;
+        }
+
+        .params__item-name{
+            width: 144px;
+        }
+    }
+
+    // params items
+    &__item{
+        display: flex;
+        align-items: center;
+        margin-bottom: 33px;
+        
+        @media (max-width: 1200px){
+            display: block;
+            margin-bottom: 24px;
+            font-size: 16px;
+        }
+    }
+
+    &__item-value{        
+        @media (max-width: 1200px){
+            margin-top: 8px;
+        }
+    }
+
+    // fields widths
+    &__city, &__gender, &__marital, &__experience{
+        width: 222px;
+        
+        @media (max-width: 1200px){
+            width: 100%;
+        }
+    }
+
+    &__age{
+        width: 53px;
+
+        @media (max-width: 1200px){
+            width: 160px;
+        }
+        @media (max-width: 480px){
+            width: 53px;
+        }
+    }
+
+    &__tradition, &__doctrine, &__practice, &__interests{
+        width: 538px;
+        
+        @media (max-width: 1200px){
+            width: 100%;
+        }
+    }
+
+    &__apply{
+        text-align: right;
+        margin-top: 42px;
+
+        a{
+            margin-right: 15px;
+            font-size: 14px;
+            &:hover{text-decoration: none;}
+        }
+    }
+}

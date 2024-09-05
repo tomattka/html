@@ -1,0 +1,98 @@
+/* Variables */
+/* Configuration */
+.config {
+  padding: 30px 30px 60px 30px;
+}
+
+@media (max-width: 620px) {
+  .config {
+    padding: 0px 0px 30px 0px;
+  }
+}
+
+.config__item {
+  margin-bottom: 30px;
+  line-height: 130%;
+}
+
+.config__title {
+  margin-bottom: 5px;
+}
+
+.config__input {
+  width: 300px;
+  margin-right: 5px;
+}
+
+@media (max-width: 620px) {
+  .config__input {
+    width: 100%;
+  }
+}
+
+@media (max-width: 620px) {
+  .config__email .config__input {
+    margin-bottom: 7px;
+  }
+}
+
+.config input[type=checkbox] {
+  margin-right: 10px;
+}
+
+.config__password {
+  margin-bottom: 60px;
+}
+
+.config__password .config__input {
+  margin-bottom: 15px;
+}
+
+.config__message {
+  margin-bottom: 15px;
+}
+
+.config__message_red {
+  color: #E62E6B;
+}
+
+.config__message_green {
+  color: green;
+}
+
+.config__time {
+  margin-top: 45px;
+}
+
+.config__dropdown {
+  width: 500px;
+}
+
+@media (max-width: 620px) {
+  .config__dropdown {
+    width: 100%;
+  }
+}
+
+.config__news {
+  margin-top: 45px;
+}
+
+.config__recommend {
+  margin-top: 45px;
+}
+
+.config__info {
+  color: #8A8A9E;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 480px) {
+  .config__button {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+/*# sourceMappingURL=user-config.css.map */

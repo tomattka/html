@@ -1,0 +1,114 @@
+/* Variables */
+$footerLinksColor: #49497D;
+
+.footer{
+    background-color: rgba(243, 227, 255, 0.75);
+    font-size: 14px;
+    line-height: 100%;
+    padding-bottom: 30px;
+    
+    @media (max-width: 1280px) { padding-bottom: 15px; }
+
+    &__link{ color: $footerLinksColor; }
+    
+    &__wrapper{
+        @include contentWrapper();
+        padding: 40px 0px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        @media (max-width: 768px) { 
+            padding-bottom: 25px;
+        }
+    }
+
+    &__logo{
+        flex-basis: 114px;
+        margin-right: 86px;
+        text-align: center;
+        margin-bottom: 0;
+
+        @media (max-width: 1280px) { 
+            flex-basis: 100%; 
+            order: 1;
+            margin-right: 0px;
+            margin-bottom: 25px;
+        }
+        @media (max-width: 480px) { 
+            margin-bottom: 15px;
+        }
+    }
+
+    &__logo-figcaption{
+        font-family: 'Barlow', sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 100%;
+    }
+    
+    &__logo-link:hover{ text-decoration: none; }
+
+    &__center{
+        flex-basis: 750px;
+
+        @media (max-width: 1280px) { 
+            flex-basis: 100%; 
+            order: 2;
+            text-align: center;
+            margin-bottom: 10px;
+            margin-top: 15px;
+        }
+    }
+
+    &__menu{
+        list-style: none;
+        padding: 0;
+        line-height: 140%;
+        margin-bottom: 17px;
+
+        @media (max-width: 480px) {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__menu-item{
+        display: inline;
+        margin-right: 22px;
+        white-space: nowrap;
+
+        @media (max-width: 480px) {
+            margin-right: 8px;
+            margin-left: 8px;
+        }
+    }
+
+    &__social{
+        flex-basis: 220px;
+        display: flex;
+        justify-content: flex-end;
+        @media (max-width: 1280px) { 
+            order: 3; 
+            flex-basis: 100%;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+    }
+
+    &__soc-link{
+        margin-left: 11px;
+    }
+
+    &__copyright{
+        flex-basis: 50%;
+        font-weight: 400;
+        line-height: 140%;
+
+        @media (max-width: 1280px) { 
+            flex-basis: 100%;
+            text-align: center;
+            margin-bottom: 24px;
+        }
+    }
+
+}

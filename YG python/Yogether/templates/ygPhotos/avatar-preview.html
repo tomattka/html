@@ -1,0 +1,65 @@
+{% extends "ygTemplates/tplProfile.html" %}
+
+{% load static %}
+
+{% block title %}Изменение аватара{% endblock %}
+{% block breadcrumbs %}<a href="{% url 'user_profile' user_id=user.id %}" class="title__link">Профиль</a><span>Изменение аватара</span>
+{% endblock %}
+
+
+{% block content %}
+
+<style>
+    @import "{% static 'css/common/profile-structure.css' %}";
+    @import "{% static 'css/content/avatar.css' %}";
+    @import "{% static 'css/plugins/cropper.min.css' %}";
+</style>
+
+
+    <!-- Cropper -->
+<script src="{% static 'js/photos/cropper.min.js' %}"></script>
+<script src="{% static 'js/photos/avatar-crop.js' %}"></script>
+
+<!-- Profile structure start -->
+<div class="profile-structure">
+    <div class="profile-structure__wrapper">
+        <!-- Profile menu start -->
+        {% include "../ygProfile/profile-menu.html" %}
+        <!-- Profile menu end -->
+
+        <!-- Avatar page start -->
+        <div class="avatar profile-structure_avatar">
+            <h1>Изменение фотографии профиля</h1>
+            <p class="avatar__description">Выберите квадратную область на фотографии для отображения в качестве аватара.</p>
+
+
+            <div class="avatar__block">
+                <div class="avatar__area-select">
+                    <img id="full-photo" width="400" src="{{ file_url }}" alt="Новое фото">
+                </div>
+
+                <div class="avatar__preview">
+                    <div class="avatar__preview-big preview"></div>
+                    <div class="avatar__preview-small preview"></div>
+                </div>
+
+            </div>
+
+            <form id="fCrop" action="" method="POST" enctype="multipart/form-data" class="avatar__coordinates no-display">
+                {% csrf_token %}
+                <input id="iX" name="iX" type="text">
+                <input id="iY" name="iY" type="text">
+                <input id="iW" name="iW" type="text"><br>
+                <input id="iUrl" name="iUrl" type="text" value="{{ file_url }}">
+                <input id="iFileName" name="iFileName" type="text" value="{{ file_name }}">
+                <input id="iDelete" name="iDelete" type="hidden" value="false">
+            </form>
+
+            <button id="bSave" class="button">Сохранить</button> <button id="bCancel" class="button_empty">Отмена</button>
+
+        </div><!-- Avatar page end -->
+    </div>
+</div>
+<!-- Profile structure end -->
+
+{% endblock %}

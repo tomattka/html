@@ -1,0 +1,21 @@
+{% extends "ygTemplates/tplProfile.html" %}
+
+{% load static %}
+
+{% block title %}{{ page_title }}{% endblock %}
+{% block breadcrumbs %}<span>{{ page_title }}</span>
+{% endblock %}
+
+{% block content %}
+
+<style>
+    @import "{% static 'css/content/article.css' %}";
+</style>
+
+<!-- Article start-->
+<article class="container">
+    {{ page_text|safe }}
+</article>
+<!-- Article end-->
+
+{% endblock %}

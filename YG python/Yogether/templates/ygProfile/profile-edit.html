@@ -1,0 +1,435 @@
+{% extends "ygTemplates/tplProfile.html" %}
+
+{% load static %}
+
+{% block title %}Управление профилем{% endblock %}
+{% block breadcrumbs %}<a href="{% url 'user_profile' user_id=user.id %}" class="title__link">Профиль</a><span>Редактировать</span>
+{% endblock %}
+
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<style>
+    @import "{% static 'controls/css/tags/tags.css' %}";
+    @import "{% static 'controls/css/list/list.css' %}";
+    @import "{% static 'controls/css/select/select.css' %}?v=1.1";
+    @import "{% static 'controls/css/date/date.css' %}";
+    @import "{% static 'controls/css/input/input.css' %}";
+    @import "{% static 'controls/css/hint/hint.css' %}";
+
+    @import "{% static 'css/common/profile-structure.css' %}";
+    @import "{% static 'css/content/profile_edit.css' %}";
+</style>
+
+<script src="{% static 'js/profile-edit.js' %}"></script>
+
+<script src="{% static 'controls/js/tags.js' %}"></script>
+<script src="{% static 'controls/js/list.js' %}"></script>
+<script src="{% static 'controls/js/select.js' %}"></script>
+<script src="{% static 'controls/js/date.js' %}"></script>
+<script src="{% static 'controls/js/hint.js' %}"></script>
+
+<script src="{% static 'js/ajax/ajax-hints.js' %}"></script>
+<script src="{% static 'js/ajax/edit-profile_save-params.js' %}"></script>
+<script src="{% static 'js/ajax/edit-profile_mobile.js' %}"></script>
+
+<!-- Profile edit start -->
+    <div class="profile-structure">
+        <div class="profile-structure__wrapper">
+
+            <!-- Profile menu start -->
+            {% include "../ygProfile/profile-menu.html" %}
+            <!-- Profile menu end -->
+
+            <!-- User data start -->
+            <div class="user-data profile-structure__data">
+
+                <div class="user-data__main">
+                    <a href="{% url 'avatar_load' %}" class="user-data__avatar" style="background-image: url(
+                    {% if user.profile_pic %}
+                            '{{ user.profile_pic.url }}'
+                    {% else %}
+                            '{% static 'img/user-profile/no-photo.png' %}'
+                    {% endif %}
+                    );"><div class="user-data__avatar-dark"><img src="{% static 'img/profile-edit/avatar_change.png' %}" alt="Изменить фото"></div></a>
+                    <div class="user-data__name"><span id="sName">{{user.first_name}} <br>{{user.last_name}}</span>
+                        <button class="pen"><img src="{% static 'img/profile-edit/pen.png' %}" alt="Редактировать"></button>
+                    </div>
+                    <div class="user-data__editable">
+                        <div class="user-data__name-fields">
+                            <span>Имя:</span>
+                            <input id="iName" type="text" class="input-simple user-data__input" placeholder="Имя" value="{{user.first_name}}" autocomplete="off">
+                            <span class="second-name">Фамилия:</span>
+                            <input id="iFamily" type="text" class="input-simple user-data__input" placeholder="Фамилия" value="{{user.last_name}}" autocomplete="off">
+                        </div>
+                        <button id="bName" class="button user-data__save">Сохранить</button>
+                    </div>
+                </div>
+
+                <div class="user-info user-data__info">
+
+                    <!-- User params start -->
+
+                    <!-- User city start -->
+                    <div class="user-info__item">
+
+                        <div class="user-info__param">Место жительства:</div>
+
+                        <div id="dLocation" class="user-info__value">
+                            {{ user_info.location|default:"<span>не указано</span>" }}
+                        </div>
+
+                        <div class="user-info__editable">
+
+                            <div class="select-list user-info__select-list">
+                                <div class="select-list__input-box">
+                                    <input id="iLocation" type="text" class="select-list__input" value="{{ user_info.location|default:'' }}" autocomplete="off">
+                                    <img src="{% static 'controls/img/list_clear.png' %}" class="select-list__clear" width="12" height="12" alt="clear">
+                                </div>
+                            </div>
+
+                            <button id="bSaveLocation" class="button user-info__save">Сохранить</button>
+                        </div>
+
+                        <button class="pen"><img src="{% static 'img/profile-edit/pen.png' %}" alt="Редактировать"></button>
+
+                    </div>
+                    <!-- User city end -->
+
+
+                    <!-- User age start -->
+                    <div class="user-info__item">
+
+                        <div class="user-info__param">Возраст:</div>
+
+                        <div id="dBirthDay" class="user-info__value">
+                            {{ user_info.getAge|default:"<span>не указано</span>" }}
+                        </div>
+
+                        <div class="user-info__editable">
+
+                            <div class="date user-info__date">
+                                <input id="iBirthDay" type="date" class="date__input" placeholder="Дата рождения" value="{{ user_info.getBirthDateForField }}">
+                                <div class="date__error">Укажите дату в формате дд.мм.гггг</div>
+                            </div>
+
+
+                            <button id="bBirthDay" class="button user-info__save">Сохранить</button>
+                        </div>
+
+                        <button class="pen"><img src="{% static 'img/profile-edit/pen.png' %}" alt="Редактировать"></button>
+                    </div>
+                    <!-- User age end -->
+
+
+                    <!-- User gender start -->
+
+                    <div class="user-info__item">
+
+                        <div class="user-info__param">Пол:</div>
+
+                        <div id="dGender" class="user-info__value">
+                            {{ user.gender|default:"<span>не указано</span>" }}
+                        </div>
+
+                        <div class="user-info__editable">
+
+                            <div class="dropdown user-info__dropdown">
+
+                                <div class="dropdown__input-box">
+                                    <button class="dropdown__invisible"></button>
+                                    <input id="iGender" type="text" class="dropdown__input" value='{{ user.gender|default:"не указано" }}' disabled>
+                                    <img src="{% static 'controls/img/list_down.png' %}" class="dropdown__expand" width="13" alt="Expand">
+                                </div>
+
+                                <div class="dropdown__hints">
+                                    {{ vocabularies.genders|safe}}
+                                </div>
+
+                            </div>
+
+                            <button id="bSaveGender" class="button user-info__save">Сохранить</button>
+                        </div>
+
+                        <button class="pen"><img src="{% static 'img/profile-edit/pen.png' %}" alt="Редактировать"></button>
+                    </div>
+                    <!-- User gender end -->
+
+
+                    <!-- User marital status start -->
+
+                    <div class="user-info__item">
+
+                        <div class="user-info__param">Семейное положение:</div>
+
+                        <div id="dMarital" class="user-info__value">
+                            {{ user_info.str_mar_status|default:"<span>не указано</span>" }}
+                        </div>
+
+                        <div class="user-info__editable">
+
+                            <div class="dropdown user-info__dropdown">
+
+                                <div class="dropdown__input-box">
+                                    <button class="dropdown__invisible"></button>
+                                    <input id="iMarital" type="text" class="dropdown__input" value="{{ user_info.str_mar_status|default:'не указано' }}" disabled>
+                                    <img src="{% static 'controls/img/list_down.png' %}" class="dropdown__expand" width="13" alt="Expand">
+                                </div>
+
+                                <div class="dropdown__hints">
+                                    {{ vocabularies.statusList|safe}}
+                                </div>
+
+                            </div>
+
+                            <button id="bSaveMarital" class="button user-info__save">Сохранить</button>
+                        </div>
+
+                        <button class="pen"><img src="{% static 'img/profile-edit/pen.png' %}" alt="Редактировать"></button>
+                    </div>
+                    <!-- User marital status end -->
+
+
+                    <!-- User doctrine start -->
+
+                    <div class="user-info__item">
+
+                        <div class="user-info__param">Учение&nbsp;<img src="{% static 'controls/img/hint.png' %}" class="hint" alt="hint">
+                            <div class="hint-box">
+                                <noindex>Название учения/верования. Например: йога, каббала, пастафарианство</noindex>
+                                <button class="hint-box__hidden"></button>
+                            </div>
+                        </div>
+
+                        <div id="dDoctrines" class="user-info__value">
+                            {{ user_info.doctrine_list|safe|default:"<span>не указано</span>" }}
+                        </div>
+
+                        <div class="user-info__editable">
+
+                            <div class="tags-frame user-info__tags">
+                                <div id="tagsDoctrines" class="tags">
+                                    {{ user_info.doctrine_tags|safe }}
+                                    <div class="input-box">
+                                        <input type="text" class="input-box__hint input-autowidth" value="" size="2" maxlength="50" disabled>
+                                        <input id="iDoctrine" type="text" class="input-box__input input-autowidth" value="" size="2" maxlength="50" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="tags-error tags-frame__error">Данный тег уже внесён в список!</div>
+                            </div>
+
+                            <button id="bDoctrines" class="button user-info__save">Сохранить</button>
+                        </div>
+
+                        <button class="pen"><img src="{% static 'img/profile-edit/pen.png' %}" alt="Редактировать"></button>
+
+                    </div>
+                    <!-- User doctrine end -->
+
+
+                    <!-- User tradition start -->
+
+                    <div class="user-info__item">
+
+                        <div class="user-info__param">Традиция&nbsp;<img src="{% static 'controls/img/hint.png' %}" class="hint" alt="hint">
+                            <div class="hint-box">
+                                <noindex>Традиция — отдельная ветвь учения. Может носить имя гуру/учителя, конкретной школы/организации и т.п.</noindex>
+                                <button class="hint-box__hidden"></button>
+                            </div>
+                        </div>
+
+                        <div id="dTraditions" class="user-info__value">
+                            {{ user_info.tradition_list|safe|default:"<span>не указано</span>" }}
+                        </div>
+
+                        <div class="user-info__editable">
+
+                            <div class="tags-frame user-info__tags">
+                                <div id="tagsTraditions" class="tags">
+
+                                    {{ user_info.tradition_tags|safe }}
+                                    <div class="input-box">
+                                        <input type="text" class="input-box__hint input-autowidth" value="" size="2" maxlength="50" disabled>
+                                        <input id="iTradition" type="text" class="input-box__input input-autowidth" value="" size="2" maxlength="50" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="tags-error tags-frame__error">Данный тег уже внесён в список!</div>
+                            </div>
+
+                            <button id="bTraditions" class="button user-info__save">Сохранить</button>
+                        </div>
+
+                        <button class="pen"><img src="{% static 'img/profile-edit/pen.png' %}" alt="Редактировать"></button>
+
+                    </div>
+                    <!-- User tradition end -->
+
+
+                    <!-- User practices start -->
+                    <div class="user-info__item">
+
+                        <div class="user-info__param">Практики&nbsp;<img src="{% static 'controls/img/hint.png' %}" class="hint" alt="hint">
+                            <div class="hint-box">
+                                <noindex>Практики — конкретные упражнения/техники, которые Вы практикуете.<br>Например: хатха-йога, медитация, прокрастинация.</noindex>
+                                <button class="hint-box__hidden"></button>
+                            </div>
+                        </div>
+                        <div id="dPractices" class="user-info__value">
+                            {{ user_info.practice_list|safe|default:"<span>не указано</span>" }}
+                        </div>
+
+                        <div class="user-info__editable">
+
+                            <div class="tags-frame user-info__tags">
+                                <div id="tagsPractices" class="tags">
+                                    {{ user_info.practice_tags|safe }}
+                                    <div class="input-box">
+                                        <input type="text" class="input-box__hint input-autowidth" value="" size="2" maxlength="50" disabled>
+                                        <input id="iPractice" type="text" class="input-box__input input-autowidth" value="" size="2" maxlength="50" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="tags-error tags-frame__error">Данный тег уже внесён в список!</div>
+                            </div>
+
+                            <button id="bPractices" class="button user-info__save">Сохранить</button>
+                        </div>
+
+                        <button class="pen"><img src="{% static 'img/profile-edit/pen.png' %}" alt="Редактировать"></button>
+                    </div>
+                    <!-- User practices end -->
+
+
+                    <!-- User experience start -->
+
+                    <div class="user-info__item">
+
+                        <div class="user-info__param">Опыт практики:</div>
+
+                        <div id="dExperience" class="user-info__value">
+                            {{ user_info.experience|default:"<span>не указано</span>" }}
+                        </div>
+
+                        <div class="user-info__editable">
+
+                            <div class="dropdown user-info__dropdown">
+
+                                <div class="dropdown__input-box">
+                                    <button class="dropdown__invisible"></button>
+                                    <input id="iExperience" type="text" class="dropdown__input" value="{{ user_info.experience|default:'не указано' }}" disabled>
+                                    <img src="{% static 'controls/img/list_down.png' %}" class="dropdown__expand" width="13" alt="Expand">
+                                </div>
+
+                                <div class="dropdown__hints">
+                                    {{ vocabularies.experience|safe}}
+                                </div>
+
+                            </div>
+
+                            <button id="bSaveExperience" class="button user-info__save">Сохранить</button>
+                        </div>
+
+                        <button class="pen"><img src="{% static 'img/profile-edit/pen.png' %}" alt="Редактировать"></button>
+                    </div>
+
+                    <!-- User experience end -->
+
+
+                    <!-- User interests start -->
+
+                    <div class="user-info__item">
+
+                        <div class="user-info__param">Интересы:</div>
+
+                        <div id="dInterests" class="user-info__value">
+                            {{ user_info.interest_list|safe|default:"<span>не указано</span>" }}
+                        </div>
+
+                        <div class="user-info__editable">
+
+                            <div class="tags-frame user-info__tags">
+                                <div id="tagsInterests" class="tags">
+                                    {{ user_info.interest_tags|safe }}
+                                    <div class="input-box">
+                                        <input type="text" class="input-box__hint input-autowidth" value="" size="2" maxlength="50" disabled>
+                                        <input id="iInterests" type="text" class="input-box__input input-autowidth" value="" size="2" maxlength="50" autocomplete="off">
+                                    </div>
+                                </div>
+                                <div class="tags-error tags-frame__error">Данный тег уже внесён в список!</div>
+                            </div>
+
+                            <button id="bInterests" class="button user-info__save">Сохранить</button>
+                        </div>
+
+                        <button class="pen"><img src="{% static 'img/profile-edit/pen.png' %}" alt="Редактировать"></button>
+                    </div>
+                    <!-- User interests end -->
+
+
+                    <!-- User request start -->
+
+                    <div class="user-info__item">
+
+                        <div class="user-info__param">Ищу:</div>
+
+                        <div id="dRequest" class="user-info__value">
+                            {{ user_info.request|safe|default:"<span>не указано</span>" }}
+                        </div>
+
+                        <div class="user-info__editable">
+                            <textarea id="tRequest" class="input-simple user-info__input-simple" placeholder="Ищу">{{ user_info.request_txt|safe|default:"" }}</textarea>
+
+                            <button id="bRequest" class="button user-info__save">Сохранить</button>
+                        </div>
+
+                        <button class="pen"><img src="{% static 'img/profile-edit/pen.png' %}" alt="Редактировать"></button>
+                    </div>
+
+                    <!-- User request end -->
+
+
+                    <!-- User about start -->
+
+                    <div class="user-info__item">
+
+                        <div class="user-info__param">Обо мне:</div>
+
+                        <div id="dAbout" class="user-info__value">
+                            {{ user_info.about|safe|default:"<span>не указано</span>" }}
+                        </div>
+
+                        <div class="user-info__editable">
+
+                            <textarea id="tAbout" class="input-simple user-info__input-simple" placeholder="Обо мне">{{ user_info.about_txt|safe|default:"" }}</textarea>
+
+                            <button id="bAbout" class="button user-info__save">Сохранить</button>
+                        </div>
+
+                        <button class="pen"><img src="{% static 'img/profile-edit/pen.png' %}" alt="Редактировать"></button>
+                    </div>
+
+                    <!-- User about end -->
+
+                    <!-- User params end -->
+
+                    <!-- Mobile Save All start -->
+                    <div class="save-all">
+                        <div class="save-all__message save-all__message_err">Проверьте правильность сохранения полей!</div>
+                        <div class="save-all__loading"><img src="{% static 'img/common/loading.gif' %}" alt="Загрузка"></div>
+                        <button class="button save-all__button">Сохранить</button>
+                    </div>
+                    <!-- Mobile Save All end -->
+                </div>
+            </div>
+            <!-- User data end -->
+
+        </div>
+    </div>
+    <!-- Profile edit end -->
+
+{% else %}
+<p class="no-data">Нет данных</p>
+{% endif %}
+
+{% endblock %}

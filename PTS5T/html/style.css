@@ -1,0 +1,518 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	padding: 0px;
+	height: 100%;
+}
+.container-fluid{
+	min-width: 1650px;
+}
+.container{
+	min-width: 1170px;
+}
+.topmenu{
+	background-color: #f6f6f6;
+	font-family: Microsoft Sans Serif;
+	border-bottom: 1px solid #aeaeae;
+}
+.topmenu .menu{
+	min-width: 74%;
+	max-width: 74%;
+}
+.topmenu .srch{
+	min-width: 14%;
+	max-width: 14%;
+}
+.topmenu .lk{
+	min-width: 12%;
+	max-width: 12%;
+}
+.menuitem{
+	display: block;
+	padding-left: 40px;
+	padding-right: 30px;
+}
+.menuitem a{
+	color: #1d2027;
+}
+.topmenu .srch input{
+	display: block;
+	padding: 10px 30px 10px 45px;
+	background-image: url("img/menu/search.png");
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	border: none;
+	background-size: 24px;
+	width: 13vw;
+	font-size: 18px;
+}
+.topmenu .lk a{
+	display: block;
+	padding: 11px 0px 11px 50px;
+	background-image: url("img/menu/lk.png");
+	background-repeat: no-repeat;
+	background-position: left center;
+	background-color: #1d1d1b;
+	background-size: 45px;
+	width: 11vw;
+	min-width: 220px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #dadada;
+	white-space: nowrap;
+}
+.topmenu .lk a:hover{
+	text-decoration: none;
+	color: #fff;
+}
+
+
+.bordered{
+	border: 1px solid #1c232e;
+}
+.purple-line{
+	height: 15px;
+	background-color: #6202d1;
+}
+.video{
+	background-color: #000000;
+}
+#greet{
+	padding: 0px; 
+	height: 50vw;
+	background-image: url('img/bp1_1.jpg'); 
+	background-size: 100% auto; 
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-color: #05070a;
+}
+#greet #caption{
+	text-align: center;
+	font-size: 3vw;
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+	margin-top: 3%;
+}
+#greet #email{
+	width: 90%;
+	text-align: right;
+	margin-top: 30px;
+}
+#greet #email a{
+	color: #f5f5f5;
+	font-size: 18px;
+	padding: 7px 15px 12px 15px;
+}
+#greet #email a:hover{
+	background-color: #6202d1;
+	color: white;
+	text-decoration: none;
+}
+/* Описание системы */
+#desc{
+	margin: 120px auto 120px auto;
+	min-width: 1170px;
+}
+#desc #info{
+	padding: 60px 30px 60px 60px;
+	font-size: 28px;
+	min-height: 320px;
+	max-height: 320px;
+	min-width: 570px;
+	max-width: 570px;
+}
+#desc #btn{
+	max-width: 110px;
+	min-width: 110px;
+	max-height: 110px;
+	min-height: 110px;
+	border-top: none;
+	text-align: center;
+	padding: 20px;
+}
+#desc #prebtn{
+	border-bottom: 1px solid #1c232e;
+	max-width: 110px;
+	min-width: 110px;
+}
+#desc a.get{
+	position: absolute;
+	display: block;
+	top: 290px;
+	left: 50%;
+	width: 370px;
+	margin-left: -185px;
+	background-color: #6202d1;
+	padding-top: 10px;
+	text-align: center;
+	z-index: 2;
+	color: #dadada;
+	height: 60px;
+	text-transform: uppercase;
+	font-size: 24px;
+}
+#desc a.get:hover{
+	text-decoration: none;
+	color: #fff;
+}
+
+/* Преимущества использования*/
+#advantages h2{
+	color: #2e343f;
+	text-align: center;
+	font-size: 48px;
+	font-weight: normal;
+	margin-top: 120px;
+	margin-bottom: 90px;
+}
+#advantages col{
+	height: 100%;
+}
+#advantages .advantage{
+	padding: 30px 15px 30px 15px;
+	text-align: center;
+	border: 1px solid #60605f;
+	min-width: 300px;
+}
+#advantages h3{
+	color: #1d2027;
+	text-transform: uppercase;
+	margin-bottom: 35px;
+}
+#advantages .split{
+	height: 60px;
+}
+#advantages img{
+	margin-bottom: 45px;
+}
+#advantages p{
+	color: #1d1d1b;
+	font-size: 24px;
+	font-family: 'Microsoft Sans Serif';
+	margin: 0px;
+	line-height: 36px;
+}
+#advantages:hover{
+	border: 5px;
+}
+
+a.button{
+	text-decoration: none;
+	color: #dadada;
+	font-size: 36px;
+	text-transform: uppercase;
+	font-family: Myriad Pro, Roboto;
+	display: block;
+	width: 635px;
+	height: 98px;
+	background-color: #6202d1;
+	position: relative;
+	left: 50%;
+	margin: 100px auto 285px auto;
+	margin-left: -318px;
+	padding: 22px;
+}
+a.button:hover{
+	color: #ffffff;
+}
+#about{
+	background-color: #1d1711;
+	background-image: url('img/bp2.jpg'); 
+	background-size: 100% auto; 
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+#about .container{
+	background-color: #ffffff;
+}
+#about h2{
+	font-family: Roboto;
+	color: #754361;
+	font-weight: normal;
+	font-size: 48px;
+	margin: 0px auto 0px auto;
+	padding: 0px;
+	text-align: center;
+}
+#about ul{
+	display: block;
+	padding: 75px 75px 150px 75px;
+	margin: 0px;
+}
+#about ul li{
+	padding: 30px 30px 30px 130px;
+	border-bottom: 1px solid #dadada;
+	list-style: none;
+	color: #1d1d1b;
+	font-size: 24px;
+	font-family: 'Microsoft Sans Serif';
+	background-repeat: no-repeat;
+	background-position: center left;
+	background-position-x: 30px;
+	min-height: 100px;
+}
+#about ul li#pts5t{
+	background-image: url('img/list-icons/5t.jpg');
+}
+#about ul li#server{
+	background-image: url('img/list-icons/server.jpg');
+}
+#about ul li#terminal{
+	background-image: url('img/list-icons/terminal.jpg');
+}
+#about ul li#money{
+	background-image: url('img/list-icons/money.jpg');
+}
+#about ul li#time{
+	background-image: url('img/list-icons/time.jpg');
+}
+#about ul li#roundup{
+	background-image: url('img/list-icons/round_up.jpg');
+}
+#about ul li#quest{
+	background-image: url('img/list-icons/question.jpg');
+}
+#about ul li#config{
+	background-image: url('img/list-icons/config.jpg');
+}
+/* Наведение */
+#about ul li#pts5t:hover{
+	background-image: url('img/list-icons/5t_hl.jpg');
+}
+#about ul li#server:hover{
+	background-image: url('img/list-icons/server_hl.jpg');
+}
+#about ul li#terminal:hover{
+	background-image: url('img/list-icons/terminal_hl.jpg');
+}
+#about ul li#money:hover{
+	background-image: url('img/list-icons/money_hl.jpg');
+}
+#about ul li#time:hover{
+	background-image: url('img/list-icons/time_hl.jpg');
+}
+#about ul li#roundup:hover{
+	background-image: url('img/list-icons/round_up_hl.jpg');
+}
+#about ul li#quest:hover{
+	background-image: url('img/list-icons/question_hl.jpg');
+}
+#about ul li#config:hover{
+	background-image: url('img/list-icons/config_hl.jpg');
+}
+/* Получите ПТС5Т*/
+#getit{
+	background-image: url('img/bp3_1.jpg');
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	padding-top: 90px;
+	padding-bottom: 120px;
+}
+#getit #getform{
+	background-color: #ffffff;
+	padding: 60px 60px 90px 60px;
+	text-align: center;
+	color: #1d2027;
+	font-size: 1.2vw;
+}
+#getit #getform p{
+	line-height: 2vw;
+	margin-bottom: 30px;
+}
+#getit #getform input{
+	width: 80%;
+	color: #1d2027;
+	margin-bottom: 10px;
+	padding: 5px;
+	display: block;
+	margin-left: 10%;
+}
+#getit #getform a{
+	color: #dadada;
+	font-size: 1.5vw;
+	padding: 10px;
+	background-color: #6202d1;
+	width: 80%;
+	text-transform: uppercase;
+	display: block;
+	margin-left: 10%;
+	margin-top: 30px;
+}
+#getit #getform a:hover{
+	color: white;
+	text-decoration: none;
+}
+/* Отзывы */
+#feedback{
+	color: #1d1d1b;
+	font-size: 18px;
+}
+#feedback #carouselExampleIndicators{
+	height: 260px;
+	padding-top: 90px;
+}
+#feedback h2{
+	margin-top: 120px;
+	margin-left: 9%;
+	font-size: 36px;
+	font-weight: normal;
+}
+#feedback .col-3{
+	min-width: 22%;
+	max-width: 22%;
+	border-right: 1px solid #c8c8c7;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	padding-right: 60px;
+}
+#feedback .col{
+	min-width: 8%;
+	max-width: 8%;;
+}
+#feedback .photo{
+	padding: 30px 0px 0px 30px;
+}
+#feedback .name{
+	text-transform: uppercase;
+	font-weight: bold;
+}
+/* Footer */
+footer{
+	background-image: url("img/footer_top.jpg");
+	background-size: 100% auto;
+	background-color: #f6f6f6;
+	background-position: top;
+	background-repeat: no-repeat;
+	/*padding-top: 16vw;*/
+	padding-top: 300px;
+}
+footer .social{
+	text-align: center;
+}
+footer .social a{
+	margin: auto 15px auto 15px;
+	display: inline-block;
+	width: 81px;
+	height: 70px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+footer .social #soc1{
+	background-image: url("img/social/soc1.png");
+}
+footer .social #soc2{
+	background-image: url("img/social/soc2.png");
+}
+footer .social #soc3{
+	background-image: url("img/social/soc3.png");
+}
+footer .social #soc4{
+	background-image: url("img/social/soc4.png");
+}
+footer .social #soc5{
+	background-image: url("img/social/soc5.png");
+}
+footer .social #soc6{
+	background-image: url("img/social/soc6.png");
+}
+footer .social #soc1:hover{
+	background-image: url("img/social/soc1_hover.png");
+}
+footer .social #soc2:hover{
+	background-image: url("img/social/soc2_hover.png");
+}
+footer .social #soc3:hover{
+	background-image: url("img/social/soc3_hover.png");
+}
+footer .social #soc4:hover{
+	background-image: url("img/social/soc4_hover.png");
+}
+footer .social #soc5:hover{
+	background-image: url("img/social/soc5_hover.png");
+}
+footer .social #soc6:hover{
+	background-image: url("img/social/soc6_hover.png");
+}
+footer nav {
+	text-align: center;
+	margin-top: 90px;
+	padding-bottom: 150px;
+}
+nav a{
+	display: inline-block;
+	height: 79px;
+	padding-left: 45px;
+	background-repeat: no-repeat;
+	padding-top: 23px;
+	margin-right: 30px;
+	font-size: 20px;
+	color: #1d2027;
+	text-transform: uppercase;
+}
+nav a:hover{
+	color: #6202d1;
+	text-decoration: none;
+}
+nav a.about{
+	background-image: url("img/menu/5t.png");
+	background-size: 35px;
+	background-color: initial;
+	background-position: left center;
+}
+nav a.about:hover{
+	background-image: url("img/menu/5t_hover.png");
+}
+nav a.news{
+	background-image: url("img/menu/news.png");
+	background-size: 35px;
+	background-color: initial;
+	background-position: left center;
+}
+nav a.news:hover{
+	background-image: url("img/menu/news_hover.png");
+}
+nav a.articles{
+	background-image: url("img/menu/articles.png");
+	background-size: 35px;
+	background-color: initial;
+	background-position: left center;
+}
+nav a.articles:hover{
+	background-image: url("img/menu/articles_hover.png");
+}
+nav a.instructions{
+	background-image: url("img/menu/instructions.png");
+	background-size: 35px;
+	background-color: initial;
+	background-position: left center;
+}
+nav a.instructions:hover{
+	background-image: url("img/menu/instructions_hover.png");
+}
+nav a.support{
+	background-image: url("img/menu/support.png");
+	background-size: 35px;
+	background-color: initial;
+	background-position: left center;
+	padding-left: 49px;
+}
+nav a.support:hover{
+	background-image: url("img/menu/support_hover.png");
+}
+nav a.contacts{
+	background-image: url("img/menu/contacts.png");
+	background-size: 25px;
+	background-color: initial;
+	background-position: left center;
+	padding-left: 40px;
+}
+nav a.contacts:hover{
+	background-image: url("img/menu/contacts_hover.png");
+}
+div.preload{
+	visibility: hidden;
+	height: 1px;
+	overflow: hidden;
+}

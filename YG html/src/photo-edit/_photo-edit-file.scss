@@ -1,0 +1,52 @@
+.add-files{
+    width: 762px;
+    text-align: center;
+    color: $paramTextColor;
+
+    @media (max-width: 1220px){
+        width: 100%;
+    }
+    
+    &__drop{
+        margin-bottom: 15px;
+    }
+
+    &__loading{
+        display: none;
+        margin-top: 5px;
+        margin-bottom: 15px;
+    }
+
+    &__message-err{
+        color: $errorMsgColor;
+    }
+}
+
+.file-drop{
+    padding: 60px 20px;
+    border: 2px dashed rgba(42, 16, 78, 0.2);
+    border-radius: 8px;
+
+    @media(max-width: 480px){
+        padding: 30px 15px;
+    }
+
+    &__button{
+        margin-bottom: 10px;
+        
+        @media(max-width: 480px){
+            width: 180px;
+            margin-bottom: 0;
+        }
+    }
+
+    &__comment{
+        width: 270px;
+        margin: auto;
+
+        @media(max-width: 480px){
+            display: none;
+        }
+    }
+
+}

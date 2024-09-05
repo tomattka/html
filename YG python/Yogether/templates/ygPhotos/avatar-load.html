@@ -1,0 +1,43 @@
+{% extends "ygTemplates/tplProfile.html" %}
+
+{% load static %}
+
+{% block title %}Изменение аватара{% endblock %}
+{% block breadcrumbs %}<a href="{% url 'user_profile' user_id=user.id %}" class="title__link">Профиль</a><span>Изменение аватара</span>
+{% endblock %}
+
+
+{% block content %}
+
+<script src="{% static 'js/photos/avatar-load.js' %}"></script>
+<style>
+    @import "{% static 'css/common/profile-structure.css' %}";
+    @import "{% static 'css/content/avatar.css' %}";
+</style>
+
+<!-- Profile structure start -->
+<div class="profile-structure">
+    <div class="profile-structure__wrapper">
+        <!-- Profile menu start -->
+        {% include "../ygProfile/profile-menu.html" %}
+        <!-- Profile menu end -->
+
+        <!-- Avatar page start -->
+        <div class="avatar profile-structure_avatar">
+            <h1>Изменение фотографии профиля</h1>
+            <p class="avatar__description">Выберите фото для загрузки.<br>
+                Изображение должно быть в формате JPG.</p>
+                <div id="avError" class="avatar__error">Во время загрузки файла произошла ошибка!</div>
+            <form id="fUpload" action="" method="POST" enctype="multipart/form-data" class="no-display">
+            {% csrf_token %}
+            <input id="iFile" name="iFile" type="file">
+            </form>
+            <button id="bUpload" class="button avatar__button">Загрузить</button>
+            <a id="avDelete" href="{% url 'avatar_delete' %}" class="avatar__delete">Удалить текущее фото</a>
+        </div>
+        <!-- Avatar page end -->
+    </div>
+</div>
+<!-- Profile structure end -->
+
+{% endblock %}

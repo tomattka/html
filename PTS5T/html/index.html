@@ -1,0 +1,274 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ПТС5Т</title>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!-- Подстройка под разные типы девайсов -->
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="bootstrap-4.1.3-dist/css/bootstrap.css">
+	<script src="bootstrap-4.1.3-dist/js/bootstrap.min.js"></script>
+	<script src="bootstrap-4.1.3-dist/js/jquery-1.11.3.min.js"></script>	
+	<script src="bootstrap-4.1.3-dist/js/bootstrap.bundle.js"></script>
+	
+	<!-- Additional CSS -->
+	<link rel="stylesheet" href="style.css">	
+	<script src="script.js"></script>
+	
+	
+</head>
+
+<body>
+	<div class="navbar container-fluid sticky-top topmenu">
+		<div class="container-fluid row">
+				<div class="col-10 menu">
+					<nav>
+						<a class="about" href="#">О системе</a>
+						<a class="news" href="#">Новости</a>
+						<a class="articles" href="#">Статьи</a>
+						<a class="instructions" href="#">Инструкции</a>
+						<a class="support" href="#">Поддержка</a>
+						<a class="contacts" href="#">Контакты</a>		
+					</nav>
+				</div>
+				<div class="col srch"><input type="text" class="search" placeholder="Поиск"></div>
+				<div class="col lk"><a href="#">Личный кабинет</a></div>	
+		</div>
+	</div>
+
+<!-- Блок №1 -->
+<div id="greet" class="container-fluid" onresize="alert('123');">
+	<div class="container-fluid h-100">
+		<div id="email" class="position-absolute"><a href="#">pts5t@yandex.ru</a></div>
+			<div class="row align-items-center h-100" style="color: white;">
+				<div class="col" style="text-align: center;"><img src="img/logo.png" width="18%" alt="ПТС5Т">
+					<div id="caption">Прогнозирующая торговая система</div>
+				</div>
+			</div>
+	</div>
+</div>
+	
+<!-- Блок №2-->
+<div class="container-fluid">
+	<div id="desc" class="container">
+		<div class="row">
+			<div class="col" style="max-width: 16%;"></div>
+			<div id="prebtn" class="col-2">&nbsp;</div>
+			<div id="info" class="col-6 bordered">			
+				<a href="#getit" class="get">Получить бесплатно</a>
+				<b>ПТС5Т</b> — надёжная система, позволяющая получать<br> регулярную прибыль. <br>Проверена опытными трейдерами!</div>
+			<div class="col" style="max-width: 20%;"></div>
+		</div>
+		<div class="row">
+			<div class="col" style="max-width: 16%;"></div>
+			<div id="btn" class="col-2 bordered" style="border-right: none;"><a href="#getit"><img src="img/download.jpg" width="50" alt="Download"></a></div>
+			<div class="col-6" style="border-left: 1px solid #1c232e;">&nbsp;</div>
+			<div class="col" style="max-width: 20%;"></div>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid purple-line"></div>
+
+<!-- Блок №3-->
+<div class="container-fluid">
+	<div id="advantages" class="container">
+		<h2>Преимущества использования системы ПТС5Т</h2>
+		<div class="row align-items-stretch">
+			<div class="col"></div>
+			<div id="adv1" class="col-3 advantage" onmouseover="advOn(1);" onmouseout="advOut(1);">
+				<h3>Доходность</h3>
+				<img src="img/advantages/a1.jpg" width="100" height="100" alt="Доходность">
+				<p>Ежегодная прибыль<br> до 70% от оборота.</p>
+			</div>
+			<div class="col"></div>
+			<div id="adv2" class="col-3 advantage" onmouseover="advOn(2);" onmouseout="advOut(2)";>
+				<h3>Доступность</h3>
+				<img src="img/advantages/a2.jpg" width="101" height="100" alt="Доступность">
+				<p>Бесплатное тестирование<br> в течение неограниченного срока.</p>
+			</div>
+			<div class="col"></div>
+			<div id="adv3" class="col-3 advantage" onmouseover="advOn(3);" onmouseout="advOut(3)">
+				<h3>Гибкость</h3>
+				<img src="img/advantages/a3.jpg" width="96" height="100" alt="Гибкость">
+				<p>Рисками можно управлять самостоятельно<br> и свести их к минимуму.</p>
+			</div>
+			<div class="col"></div>
+		</div>
+		<div class="split">&nbsp;</div>
+		<div class="row align-items-center align-items-stretch">
+			<div class="col-2" style="min-width: 21%;"></div>
+			<div id="adv4" class="col-3 advantage" onmouseover="advOn(4);" onmouseout="advOut(4)">
+				<h3>Надёжность</h3>
+				<img src="img/advantages/a4.jpg" width="100" height="100" alt="Надёжность">
+				<p>Вы сами выбираете,<br> в какой системе хранить ваши средства.</p>
+			</div>
+			<div class="col" style="max-width: 80px;"></div>
+			<div id="adv5" class="col-3 advantage" onmouseover="advOn(5);" onmouseout="advOut(5)">
+				<h3>Простота</h3>
+				<img src="img/advantages/a5.jpg" width="101" height="100" alt="Простота">
+				<p>Понятные инструкции<br> и бесплатная поддержка специалистов.</p>
+			</div>
+			<div class="col-2" style="min-width: 21%;"></div>
+		</div>
+	</div>
+</div>	
+
+	
+	<div class="container-fluid" id="about">
+		<div class="container">
+			<div style="text-align: center;"><a href="#getit" class="button">Попробовать бесплатно</a></div>
+			<h2>О системе ПТС5Т</h2>
+			<ul>
+				<li id="pts5t">Торговый Терминал Multiterm PTS5T разработан ПТС5Т для автоматической торговли на Форекс.</li>
+				<li id="server">Данные для его работы поступают с главного сервера SERVER PTS5T.</li>
+				<li id="terminal">Торговым Терминалом Multiterm PTS5T может воспользоваться каждый желающий.</li>
+				<li id="money">Multiterm PTS5T и данные к нему распространяются абсолютно бесплатно.</li>
+				<li id="time">Для его освоения достаточно изучить инструкции, на что уйдет не более нескольких часов.</li>
+				<li id="roundup">После установки и настройки, вы можете протестировать Торговый Терминал на DEMO-счёте и убедится в его работоспособности и эффективности.</li>
+				<li id="quest">После длительного тестирования принять решение, подходит вам Multiterm PTS5T или нет.</li>
+				<li id="config" style="border: none;">При необходимости наши специалисты всегда окажут вам поддержку.</li>
+			</ul>
+		</div>
+	</div>
+	
+	<div class="container-fluid purple-line"></div>
+
+	<div class="container-fluid video">
+		<div class="container embed-responsive embed-responsive-16by9">
+			<iframe class="embed-responsive embed-responsive-16by9" src="https://www.youtube.com/embed/WBx6ZeR1Ibo" frameborder="0" allow="accelerometer; autoplay; encr	ypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		</div>
+	</div>
+	
+	<div id="getit" class="container-fluid">
+			<div class="row">
+				<div class="col"></div>
+			<div class="col-4 align-items-center">
+				<div id="getform" class="shadow">				
+					<p>Получите систему <b>ПТС5Т</b> сейчас!</p>
+					<p>Для этого оставьте свой e-mail, на него будет выслана ссылка на скачивание и инструкция по установке системы.</p>
+					<input type="text" placeholder="Имя" />
+					<input type="text" placeholder="E-mail" />
+					<a href="#">Получить</a>
+				</div>
+			</div>
+				<div class="col"></div>
+			<div class="col-6">&nbsp;</div>
+			
+			</div>
+	</div>
+	
+<!-- FEEDBACK START-->
+
+	<div id="feedback" class="container-fluid" style="padding: 0px;">
+		<div class="container-fluid" style="padding: 0px;">
+			
+			<h2>Отзывы пользователей</h2>
+
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+
+				<div class="carousel-inner">
+
+					<div class="carousel-item active">
+						<div class="row">
+							<div class="col"></div>
+							<div class="photo" style="padding-left: 30px;"><img src="img/feedback/katya.jpg" alt="Екатерина Петрова" width="90"></div>
+							<div class="col-3">
+								<p class="name">Екатерина Петрова</p><p>Компания «Виктория»</p><p><img src="img/feedback/5stars.gif" width="120" alt="5 звёзд" /></p><p>Замечательное сотрудничество, все было наилучшим образом. Я довольна результатом!</p>
+							</div>
+							<div class="photo"><img src="img/feedback/olga.jpg" alt="Ольга Ростова" width="90"></div>
+							<div class="col-3">
+									<p class="name">Ольга Ростова</p><p>Проект «Никром»</p><p><img src="img/feedback/5stars.gif" width="120" alt="5 звёзд" /></p><p>Проект получился великолепным. Все правки вносились оперативно. Снова буду обращаться.</p>
+							</div>
+							<div class="photo"><img src="img/feedback/stas.jpg" alt="Станислав Первин" width="90"></div>
+							<div class="col-3" style="border: none; max-width: 19%; min-width: 19%;">
+									<p class="name">Станислав Первин</p><p>ООО «Леонардо»</p><p><img src="img/feedback/5stars.gif" width="120" alt="5 звёзд" /></p><p>Долго думали, чтобы начать сотрудничать, но, в итоге, не пожалели. Заказали даже больше, чем планировали, профессионалы на дороге не валяются.</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="carousel-item">
+						<div class="row">
+							<div class="col"></div>
+							<div class="photo" style="padding-left: 30px;"><img src="img/feedback/katya.jpg" alt="Екатерина Петрова" width="90"></div>
+							<div class="col-3">
+								<p class="name">Екатерина Петрова</p><p>Компания «Виктория»</p><p><img src="img/feedback/5stars.gif" width="120" alt="5 звёзд" /></p><p>Замечательное сотрудничество, все было наилучшим образом. Я довольна результатом!</p>
+							</div>
+							<div class="photo"><img src="img/feedback/olga.jpg" alt="Ольга Ростова" width="90"></div>
+							<div class="col-3">
+									<p class="name">Ольга Ростова</p><p>Проект «Никром»</p><p><img src="img/feedback/5stars.gif" width="120" alt="5 звёзд" /></p><p>Проект получился великолепным. Все правки вносились оперативно. Снова буду обращаться.</p>
+							</div>
+							<div class="photo"><img src="img/feedback/stas.jpg" alt="Станислав Первин" width="90"></div>
+							<div class="col-3" style="border: none; max-width: 19%; min-width: 19%;">
+									<p class="name">Станислав Первин</p><p>ООО «Леонардо»</p><p><img src="img/feedback/5stars.gif" width="120" alt="5 звёзд" /></p><p>Долго думали, чтобы начать сотрудничать, но, в итоге, не пожалели. Заказали даже больше, чем планировали, профессионалы на дороге не валяются.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev" style="width: 50px;" style="background:none;">
+					<span class="carousel-control-prev-icon" aria-hidden="true" style="background:none;"><img src="img/arrow_left.png" width="80" /></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" style="width: 160px;">
+					<span class="carousel-control-next-icon" style="background-image:none;"><img src="img/arrow_right.png" width="80" /></span>
+					<span class="sr-only">Next</span>
+				</a>
+			</div>
+		</div>
+	</div>
+
+<!-- FEEDBACK END-->
+	
+	<footer class="container-fluid" style="margin-top: 200px;">
+		<div class="container">
+			<div class="social">
+				<a href="#" id="soc1">&nbsp;</a>
+				<a href="#" id="soc2">&nbsp;</a>
+				<a href="#" id="soc3">&nbsp;</a>
+				<a href="#" id="soc4">&nbsp;</a>
+				<a href="#" id="soc5">&nbsp;</a>
+				<a href="#" id="soc6">&nbsp;</a>
+			</div>
+		</div>		
+
+		<nav>
+			<a class="about" href="#">О системе</a>
+			<a class="news" href="#">Новости</a>
+			<a class="articles" href="#">Статьи</a>
+			<a class="instructions" href="#">Инструкции</a>
+			<a class="support" href="#">Поддержка</a>
+			<a class="contacts" href="#">Контакты</a>		
+		</nav>
+
+	</footer>
+
+	<div class="preload">
+		<img src="img/list-icons/5t_hl.jpg" alt="Изображение" />
+		<img src="img/list-icons/server_hl.jpg" alt="Изображение" />
+		<img src="img/list-icons/terminal_hl.jpg" alt="Изображение" />
+		<img src="img/list-icons/money_hl.jpg" alt="Изображение" />
+		<img src="img/list-icons/time_hl.jpg" alt="Изображение" />
+		<img src="img/list-icons/round_up_hl.jpg" alt="Изображение" />
+		<img src="img/list-icons/question_hl.jpg" alt="Изображение" />
+		<img src="img/list-icons/config_hl.jpg" alt="Изображение" />
+		<img src="img/social/soc1_hover.png" alt="Изображение" />
+		<img src="img/social/soc2_hover.png" alt="Изображение" />
+		<img src="img/social/soc3_hover.png" alt="Изображение" />
+		<img src="img/social/soc4_hover.png" alt="Изображение" />
+		<img src="img/social/soc5_hover.png" alt="Изображение" />
+		<img src="img/social/soc6_hover.png" alt="Изображение" />
+		<img src="img/menu/5t_hover.png"  alt="Изображение"/>
+		<img src="img/menu/news_hover.png" alt="Изображение" />
+		<img src="img/menu/articles_hover.png" alt="Изображение" />
+		<img src="img/menu/instructions_hover.png" alt="Изображение" />
+		<img src="img/menu/support_hover.png" alt="Изображение" />
+		<img src="img/menu/contacts_hover.png" alt="Изображение" />
+	</div>
+	
+	
+	
+</body>
+</html>

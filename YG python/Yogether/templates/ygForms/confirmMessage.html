@@ -1,0 +1,13 @@
+{% load static %}
+<!-- Confirm message start -->
+
+<div id="confirm" class="confirm">
+    <button id="confirm-close" class="x-close confirm__close"><img src="{% static 'img/popups/close.png' %}" alt="Закрыть"></button>
+    <h3 class="confirm__title">Подтверждение</h3>
+    <p class="confirm__text">Подтвердите своё действие. Данное действие нельзя будет отменить!</p>
+    <div class="confirm__buttons">
+        <button id="bOk" class="button confirm__ok">Подтверждаю</button>
+        <button id="bCancel" class="button_empty confirm__cancel">Отмена</button>
+    </div>
+</div>
+<!-- Confirm message end -->

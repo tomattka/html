@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Yogether</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Fonts -->
+    <link rel="stylesheet" href="css/common/fonts.css">
+
+    <!-- Style -->    
+    <link rel="stylesheet" href="css/common/common.css">	
+    <link rel="stylesheet" href="css/common/header.css">	
+    <link rel="stylesheet" href="css/common/footer.css">	
+    
+    <link rel="stylesheet" href="css/content/forms.css">
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Header start -->
+    <header class="header">
+        <div class="header__wrapper">
+
+            <!-- Menu block start -->
+            <div class="menu-block">
+                <figure class="menu-block__logo">
+                    <a href="#"><img class="menu-block__logo-img" src="img/header/logo.svg" width="70" alt="Yogether"></a>
+                    <figcaption class="menu-block__logo-figcaption"><a href="#" class="menu-block__link menu-block__logo-link">Yogether</a></figcaption>
+                </figure>
+                <ul class="menu-block__menu">
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">Главная</a></li>
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">Участники</a></li>
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">О проекте</a></li>
+                    <li class="menu-block__item"><a href="#" class="menu-block__link">Контакты</a></li>
+                </ul>
+                <div class="menu-block__buttons">
+                    <a id="aLogin" href="#" class="menu-block__login menu-block__link">Вход</a>
+                    <a href="#" id="bRegister" class="menu-block__register button">Регистрация</a>
+                </div>
+                <div class="menu-block__mobile-buttons">
+                    <a id="aLoginMob" href="#"><img src="img/header/login_mobile.png" alt="Вход"></a>
+                    <a id="aMobMenu" class="menu-block__mob-bt-link" href="#"><img src="img/header/menu_mobile.png" alt="Меню" /></a>
+                </div>
+            </div>
+            <!-- Menu block end -->
+
+            <!-- Title start -->
+            <div class="header__title title">
+                <h2 class="title__h2">Регистрация</h2>
+                <div class="title__breadcrumbs">
+                    <a href="#" class="title__link">Главная</a><span>Регистрация</span>
+                </div>
+            </div>
+            <!-- Title end -->
+
+        </div>
+    </header>
+    <!-- Header end -->
+
+    
+    <!-- Register form start -->
+
+    <div class="profile-form">   
+        
+        <h1>Зарегистрироваться</h1>
+        
+        <form class="signup" id="signup_form" method="post" action="/accounts/signup/">
+            <input type="hidden" name="csrfmiddlewaretoken" value="Xo58Xgtijn18NhYA9M4EsyoRuWfy9rmJf3pQ5YRkbpyWUef2ak3XyRFAcnZEDCGX">
+            <p><label for="id_username">Имя пользователя:</label> <input type="text" name="username" placeholder="Имя пользователя" autocomplete="username" minlength="4" maxlength="150" required id="id_username"></p>
+            <p><label for="id_email">E-mail (опционально):</label> <input type="email" name="email" placeholder="E-mail адрес" autocomplete="email" id="id_email"></p>
+            <ul class="errorlist"><li>Введённый пароль слишком короткий. Он должен содержать как минимум 8 символов.</li><li>Введённый пароль слишком широко распространён.</li><li>Введённый пароль состоит только из цифр.</li></ul>
+            <p><label for="id_password1">Пароль:</label> <input type="password" name="password1" placeholder="Пароль" autocomplete="new-password" required id="id_password1"></p>
+            <p><label for="id_password2">Пароль (ещё раз):</label> <input type="password" name="password2" placeholder="Пароль (ещё раз)" required id="id_password2"></p>
+          
+            <button class="button profile-form__button" type="submit">Зарегистрироваться</button>
+        </form>
+
+        <p>Уже зарегистрированы? <a href="/accounts/login/">Войдите</a>.</p>
+        
+    </div>
+
+    <!-- Register form end -->
+
+
+    <!-- Footer start -->
+
+    <footer class="footer">
+        <div class="footer__wrapper">
+            <figure class="footer__logo">
+                <a href="#"><img class="footer__logo-img" src="img/footer/logo.svg" width="70" alt="Yogether"></a>
+                <figcaption class="footer__logo-figcaption"><a class="footer__link footer__logo-link" href="#">Yogether</a></figcaption>
+            </figure>
+            <div class="footer__menus">
+                <ul class="footer__menu footer__menu_first">
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Главная</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Участники</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">О проекте</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Встречи</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Контакты</a></li>
+                </ul>
+                <ul class="footer__menu">
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Расписание</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Города и страны</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Встречи YG</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Карта сайта</a></li>
+                    <li class="footer__menu-item"><a class="footer__link" href="#">Наша команда</a></li>
+                </ul>
+            </div>
+            <div class="footer__social">
+                <a href="#" class="footer__soc-link"><img src="img/footer/vk.png" alt="Вконтакте"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/instagram.png" alt="Инстаграм"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/facebook.png" alt="Facebook"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/youtube.png" alt="Youtube"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/twitter.png" alt="Twitter"></a>
+                <a href="#" class="footer__soc-link"><img src="img/footer/ok.png" alt="Одноклассники"></a>
+            </div>
+            <div class="footer__desc">Поиск единомышленников для общения и совместных практик для йогов и эзотериков</div>
+            <div class="footer__copyright">&copy; Yogether. Копирование материалов возможно только с разрешения владельца.</div>
+            <div class="footer__policy">
+                <a href="#" class="footer__link footer__policy-link">Политика конфиденциальности</a>
+                <a href="#" class="footer__link footer__policy-link">Политика обработки персональных данных</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Footer end -->
+
+</body>
+</html>

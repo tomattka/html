@@ -1,0 +1,121 @@
+$mainPhotoWidth: 270px;
+
+.avatar{
+    margin: 0px auto 90px auto;
+    text-align: center;
+
+    h1{
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 100%;
+        letter-spacing: 0.01em;
+        color: #07071F;
+        text-align: center;
+        margin: 30px 0px 30px 0px;
+    }
+
+    &__description{
+        text-align: center;
+        line-height: 160%;
+        margin-bottom: 15px;
+    }
+
+    &__error{
+        color: $errorMsgColor;
+        margin-bottom: 15px;
+        display: none;
+    }
+
+    &__button{
+        margin-bottom: 20px;
+    }
+
+    &__delete{
+        display: block;
+        color: $paramTextColor;
+        text-decoration: underline;
+    }
+
+    &__block{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        margin-top: 30px;
+
+        @media (max-width: 720px){
+            display: block;
+        }
+    }
+
+    &__area-select{
+        margin-right: 30px;
+        width: 500px;
+        max-width: 500px;
+
+        @media (max-width: 1180px){
+            width: 410px;
+            max-width: 410px;
+            margin-right: 10px;
+        }
+        @media (max-width: 720px){
+            width: 460px;
+            max-width: 460px;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 480px){
+            width: 100%;
+            max-width: 100%;
+        }
+
+        img{
+            display: block;
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 600px;
+        }
+    }
+
+    &__preview{
+        flex-basis: $mainPhotoWidth;
+    }
+    
+    &__preview-big{
+        width: 270px;
+        height: 270px;
+        overflow: hidden;
+        border-radius: $mainPhotoWidth / 2;
+        margin-bottom: 20px;
+
+        @media (max-width: 1180px){            
+            width: 240px;
+            height: 240px;
+        }
+
+        @media (max-width: 720px){
+            width: 180px;
+            height: 180px;
+            margin: auto;
+            margin-bottom: 5px;
+        }
+    }
+
+    &__preview-small{
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
+        border-radius: 35px;
+
+        @media (max-width: 720px){
+            display: block;
+            margin: auto;
+        }
+    }
+
+    &__coordinates{
+        margin-bottom: 30px;
+    }
+}

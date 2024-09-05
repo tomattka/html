@@ -1,0 +1,240 @@
+/* Common */
+body{
+    font-family: 'Nunito', sans-serif; /* Free analog of Avenir font*/
+    min-width: 320px;
+}
+html, body{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+input, textarea{    
+    outline: none;
+}
+.clearfix{
+    clear: both;
+}
+section.container-fluid{
+    padding: 0;
+}
+input::placeholder, textarea::placeholder{
+    color: #292929;
+    opacity: 1;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder{
+    color: #292929;
+}
+input::-ms-input-placeholder, textarea::-ms-input-placeholder{
+    color: #292929;
+}
+/* Common logo + menu style */
+.lined{
+    min-height: 79px;
+    height: auto;
+    transition: max-height 0.25s;
+}
+a.logo{
+    float: left;
+}
+ul.menu{
+    display: block;
+    text-align: right;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+}
+ul.menu li{
+    display: inline-block;
+    margin-left: 30px;
+}
+ul.menu a{
+    display: inline-block;
+    padding-top: 13px;
+}
+
+/* Текст с красной линией слева от блока */
+.red-label{
+    width: 3.5vw;
+    display: inline-block;
+    overflow: hidden;
+    writing-mode: tb-rl;
+    transform: rotate(-180deg);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    line-height: 24px;
+    color: #292929;
+    font-weight: 500;
+    vertical-align: top;
+}
+.red-label .redline{
+    display: inline-block;
+    width: 4px;
+    height: 78px;
+    background-color: #EF3D39;
+    margin: 22px auto;
+}
+.red-label .text{
+    display: inline-block;
+    box-sizing: border-box;
+    min-width: 683px;
+    height: 789px;
+    background-color: white;
+    padding: 66px 74px 77px 74px;
+    box-shadow: 0 20px 26px rgba(0, 0, 0, 0.16);
+    text-align: left;
+}
+
+/* Header */
+header .lined{
+    border-bottom: solid 2px #B9B9B9;
+    margin: 35px 132px 0px 132px;
+    padding-right: 7px;
+}
+header ul.menu a{
+    color: #292929;
+    text-transform: uppercase;
+}
+header ul.menu a.active{
+    border-top: solid 4px #EF3D39;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+header .mobile-menu{
+    display: none;
+}
+
+/* Navigation */
+.breadcrumbs{
+    text-align: center;
+    padding: 46px 0px 48px 0px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 19px;
+}
+.breadcrumbs a{
+    color: #292929;
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 1px;
+}
+.breadcrumbs b{
+    font-weight: 600;
+    color: #292929;
+    display: inline-block;
+    vertical-align: bottom;
+}
+
+/* Footer */
+footer{
+    background-color: #535556;
+    padding: 35px 132px 51px 132px;
+    color: white;
+}
+footer a, footer a:hover{
+    color: white;
+}
+footer .lined{
+    border-bottom: solid 1px white;
+}
+footer a.logo{
+    float: left;
+}
+footer ul.menu li{
+    margin-left: 60px;
+}
+footer ul.menu a{
+    color: white;
+    line-height: 40px;
+}
+footer .info{    
+    font-family: 'Montserrat', sans-serif;
+    font-size: 19px;
+    line-height: 23px;
+    font-weight: 300;
+    padding-top: 33px;
+}
+footer .company{
+    width: 11vw;
+    font-size: 17px;
+    white-space: nowrap;
+    float: left;
+}
+footer .company a.dev-logo{
+    display: block;
+    margin-top: 15px;
+}
+footer .company img.lg{
+    display: none;
+}
+footer .company span.dev{
+    font-size: 16px;
+}
+footer .rekv{
+    text-align: right;
+}
+footer .adress, footer .phones, footer .contact{
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+}
+footer .adress{
+    width: 16.2vw;
+}
+footer .adress p{
+    margin: 0 0 17px 0;
+}
+footer .phones{
+    width: 19.6vw;
+    margin-left: 2.7vw;
+    line-height: 30px;
+}
+footer .contact{
+    margin-left: 65px;
+    margin-left: 3.3vw;
+}
+footer .contact a.email{
+    display: block;
+    margin: 15px auto 20px auto;
+}
+footer .contact .social a{
+    display: inline-block;
+    vertical-align: bottom;
+    margin-right: 16px;
+}
+footer .contact .social img{
+    vertical-align: bottom;
+}
+footer .contact .social a.fb{
+    margin-right: 20px;
+}
+
+/* Montserrat Font */
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    src: url('../fonts/Montserrat/Montserrat-Regular.ttf');
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    src: url('../fonts/Montserrat/Montserrat-Medium.ttf');
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    src: url('../fonts/Montserrat/Montserrat-SemiBold.ttf');
+}
+/* Nunito Font (instead of Avenir) */
+@font-face {
+    font-family: 'Nunito';
+    font-weight: 400;
+    src: url('../fonts/Nunito/Nunito-Regular.ttf');
+}
+@font-face {
+    font-family: 'Nunito';
+    font-weight: 600;
+    src: url('../fonts/Nunito/Nunito-SemiBold.ttf');
+}

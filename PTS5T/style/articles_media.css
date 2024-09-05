@@ -1,0 +1,69 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1201px) {
+    .page ul.news{
+        padding: 60px 0px 0px 0px;
+    }
+    .informer-bottom {
+        padding-left: 30px;
+    }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px) { 
+    .page .cats{
+        margin: auto auto 60px 30px;
+    }
+    .page .cats h2{
+        font-size: 24px;
+    }
+    .page .cats a#catroll{
+        display: inline;
+    }
+    .page .cats ul{
+        display: none;
+        max-width: 90%;
+    }
+    .informer{
+        width: 94%;
+    }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px) {
+	
+
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+    .page h1{
+        font-size: 28px;
+    }
+    .page ul.news{
+        padding-top: 30px;
+    }
+    .page ul.news li{
+        font-size: 18px;
+        padding: 30px 15px;
+    }
+    .page ul.news span{
+        font-size: 16px;
+    }
+    .page .cats{
+        margin: auto auto 60px 15px;
+    }
+    .informer {
+        width: 90%;
+    }
+    .informer-bottom{
+        padding-left: 15px;
+        width: 96%;
+    }
+}
+
+
+@media only screen and (max-width : 380px) {
+	
+}

@@ -1,0 +1,23 @@
+{% load static %}
+
+<div class="chat__top">
+    <div class="chat__person"><a href="{{chat_user.profile_url}}"><img width="30"
+        {% if chat_user.profile_pic %}
+            src="{{ chat_user.profile_pic.url }}"
+        {% else %}
+            src="{% static 'img/user-profile/no-photo.png' %}"
+        {% endif %}
+       alt="{{chat_user.first_name}} {{chat_user.last_name}}">{{chat_user.first_name}} {{chat_user.last_name}}</a></div>
+    <div class="chat__back"><a href="{% url 'chat_list' %}">Назад ></a></div>
+</div>
+
+<!-- Messages start -->
+<div id="chat-messages" class="chat__messages">
+    {{ messages|safe }}
+</div>
+<!-- Messages end -->
+
+<div class="chat__bottom">
+    <input id="iText" type="text" placeholder="Ваше сообщение" class="chat__input">
+    <button id="bSend" class="button">Отправить</button>
+</div>
